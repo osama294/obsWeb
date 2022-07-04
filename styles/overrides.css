@@ -1,0 +1,10 @@
+@media only screen and (max-width: 450px) {
+  .arrow {
+    margin: auto 24px !important;
+    width: 25px !important;
+    padding: 0 !important;
+  }
+  .carousel .slide {
+    height: 290px !important;
+  }
+}
