@@ -2605,3 +2605,11 @@ $gold: #dba514;
     margin-top: 20px;
   }}
 }
+@media only screen and (max-width: 325px) {
+  .header{
+    width: calc(100% - 10px)
+  }
+  .wrapper {
+    width: calc(100% - 10px)
+  }
+  }

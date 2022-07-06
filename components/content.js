@@ -88,7 +88,7 @@ function Content() {
 
                 <div className={styles.detail}>
                   <h4 className={styles.webd}>Graphic Design | UI/UX</h4>
-                  <h4 className={styles.webm}> UI/UX   Graphic Design </h4>
+                  <h4 className={styles.webm}> UI/UX <br></br>  Graphic Design </h4>
                   <p>
                     Without UI/UX an application is like a suit without a man.
                     We create visually appealing, digital interfaces that
