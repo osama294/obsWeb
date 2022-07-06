@@ -5,7 +5,7 @@ import logo from "../public/logo.png";
 import facebook from "../public/facebook.png";
 import linkedin from "../public/linkedin.png";
 import instagram from "../public/instagram.png";
-
+import Link from "next/link";
 function Footer() {
   return (
     <>
@@ -29,32 +29,37 @@ function Footer() {
               </div>
               <div className={styles.foot}>
                 <div className={styles.b3}>
-                  <h3>Call us</h3>
+                  <h3>Contact us</h3>
                   <div className={styles.socials}>
-                    <figure className={styles.social}>
+                <figure className={styles.social}>
+                      <a href="https://www.facebook.com/obstechnologia">   
                       <Image
                         src={facebook}
                         alt="OBS TECHNOLOGIA"
                         layout="fill"
                         objectFit="contain"
-                      />
+                      /></a>
                     </figure>
+                   
                     <figure className={styles.social}>
-                      <Image
+               <a href="https://www.instagram.com/obstechnologia/">       
+                <Image
                         src={instagram}
                         alt="OBS TECHNOLOGIA"
                         layout="fill"
                         objectFit="contain"
                       />
+                   </a>
                     </figure>
                     <figure className={styles.social}>
-                      <Image
+                      <a href="https://www.linkedin.com/company/69542733/">  <Image
                         src={linkedin}
                         alt="OBS TECHNOLOGIA"
                         layout="fill"
                         objectFit="contain"
-                      />
+                      /></a>
                     </figure>
+                  
                   </div>
                 </div>
                 <div className={styles.b2}>

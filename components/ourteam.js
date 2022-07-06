@@ -51,12 +51,12 @@ function Ourteam() {
                   key={index}
                   className={styles.card}
                   whileHover={{
-                    scale: 1.1,
+                    scale: 0.9999,
                     transition: { duration: 0.1 },
                     boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
                     padding: 20,
                     borderRadius: 30,
-                    margin: 15,
+
                   }}
                 >
                   <figure className={styles.picture}>
