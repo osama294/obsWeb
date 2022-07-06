@@ -4,16 +4,21 @@ import styles from "../styles/Home.module.scss";
 import Header from "../components/header";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import LoadingSpinner from "../components/spinner";
 import Footer from "../components/footer";
+import Blur from "../components/blur";
 function Portfolio() {
   const [discription, setDiscription] = useState([]);
   const [poster, setPoster] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const domain = "https://obstechnologia.com/webAdmin/";
   // const poster = [];
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://obstechnologia.com/webAdmin/api/portshow")
       .then((res) => {
+        setIsLoading(true)
         return res.json();
       })
       .then((res) => {
@@ -21,20 +26,35 @@ function Portfolio() {
         setPoster(heading.splice(-3));
         heading.splice(-3);
         setDiscription(heading);
+        // setIsLoading(false);
+
       });
+      setTimeout(()=> {
+        console.log("2222222222222222222")
+        setIsLoading(false)}, 2000)
   }, []);
 
   return (
     <>
-      <motion.div
+     { isLoading && <motion.div  variants={{
+                  hidden: { scale: 0.8, opacity: 0 },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.1,
+                    },
+                  },
+                }}><Blur/></motion.div>  } 
+     <motion.div
         className={styles.container}
         variants={{
-          hidden: { scale: 0.999999, opacity: 0 },
+          hidden: { scale: 0.999999, opacity: 0.6 },
           visible: {
             scale: 1,
-            opacity: 1,
+            opacity: 0.5,
             transition: {
-              delay: 0.2,
+              delay: 2,
             },
           },
         }}
@@ -44,10 +64,12 @@ function Portfolio() {
           <h2 className={styles.ph}>SELECTED PROJECTS</h2>
           <div className={styles.phl}></div>
           <p className={styles.text}>Take a look at some of our best work!</p>
-          {discription.map((data, index) => {
+          { discription.length != 0 ?   discription.map((data, index) => {
             if (data.id % 2 != 0) {
               return (
-                <div key={index} className={styles.c1}>
+             isLoading ? (
+              <LoadingSpinner key={index} />
+            ) :   <div key={index} className={styles.c1}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -87,7 +109,9 @@ function Portfolio() {
               );
             } else {
               return (
-                <div key={index} className={styles.c2}>
+                isLoading ? (
+                  <LoadingSpinner key={index} />
+                ) :                <div key={index} className={styles.c2}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -126,7 +150,7 @@ function Portfolio() {
                 </div>
               );
             }
-          })}
+            } ) : <Blur/>}
 
           <h2
             className={styles.ph}
@@ -140,7 +164,9 @@ function Portfolio() {
           <div className={styles.pwork}>
             {poster.map((data, index) => {
               return (
-                <>
+                isLoading ? (
+                  <LoadingSpinner key={index} />
+                ) :    <>
                   {" "}
                   <figure key={index}>
                     <Image

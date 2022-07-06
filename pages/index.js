@@ -11,11 +11,20 @@ import Ourteam from "../components/ourteam";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 import { motion } from "framer-motion";
-// import { useEffect } from "react";
+import Blur from "../components/blur";
+import { useEffect,useState } from "react";
 
-// import LinkZZZZ from "next/link";
+
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+
+    setTimeout( ()=>{setIsLoading(false)}, 1000)
+  
+  
+  }, [])
+  
   return (
     <>
       <Head>
@@ -23,6 +32,16 @@ export default function App() {
         <meta name="viewport" content="width=device-width" />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
+      { isLoading && <motion.div  variants={{
+                  hidden: { scale: 0.8, opacity: 0 },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.1,
+                    },
+                  },
+                }}> <Blur  /></motion.div>}
       <motion.div
         className={styles.container}
         variants={{

@@ -50,7 +50,7 @@ function Footer() {
                         objectFit="contain"
                       />
                    </a>
-                    </figure>
+                    </figure>    
                     <figure className={styles.social}>
                       <a href="https://www.linkedin.com/company/69542733/">  <Image
                         src={linkedin}
