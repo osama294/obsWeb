@@ -69,6 +69,17 @@ function Header() {
               borderRadius: 30,
             }}
           >
+                 <Link href="/careers">Careers</Link>
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.1 },
+              padding: 10,
+              border: `1px solid #ffd400`,
+              borderRadius: 30,
+            }}
+          >
             <Link href="/#contact" smooth="true">
               Contact
             </Link>

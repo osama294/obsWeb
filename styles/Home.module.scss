@@ -1,3 +1,5 @@
+/** @format */
+
 $base-color: #ffd400;
 $white: #ffffff;
 $black: #000000;
@@ -226,11 +228,11 @@ $gold: #dba514;
 .detail {
   width: 290px;
   text-align: left;
-  .webm{
-    display:none;
+  .webm {
+    display: none;
   }
-  .webd{
-    display:block;
+  .webd {
+    display: block;
   }
   h4 {
     font-size: 24.72px;
@@ -667,6 +669,27 @@ $gold: #dba514;
       line-height: 45px;
     }
   }
+  .b3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 55px 0px 0px 0px;
+    width: 70%;
+    border-left: 1px solid $black;
+    h3 {
+      color: $base-color;
+      padding: 0px 0px 30px 0px;
+      font-weight: 600;
+      line-height: 45px;
+      font-size: 28px;
+    }
+    p {
+      margin: 0px 32px 0px 30px;
+      font-size: 21px;
+      line-height: 38px;
+    }
+  }
 
   .hadd {
     padding: 40px 0px 30px 0px;
@@ -678,15 +701,16 @@ $gold: #dba514;
   .email {
     margin: 0px 0px 0px 48px !important;
   }
-    .foot .b3 .socials {
-      display: flex;
-      gap: 21px;margin:0px 40px;
-      .social {
-        position: relative;
-        width: 40px;
-        height: 40px;
-      }
+  .foot .b3 .socials {
+    display: flex;
+    gap: 21px;
+    margin: 0px 40px;
+    .social {
+      position: relative;
+      width: 40px;
+      height: 40px;
     }
+  }
 }
 .footer_row {
   display: flex;
@@ -1906,12 +1930,12 @@ $gold: #dba514;
   .detail {
     width: 100px;
     text-align: center;
-.webd{
-  display:none;
-}
-.webm{
-  display:block;
-}
+    .webd {
+      display: none;
+    }
+    .webm {
+      display: block;
+    }
     h4 {
       font-size: 12px;
       line-height: 16px;
@@ -2408,7 +2432,7 @@ $gold: #dba514;
     .foot .b3 .socials {
       display: flex;
       gap: 8px;
-      margin:0px;
+      margin: 0px;
       .social {
         position: relative;
         width: 21px;
@@ -2598,26 +2622,27 @@ $gold: #dba514;
   background-color: rgba(0, 0, 0, 0.4);
 }
 @media only screen and (max-width: 450px) {
-.wrapper .portfolio  {
-  padding: 5px 0px 22px 0px;.pleft{
-    width: 156px !important;
-    height: 147px !important;
-    margin-top: 20px;
-  }}
+  .wrapper .portfolio {
+    padding: 5px 0px 22px 0px;
+    .pleft {
+      width: 156px !important;
+      height: 147px !important;
+      margin-top: 20px;
+    }
+  }
 }
 @media only screen and (max-width: 325px) {
-  .header{
-    width: calc(100% - 10px)
+  .header {
+    width: calc(100% - 10px);
   }
   .wrapper {
-    width: calc(100% - 10px)
+    width: calc(100% - 10px);
   }
-  }
+}
 
-
-  .blur{
+.blur {
   opacity: 1;
-  top:0;
+  top: 0;
   backdrop-filter: blur(5px);
   // background: rgb(255,212,0);
   // background: linear-gradient(186deg, rgba(255,212,0,1) 0%, rgba(255,212,0,1) 28%, rgba(0,0,0,1) 100%);
@@ -2626,11 +2651,134 @@ $gold: #dba514;
   position: absolute;
   background-color: #000000;
   // background: rgb(255,212,0);
-// background: linear-gradient(16deg, rgba(255,212,0,1) 26%, rgba(255,212,0,1) 34%, rgba(241,230,54,1) 45%, rgba(254,201,39,1) 55%, rgba(254,201,39,1) 66%);
+  // background: linear-gradient(16deg, rgba(255,212,0,1) 26%, rgba(255,212,0,1) 34%, rgba(241,230,54,1) 45%, rgba(254,201,39,1) 55%, rgba(254,201,39,1) 66%);
   z-index: 11111111111111111111;
   figure {
     position: relative;
     width: 100%;
     height: 100%;
   }
+}
+////////////////////////////////////////////////////////////////
+///
+///
+///
+
+.career {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .line {
+    border-top: 3px solid #ffd400;
+    width: 368px;
   }
+  .cayh {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+  }
+  .cabh {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 69px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+
+.c_card {
+  display: flex;
+  background-color: #ffd400;
+  border-radius: 55px;
+  flex-direction: column;
+  border-radius: 90px;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  .tab {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 111;
+    .arrow {
+      margin: 0px 17px 20px 17px;
+      width: 90px;
+      color: white;
+      height: 90px;
+      font-size: 90px;
+    }
+    .vertical {
+      writing-mode: vertical-lr;
+      font-family: Montserrat;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+      transform: rotate(180deg) !important;
+      margin: 134px 45px 43px 45px;
+      color: #ffffff;
+    }
+  }
+}
+
+.cd_card {
+  display: flex;
+  background-color: #ffd400;
+  border-radius: 55px;
+  border-radius: 90px;
+  height: 621px;
+  width: 467px;
+  flex-direction: row-reverse;
+  border-radius: 48px;
+  justify-content: center;
+  transition-delay: 1ms;
+  position: relative;
+  transition: ease-out;
+  align-items: flex-end;
+  .tab {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 1111;
+    flex-direction: row-reverse;
+    padding: 0px 0px 15px;
+    .arrow {
+      margin: 0px 24px 0px 0px;
+      width: 68px;
+      color: white;
+      height: 68px;
+      font-size: 61px;
+    }
+    .horizontal {
+      font-family: Montserrat;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+      color: #ffffff;
+    }
+  }
+}
+.career_row {
+  display: flex;
+  gap: 30px;
+  margin: 100px 0px;
+}
+.cardb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 48px;
+  opacity: 0.2;
+}
+.cardimg {
+  object-fit: cover !important;
+  border-radius: 48px;
+}
+.barimg {
+  border-radius: 60px;
+}

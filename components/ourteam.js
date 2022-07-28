@@ -1,9 +1,10 @@
+/** @format */
+
 import React from "react";
 import { useEffect, useState } from "react";
-import styles from "../styles/Home.module.scss";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import TeamCard from "./teamCard";
 import LoadingSpinner from "./spinner";
+import styles from "../styles/Home.module.scss";
 
 function Ourteam() {
   const [team, setTeam] = useState([]);
@@ -47,35 +48,7 @@ function Ourteam() {
               return isLoading ? (
                 <LoadingSpinner key={index} />
               ) : (
-                <motion.div
-                  key={index}
-                  className={styles.card}
-                  whileHover={{
-                    scale: 0.9999,
-                    transition: { duration: 0.1 },
-                    boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
-                    padding: 20,
-                    borderRadius: 30,
-
-                  }}
-                >
-                  <figure className={styles.picture}>
-                    <Image
-                      loader={() => {
-                        return domain + mem.url;
-                      }}
-                      src={domain + mem.url}
-                      alt="member"
-                      layout="fill"
-                      objectFit="contain"
-                      priority
-                    />
-                  </figure>
-                  <div className={styles.yc}>{index + 1}</div>
-                  <div className={styles.cn}>{mem.name}</div>
-                  <div className={styles.cl}></div>
-                  <div className={styles.position}>{mem.designation}</div>
-                </motion.div>
+                <TeamCard data={mem} />
               );
             })}
           </div>
