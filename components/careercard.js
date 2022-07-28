@@ -12,39 +12,39 @@ function Careercard({ data }) {
   const domain = "https://obstechnologia.com/webAdmin/";
   return (
     <>
-      <Link href={`/careers/${data.title}`}>
-        <motion.div
-          layout
-          transition={{ layout: { duration: 0.4, type: "spring" } }}
-          onClick={() => setShow(!show)}
-          className={show ? styles.c_card : styles.cd_card}>
-          <figure className={styles.cardb}>
-            <Image
-              loader={() => {
-                return domain + data.url;
-              }}
-              src={domain + data.url}
-              alt='member'
-              layout='fill'
-              objectFit='cover'
-              priority
-              className={show ? styles.barimg : styles.cardimg}
-            />
-          </figure>{" "}
-          {/* <motion.div Layout className={show ? styles.c_card : styles.cd_card}> */}
-          <motion.div className={styles.tab}>
-            <motion.p
-              layout='position'
-              className={show ? styles.vertical : styles.horizontal}>
-              {/* <motion.p className={show ? styles.vertical : styles.horizontal}> */}
-              {data.title}
-            </motion.p>
+      <motion.div
+        layout
+        transition={{ layout: { duration: 0.4, type: "spring" } }}
+        onClick={() => setShow(!show)}
+        className={show ? styles.c_card : styles.cd_card}>
+        <figure className={styles.cardb}>
+          <Image
+            loader={() => {
+              return domain + data.url;
+            }}
+            src={domain + data.url}
+            alt='member'
+            layout='fill'
+            objectFit='cover'
+            priority
+            className={show ? styles.barimg : styles.cardimg}
+          />
+        </figure>{" "}
+        {/* <motion.div Layout className={show ? styles.c_card : styles.cd_card}> */}
+        <motion.div className={styles.tab}>
+          <motion.p
+            layout='position'
+            className={show ? styles.vertical : styles.horizontal}>
+            {/* <motion.p className={show ? styles.vertical : styles.horizontal}> */}
+            {data.title}
+          </motion.p>
+          <Link href={`/careers/${data.title}`}>
             <motion.div className={styles.arrow} layout='position'>
               <BsArrowUpCircleFill />
             </motion.div>
-          </motion.div>
+          </Link>
         </motion.div>
-      </Link>
+      </motion.div>
     </>
   );
 }

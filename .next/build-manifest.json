@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/careers.js"
-    ],
-    "/careers/[jobid]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/careers/[jobid].js"
     ]
   },
   "ampFirstPages": []
