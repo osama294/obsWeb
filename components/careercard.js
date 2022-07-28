@@ -38,11 +38,9 @@ function Careercard({ data }) {
             {/* <motion.p className={show ? styles.vertical : styles.horizontal}> */}
             {data.title}
           </motion.p>
-          <Link href={`/careers/${data.title}`}>
-            <motion.div className={styles.arrow} layout='position'>
-              <BsArrowUpCircleFill />
-            </motion.div>
-          </Link>
+          <motion.div className={styles.arrow} layout='position'>
+            <BsArrowUpCircleFill />
+          </motion.div>
         </motion.div>
       </motion.div>
     </>
