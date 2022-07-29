@@ -16,6 +16,7 @@ function TeamCard(props) {
   return (
     <>
       <motion.div
+        key={props.data.id}
         className={styles.card}
         whileHover={{
           scale: 0.9999,

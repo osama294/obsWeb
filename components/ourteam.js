@@ -48,7 +48,7 @@ function Ourteam() {
               return isLoading ? (
                 <LoadingSpinner key={index} />
               ) : (
-                <TeamCard data={mem} />
+                <TeamCard data={mem} key={index} />
               );
             })}
           </div>

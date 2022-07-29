@@ -5,23 +5,51 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import styles from "../../styles/Home.module.scss";
 import Careercard from "../../components/careercard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 
-export async function getServerSideProps() {
-  const res = await fetch("https://obstechnologia.com/webAdmin/api/jobshow");
-  const data = await res.json();
+// export async function getServerSideProps() {
+//   const res = await fetch("https://obstechnologia.com/webAdmin/api/jobshow");
 
-  return {
-    props: {
-      jobs: data,
-    },
-  };
-}
+//   try {
+//     const data = await res.json();
+//   } catch (error) {
+//     console.log("BREAKPOINT", error);
+//   }
+
+//   const data = await res.json();
+
+//   return {
+//     props: {
+//       jobs: data,
+//     },
+//   };
+// }
 
 function Careers({ jobs }) {
+  const [job, setJob] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
-    console.log("=====>>", jobs);
+    setIsLoading(true);
+    fetch("https://obstechnologia.com/webAdmin/api/jobshow")
+      .then((res) => {
+        setIsLoading(true);
+        if (res.status == 200) {
+          return res.json();
+        }
+      })
+      .then((res) => {
+        console.log("&&&&&&&&&&&&&", res);
+        if (res?.length > 0) {
+          const job = res;
+          setJob(job);
+          setIsLoading(false);
+        } else {
+          return;
+        }
+      });
+    console.log("EEEEEE", job);
   }, []);
 
   return (
@@ -37,7 +65,7 @@ function Careers({ jobs }) {
               out our recent job openings!
             </p>
             <div className={styles.career_row}>
-              {jobs?.map((job, index) => {
+              {job?.map((job, index) => {
                 return <Careercard data={job} key={index} />;
               })}
             </div>
