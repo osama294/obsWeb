@@ -6,6 +6,7 @@ import Footer from "../../components/footer";
 import styles from "../../styles/Home.module.scss";
 import Careercard from "../../components/careercard";
 import { useEffect } from "react";
+import ErrorBoundary from "../../components/ErrorBoundary";
 
 export async function getServerSideProps() {
   const res = await fetch("https://obstechnologia.com/webAdmin/api/jobshow");
@@ -21,28 +22,30 @@ export async function getServerSideProps() {
 function Careers({ jobs }) {
   useEffect(() => {
     console.log("=====>>", jobs);
-  }, []);
+  }, [jobs]);
 
   return (
     <>
-      <Header />
-      <div className={styles.wrapper}>
-        <div className={styles.career}>
-          <p className={styles.cayh}>Careers at OBS Technologia</p>
-          <div className={styles.line}></div>
-          <p className={styles.cabh}>
-            We are always looking out for Talented Individuals.<br></br> Check
-            out our recent job openings!
-          </p>
-          <div className={styles.career_row}>
-            {jobs?.map((job, index) => {
-              return <Careercard data={job} key={index} />;
-            })}
+      <ErrorBoundary>
+        <Header />
+        <div className={styles.wrapper}>
+          <div className={styles.career}>
+            <p className={styles.cayh}>Careers at OBS Technologia</p>
+            <div className={styles.line}></div>
+            <p className={styles.cabh}>
+              We are always looking out for Talented Individuals.<br></br> Check
+              out our recent job openings!
+            </p>
+            <div className={styles.career_row}>
+              {jobs?.map((job, index) => {
+                return <Careercard data={job} key={index} />;
+              })}
+            </div>
           </div>
         </div>
-      </div>
 
-      <Footer />
+        <Footer />
+      </ErrorBoundary>
     </>
   );
 }

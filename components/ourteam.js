@@ -21,7 +21,7 @@ function Ourteam() {
       })
       .then((res) => {
         console.log("&&&&&&&&&&&&&", res);
-        if (res.length > 0) {
+        if (res?.length > 0) {
           const team = res;
           setTeam(team);
           setIsLoading(false);
@@ -30,7 +30,7 @@ function Ourteam() {
         }
       });
     console.log("EEEEEE", team);
-  }, []);
+  }, [team]);
   const domain = "https://obstechnologia.com/webAdmin/";
   return (
     <>
