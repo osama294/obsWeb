@@ -30,7 +30,7 @@ function Ourteam() {
         }
       });
     console.log("EEEEEE", team);
-  }, [team]);
+  }, []);
   const domain = "https://obstechnologia.com/webAdmin/";
   return (
     <>

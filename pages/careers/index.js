@@ -22,7 +22,7 @@ export async function getServerSideProps() {
 function Careers({ jobs }) {
   useEffect(() => {
     console.log("=====>>", jobs);
-  }, [jobs]);
+  }, []);
 
   return (
     <>
