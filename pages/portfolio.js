@@ -36,7 +36,7 @@ function Portfolio() {
 
   return (
     <>
-     { isLoading && <motion.div  variants={{
+     { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {
                     scale: 1,
@@ -45,7 +45,7 @@ function Portfolio() {
                       delay: 0.1,
                     },
                   },
-                }}><Blur/></motion.div>  } 
+                }}><Blur/></motion.div>  :
      <motion.div
         className={styles.container}
         variants={{
@@ -186,7 +186,7 @@ function Portfolio() {
           </div>
         </div>
         <Footer />
-      </motion.div>
+      </motion.div>}
     </>
   );
 }

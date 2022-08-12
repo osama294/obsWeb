@@ -32,7 +32,7 @@ export default function App() {
         <meta name="viewport" content="width=device-width" />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
-      { isLoading && <motion.div  variants={{
+      { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {
                     scale: 1,
@@ -41,8 +41,8 @@ export default function App() {
                       delay: 0.1,
                     },
                   },
-                }}> <Blur  /></motion.div>}
-      <motion.div
+                }}> <Blur  /></motion.div>
+      :<motion.div
         className={styles.container}
         variants={{
           hidden: { scale: 0.999999, opacity: 0 },
@@ -65,7 +65,7 @@ export default function App() {
         <Contact />
         <Footer />
         {/* <Testimonials /> */}
-      </motion.div>
+      </motion.div>}
     </>
   );
 }
