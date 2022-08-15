@@ -40,7 +40,7 @@ function Ourteam() {
             {" "}
             <p className={styles.yhc}>MEET OUR TALENTED TEAM</p>
             <p className={styles.bhc}>
-              We are a family of 20+ talented individuals.
+              We are a group of talented individuals.
             </p>
           </div>
           <div className={styles.row_container}>

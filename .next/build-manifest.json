@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/careers": [
+    "/portfolio": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/careers.js"
-    ],
-    "/careers/forum": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/careers/forum.js"
     ]
   },
   "ampFirstPages": []
