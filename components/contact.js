@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
@@ -58,7 +60,7 @@ function Contact() {
   return (
     <>
       <motion.div className={styles.contact_wrapper}>
-        <div className={styles.wrapper} id="contact">
+        <div className={styles.wrapper} id='contact'>
           <div className={styles.contl}>
             <div
               className={styles.contact}
@@ -68,15 +70,14 @@ function Contact() {
                 boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
                 // padding: 20,
                 borderRadius: 30,
-              }}
-            >
+              }}>
               <figure className={styles.waves}>
                 <Image
                   src={wave}
-                  alt="quote"
-                  layout="fill"
-                  objectFit="contain"
-                  smooth="true"
+                  alt='quote'
+                  layout='fill'
+                  objectFit='contain'
+                  smooth='true'
                 />
               </figure>
               <div className={styles.contact_us}>
@@ -86,10 +87,10 @@ function Contact() {
                   <form>
                     <div className={styles.row}>
                       <motion.input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Name"
+                        type='text'
+                        name='name'
+                        id='name'
+                        placeholder='Name'
                         value={inputs.name}
                         onChange={handleChange}
                         whileHover={{
@@ -99,10 +100,10 @@ function Contact() {
                         }}
                       />
                       <motion.input
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
+                        type='text'
+                        name='email'
+                        id='email'
+                        placeholder='Email'
                         value={inputs.email}
                         onChange={handleChange}
                         whileHover={{
@@ -114,10 +115,10 @@ function Contact() {
                     </div>
 
                     <motion.textarea
-                      type="text"
-                      name="message"
-                      id="message"
-                      placeholder="Message"
+                      type='text'
+                      name='message'
+                      id='message'
+                      placeholder='Message'
                       className={styles.message}
                       value={inputs.message}
                       onChange={handleChange}
@@ -135,8 +136,7 @@ function Contact() {
                       scale: 1.1,
                       transition: { duration: 0.1 },
                       boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
-                    }}
-                  >
+                    }}>
                     Send
                   </motion.button>
                 </div>
@@ -144,9 +144,9 @@ function Contact() {
               <figure className={styles.contact_cell}>
                 <Image
                   src={phone}
-                  alt="quote"
-                  layout="fill"
-                  objectFit="contain"
+                  alt='quote'
+                  layout='fill'
+                  objectFit='contain'
                 />
               </figure>
             </div>

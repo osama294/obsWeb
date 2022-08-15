@@ -26,7 +26,7 @@ import ErrorBoundary from "../../components/ErrorBoundary";
 //   };
 // }
 
-function Careers({ jobs }) {
+function Careers() {
   const [job, setJob] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 

@@ -2688,6 +2688,92 @@ $gold: #dba514;
     letter-spacing: 0em;
     text-align: center;
   }
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    width: 90%;
+    align-items: stretch;
+    .fieldset {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+    .labels {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    .upload {
+      width: 100%;
+      background: rgba(217, 217, 217, 0.5);
+      padding: 114px 0px 114px 35%;
+      border: 2px solid #000000;
+      border-radius: 10px;
+    }
+    .name {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 34px;
+    }
+    .labels:before {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 600;
+      content: "* ";
+      color: red;
+    }
+    .inputs {
+      flex-grow: 1;
+      flex-shrink: 1;
+      align-self: stretch;
+      height: 83px;
+      margin: 0;
+      padding: 27px 46px;
+      font-size: 29px;
+      line-height: 29px;
+      font-weight: 500;
+      caret-color: #ffd400;
+      margin-bottom: 53px;
+      background: rgba(217, 217, 217, 0.5);
+      border: 2px solid #000000;
+      border-radius: 10px;
+    }
+    .form_desc {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .form_title {
+        margin: 0;
+        font-size: 40px;
+        line-height: 69px;
+        font-weight: 600;
+      }
+      .clear {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+        color: #ffd400;
+        p {
+          color: black;
+          margin: 0;
+          font-size: 28px;
+          line-height: 69px;
+        }
+      }
+    }
+    .hr2 {
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      margin: 13px 0px 80px 0px;
+    }
+  }
 }
 
 .c_card {
@@ -2738,31 +2824,36 @@ $gold: #dba514;
   position: relative;
   transition: ease-out;
   align-items: flex-end;
-  .tab {
-    width: 100%;
-    justify-content: center;
+  .tab2 {
+    justify-content: space-around;
     align-items: center;
     display: flex;
     position: relative;
     z-index: 1111;
     flex-direction: row-reverse;
-    padding: 0px 0px 15px;
-    .arrow {
-      margin: 0px 24px 0px 0px;
-      width: 68px;
-      color: white;
-      height: 68px;
-      font-size: 61px;
-    }
-    .horizontal {
-      font-family: Montserrat;
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 34px;
-      color: #ffffff;
-    }
+    background: white;
+    width: 90%;
+    border-radius: 66px;
+    color: #000000;
+    padding: 10px;
+    margin: 20px;
+  }
+  .arrow2 {
+    // margin: 0px 24px 0px 0px;
+    width: 61px;
+    color: black !important;
+    height: 61px;
+    // transform: rotate(90deg) !important;
+    font-size: 55px;
+  }
+  .horizontal {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 34px;
   }
 }
+
 .career_row {
   display: flex;
   gap: 30px;
@@ -2781,4 +2872,112 @@ $gold: #dba514;
 }
 .barimg {
   border-radius: 60px;
+}
+
+.heading {
+  text-align: center;
+  margin: 70px 0px 100px 0px;
+}
+.heading > .title {
+  margin: 10px auto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+}
+.hr1 {
+  width: 368px;
+  border: 2px solid #ffd400;
+  background-color: #ffd400;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.desc {
+  margin: 15px auto;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 69px;
+}
+.myFont {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 69px;
+  color: #000000;
+}
+.role_info,
+.role_info > .title,
+.role_resp,
+.role_resp > .title,
+.role_desc {
+  font-size: 40px;
+  line-height: 69px;
+  margin-bottom: 60px;
+}
+.role_resp > .title {
+  margin-bottom: 50px;
+}
+.submit {
+  border-radius: 40px;
+  word-wrap: break-word;
+}
+.submit_btn_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (max-width: 1550px) {
+  .heading {
+    text-align: center;
+    margin: 40px 0px 30px 0px;
+  }
+  .heading > .title {
+    margin: 10px auto;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+  .hr1 {
+    width: 368px;
+    border: 2px solid #ffd400;
+    background-color: #ffd400;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .desc {
+    margin: 15px auto;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .myFont {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+  }
+  .role_info,
+  .role_info > .title,
+  .role_resp,
+  .role_resp > .title,
+  .role_desc {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  .role_resp > .title {
+    margin-bottom: 50px;
+  }
+  .submit {
+    border-radius: 40px;
+    word-wrap: break-word;
+  }
+  .submit_btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
