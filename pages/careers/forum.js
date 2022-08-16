@@ -7,12 +7,14 @@ import Input from "../../components/Input";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { useState } from "react";
 function Forum() {
+  const [response, setResponse] = useState("");
+
   const [inputs, setInputs] = useState({
     name: "",
-    lname: "",
+    lastname: "",
     email: "",
     phone: "",
-    file: "",
+    // cv: "",
   });
   const handleChange = (e) => {
     setInputs({
@@ -32,18 +34,18 @@ function Forum() {
       // }, 5000);
       return;
     } else {
-      // const requestOptions = {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(inputs),
-      // };
-      // fetch("https://obstechnologia.com/webAdmin/api/contactus", requestOptions)
-      //   .then((response) => response.json())
-      //   .then((res) => {
-      //     console.log(res);
-      //     setResponse(res.message);
-      //     console.log(res.message);
-      //   });
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(inputs),
+      };
+      fetch("https://obstechnologia.com/webAdmin/api/apply_job", requestOptions)
+        .then((response) => response.json())
+        .then((res) => {
+          console.log(res);
+          setResponse(res.message);
+          console.log(res.message);
+        });
       // setShow(true);
       // setTimeout(function () {
       //   setShow(false);
@@ -71,9 +73,11 @@ function Forum() {
                     First Name
                   </label>
                   <input
+                    type='text'
+                    name='name'
                     id='name'
                     className={styles.inputs}
-                    type='text'
+                    placeholder='Name'
                     value={inputs.name}
                     onChange={handleChange}
                   />
@@ -83,23 +87,27 @@ function Forum() {
                     Last Name
                   </label>
                   <input
+                    type='text'
+                    name='lastname'
                     id='lname'
                     className={styles.inputs}
-                    type='text'
-                    value={inputs.lname}
+                    placeholder='Last Name'
+                    value={inputs.lastname}
                     onChange={handleChange}
                   />
                 </div>
                 {/* <input type='text' value='Last Name' className={styles.lname} /> */}
               </div>
               <div className={styles.fieldset}>
-                <label htmlFor='name' className={styles.labels}>
+                <label htmlFor='email' className={styles.labels}>
                   Email
                 </label>
                 <input
+                  type='text'
+                  name='email'
                   id='email'
                   className={styles.inputs}
-                  type='text'
+                  placeholder='Email'
                   value={inputs.email}
                   onChange={handleChange}
                 />
@@ -109,9 +117,11 @@ function Forum() {
                   Phone
                 </label>
                 <input
+                  type='text'
+                  name='phone'
                   id='phone'
                   className={styles.inputs}
-                  type='text'
+                  placeholder='Phone'
                   value={inputs.phone}
                   onChange={handleChange}
                 />
@@ -129,25 +139,29 @@ function Forum() {
 
               <input type='file' value='Resumes' className={styles.upload} />*/}
               <div className={styles.fieldset}>
-                <label htmlFor='name' className={styles.labels}>
-                  name
+                <label htmlFor='resume' className={styles.labels}>
+                  Resume
                 </label>
                 <input
-                  id='file'
-                  className={styles.upload}
                   type='file'
-                  value={inputs.file}
+                  name='cv'
+                  id='cv'
+                  className={styles.upload}
+                  placeholder='Resume'
+                  value={inputs.cv}
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <Input
+            <button
               type='submit'
               role='button'
               id='submit-btn'
               value='Submit Application'
-              onClick={handleSubmit}
-            />
+              className={styles.buttons}
+              onClick={handleSubmit}>
+              Submit
+            </button>
           </div>
         </div>
       </div>

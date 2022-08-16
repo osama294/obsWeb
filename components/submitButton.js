@@ -10,14 +10,16 @@ export default function SubmitButtom(props) {
     color: "white",
     fontSize: "24px",
     lineHeight: "29.6px",
+    cursor: "pointer",
     borderRadius: "50px",
+    border: "none",
   };
 
   return (
-    <div className={styles.submit_btn_container}>
-      <p className='submit' style={submitStyle}>
+    <button className={styles.submit_btn_container}>
+      <p className={styles.submit} style={submitStyle}>
         {props.value}
       </p>
-    </div>
+    </button>
   );
 }
