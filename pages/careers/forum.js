@@ -5,10 +5,11 @@ import Footer from "../../components/footer";
 import styles from "../../styles/Home.module.scss";
 import Input from "../../components/Input";
 import { RiDeleteBin7Line } from "react-icons/ri";
+import Modal from "../../components/modal";
 import { useState } from "react";
 function Forum() {
-  const [response, setResponse] = useState("");
-
+  const [response, setResponse] = useState(""); 
+   const [show, setShow] = useState(false);
   const [inputs, setInputs] = useState({
     name: "",
     lastname: "",
@@ -26,12 +27,12 @@ function Forum() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == "" || inputs.message == "") {
-      // setShow(true);
-      // setResponse("Enter Required Details");
-      // setTimeout(function () {
-      //   setShow(false);
-      // }, 5000);
+    if (inputs.name == "" || inputs.email == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "") {
+      setShow(true);
+      setResponse("Enter Required Details");
+      setTimeout(function () {
+        setShow(false);
+      }, 5000);
       return;
     } else {
       const requestOptions = {
@@ -40,16 +41,17 @@ function Forum() {
         body: JSON.stringify(inputs),
       };
       fetch("https://obstechnologia.com/webAdmin/api/apply_job", requestOptions)
+      
         .then((response) => response.json())
         .then((res) => {
           console.log(res);
-          setResponse(res.message);
-          console.log(res.message);
+          setResponse(res);
+          console.log(res);
         });
-      // setShow(true);
-      // setTimeout(function () {
-      //   setShow(false);
-      // }, 1000);
+      setShow(true);
+      setTimeout(function () {
+        setShow(false);
+      }, 1000);
     }
   };
   return (
@@ -60,7 +62,9 @@ function Forum() {
           <div className={styles.form}>
             <div className={styles.form_desc}>
               <h3 className={styles.form_title}>Personal Information</h3>
-              <div className={styles.clear}>
+              <div className={styles.clear} onClick={()=>{
+     setInputs({name:'',lastname:'',email:'',phone:'',cv:''}) 
+              }}>
                 <RiDeleteBin7Line size={38} />
                 <p>Clear form</p>
               </div>
@@ -165,6 +169,7 @@ function Forum() {
           </div>
         </div>
       </div>
+      {show == true && <Modal message={response} />}
       <Footer />
     </>
   );

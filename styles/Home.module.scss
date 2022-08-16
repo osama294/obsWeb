@@ -1122,6 +1122,9 @@ $gold: #dba514;
 
 @media only screen and (max-width: 1200px) {
   // header
+  .inputs{
+width: 100% !important;
+  }
   .header {
     margin: 20px auto !important;
   }
@@ -2606,7 +2609,7 @@ $gold: #dba514;
   padding: 2em;
   font-size: 28px;
   min-width: 20em;
-  max-width: 70%;
+  max-width: 70%;z-index: 111111111111111111111111111111;
   color: $base-color;
   background-color: #fff;
   border-radius: 1em;
@@ -2620,6 +2623,7 @@ $gold: #dba514;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 111111111111111111;
 }
 @media only screen and (max-width: 450px) {
   .wrapper .portfolio {
