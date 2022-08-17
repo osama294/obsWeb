@@ -31,7 +31,7 @@ function Portfolio() {
       });
       setTimeout(()=> {
         console.log("2222222222222222222")
-        setIsLoading(false)}, 2000)
+        setIsLoading(false)}, 1000)
   }, []);
 
   return (
