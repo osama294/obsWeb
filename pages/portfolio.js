@@ -46,6 +46,8 @@ function Portfolio() {
                     },
                   },
                 }}><Blur/></motion.div>  :
+
+                discription.length != 0 ? 
      <motion.div
         className={styles.container}
         variants={{
@@ -64,12 +66,11 @@ function Portfolio() {
           <h2 className={styles.ph}>SELECTED PROJECTS</h2>
           <div className={styles.phl}></div>
           <p className={styles.text}>Take a look at some of our best work!</p>
-          { discription.length != 0 ?   discription.map((data, index) => {
+          {   discription.map((data, index) => {
             if (data.id % 2 != 0) {
-              return (
-             isLoading ? (
-              <LoadingSpinner key={index} />
-            ) :   <div key={index} className={styles.c1}>
+              return (<>
+             
+             <div key={index} className={styles.c1}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -106,12 +107,11 @@ function Portfolio() {
                     </figure>
                   </motion.div>
                 </div>
+                </>
               );
             } else {
-              return (
-                isLoading ? (
-                  <LoadingSpinner key={index} />
-                ) :                <div key={index} className={styles.c2}>
+              return (<>
+                          <div key={index} className={styles.c2}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -148,9 +148,10 @@ function Portfolio() {
                     </figure>
                   </motion.div>
                 </div>
+                 </>
               );
             }
-            } ) : <Blur/>}
+            } ) }
 
           <h2
             className={styles.ph}
@@ -164,9 +165,7 @@ function Portfolio() {
           <div className={styles.pwork}>
             {poster.map((data, index) => {
               return (
-                isLoading ? (
-                  <LoadingSpinner key={index} />
-                ) :    <>
+               <>
                   {" "}
                   <figure key={index}>
                     <Image
@@ -186,7 +185,11 @@ function Portfolio() {
           </div>
         </div>
         <Footer />
-      </motion.div>}
+      </motion.div>
+      :<>hellooo siaf</>
+      
+      
+      }
     </>
   );
 }

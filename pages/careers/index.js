@@ -7,7 +7,8 @@ import styles from "../../styles/Home.module.scss";
 import Careercard from "../../components/careercard";
 import { useEffect, useState } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
-
+import Blur from "../../components/blur";
+import { motion } from "framer-motion";
 
 
 function Careers() {
@@ -33,12 +34,24 @@ function Careers() {
           return;
         }
       });
+      setTimeout(()=> {
+        console.log("2222222222222222222")
+        setIsLoading(false)}, 2000)
     console.log("EEEEEE", job);
   }, []);
 
   return (
     <>
-      <ErrorBoundary>
+  { isLoading ?<motion.div  variants={{
+                  hidden: { scale: 0.8, opacity: 0 },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.1,
+                    },
+                  },
+                }}><Blur/></motion.div>   :<ErrorBoundary>
       <Header />
       <div className={styles.wrapper}>
         <div className={styles.career}>
@@ -57,7 +70,7 @@ function Careers() {
       </div>
 
       <Footer />
-    </ErrorBoundary>
+    </ErrorBoundary> }
     </>
   );
 }
