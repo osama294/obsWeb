@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/Home.module.scss";
 
 function TeamCard(props) {
+  var i = 0;
   useEffect(() => {
     console.log(">>>>>>>", props);
     console.log(">>>>>>>");
@@ -37,7 +38,7 @@ function TeamCard(props) {
             priority
           />
         </figure>
-        <div className={styles.yc}>{props.data.id}</div>
+        <div className={styles.yc}>{i + 1}</div>
         <div className={styles.cn}>{props.data.name}</div>
         <div className={styles.cl}></div>
         <div className={styles.position}>{props.data.designation}</div>
