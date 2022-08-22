@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import LoadingSpinner from "../components/spinner";
 import Footer from "../components/footer";
+import error from "../public/err.png";
 import Blur from "../components/blur";
 function Portfolio() {
   const [discription, setDiscription] = useState([]);
@@ -186,7 +187,11 @@ function Portfolio() {
         </div>
         <Footer />
       </motion.div>
-      :<>hellooo siaf</>
+      :<><Header/>
+                       <figure className={styles.center}>
+                       <Image src={error} alt="web" width={450} height={340} />
+                    </figure>
+      </>
       
       
       }

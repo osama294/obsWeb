@@ -28,6 +28,14 @@ function ReactNativeDeveloper() {
     "Work with Redux architecture to improve performance of the websites/mobile apps",
     "Coordinate with the cross-functional teams to build apps in stipulated time/budget.",
   ];
+  const submitStyle = {
+    padding: "1.7% 16.3%",
+    backgroundColor: "black",
+    color: "white",
+    fontSize: "24px",
+    lineHeight: "29.6px",
+    borderRadius: "50px",
+  };
 
   return (
     <>
@@ -48,7 +56,11 @@ function ReactNativeDeveloper() {
             location='I-8 Markaz Islamabad'
           />
           <Link href='/careers/forum'>
-            <SubmitButtom value='Apply for this Job' />
+            <div className={styles.submit_btn_container}>
+              <p className='submit' style={submitStyle}>
+                Apply for this Job
+              </p>
+            </div>
           </Link>
         </div>
       </div>

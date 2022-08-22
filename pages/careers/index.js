@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import Blur from "../../components/blur";
 import { motion } from "framer-motion";
+import error from "../../public/err.png"
+import Image from "next/image";
 
 
 function Careers() {
@@ -42,7 +44,7 @@ function Careers() {
 
   return (
     <>
-  { isLoading ?<motion.div  variants={{
+  { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {
                     scale: 1,
@@ -51,7 +53,9 @@ function Careers() {
                       delay: 0.1,
                     },
                   },
-                }}><Blur/></motion.div>   :<ErrorBoundary>
+                }}><Blur/></motion.div>   :
+                
+                job.length != 0 ? <ErrorBoundary>
       <Header />
       <div className={styles.wrapper}>
         <div className={styles.career}>
@@ -70,7 +74,13 @@ function Careers() {
       </div>
 
       <Footer />
-    </ErrorBoundary> }
+    </ErrorBoundary> :
+    <><Header/>
+    <figure className={styles.center}>
+    <Image src={error} alt="web" width={450} height={340} />
+ </figure>
+</>
+    }
     </>
   );
 }

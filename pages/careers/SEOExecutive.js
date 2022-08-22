@@ -33,6 +33,14 @@ function SEOExecutive() {
     "In-depth understanding of the entire web development process (design, development and deployment)",
     "BSc degree in Computer Science or relevant field",
   ];
+  const submitStyle = {
+    padding: "1.7% 16.3%",
+    backgroundColor: "black",
+    color: "white",
+    fontSize: "24px",
+    lineHeight: "29.6px",
+    borderRadius: "50px",
+  };
 
   return (
     <>
@@ -52,8 +60,12 @@ function SEOExecutive() {
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'
           />
-          <Link href='/careers/forum'>
-            <SubmitButtom value='Apply for this Job' />
+       <Link href='/careers/forum'>
+            <div className={styles.submit_btn_container}>
+              <p className='submit' style={submitStyle}>
+                Apply for this Job
+              </p>
+            </div>
           </Link>
         </div>
       </div>

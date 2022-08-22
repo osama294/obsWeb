@@ -28,6 +28,14 @@ function GraphicDesigner() {
     "A candidate with working knowledge of premiere pro would be preferred.",
     "You should have excellent communication and managing skills.",
   ];
+  const submitStyle = {
+    padding: "1.7% 16.3%",
+    backgroundColor: "black",
+    color: "white",
+    fontSize: "24px",
+    lineHeight: "29.6px",
+    borderRadius: "50px",
+  };
 
   return (
     <>
@@ -47,8 +55,12 @@ function GraphicDesigner() {
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'
           />
-          <Link href='/careers/forum'>
-            <SubmitButtom value='Apply for this Job' />
+         <Link href='/careers/forum'>
+            <div className={styles.submit_btn_container}>
+              <p className='submit' style={submitStyle}>
+                Apply for this Job
+              </p>
+            </div>
           </Link>
         </div>
       </div>
