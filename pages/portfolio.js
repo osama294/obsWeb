@@ -17,7 +17,7 @@ function Portfolio() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://obstechnologia.com/webAdmin/api/portshow")
+    fetch("http://globaltechnologia.org/webAdmin/api/portshow")
       .then((res) => {
         setIsLoading(true)
         return res.json();
