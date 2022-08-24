@@ -12,7 +12,7 @@ function Portfolio() {
   const [discription, setDiscription] = useState([]);
   const [poster, setPoster] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const domain = "https://obstechnologia.com/webAdmin/";
+  const domain = "http://globaltechnologia.org/webAdmin/";
   // const poster = [];
 
   useEffect(() => {
