@@ -13,7 +13,7 @@ function TeamCard(props) {
     console.log(">>>>>>>", props);
     console.log(">>>>>>>");
   }, []);
-  const domain = "https://obstechnologia.com/webAdmin/";
+  const domain = "http://globaltechnologia.org/webAdmin/";
   return (
     <>
       <motion.div
