@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Careercard({ data }) {
   const [show, setShow] = useState(true);
-  const domain = "https://obstechnologia.com/webAdmin/";
+  const domain = "http://globaltechnologia.org/webAdmin/";
   return (
     <>
       <motion.div
