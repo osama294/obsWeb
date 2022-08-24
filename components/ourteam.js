@@ -12,7 +12,7 @@ function Ourteam() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://obstechnologia.com/webAdmin/api/teamshow")
+  fetch("http://globaltechnologia.org//webAdmin/api/teamshow")
       .then((res) => {
         setIsLoading(true);
         if (res.status == 200) {
