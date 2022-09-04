@@ -40,7 +40,7 @@ function Forum() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(inputs),
       };
-      fetch("http://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
+      fetch("https://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
       
         .then((response) => response.json())
         .then((res) => {
