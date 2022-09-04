@@ -45,7 +45,7 @@ function Contact() {
         body: JSON.stringify(inputs),
       };
 
-      fetch("http://globaltechnologia.org/webAdmin/api/contactus", requestOptions)
+      fetch("https://globaltechnologia.org/webAdmin/api/contactus", requestOptions)
         .then((response) => response.json())
         .then((res) => {
           console.log(res);
