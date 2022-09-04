@@ -19,7 +19,7 @@ function Careers() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://globaltechnologia.org/webAdmin/api/jobshow")
+    fetch("https://globaltechnologia.org/webAdmin/api/jobshow")
   
       .then((res) => {
         setIsLoading(true);
