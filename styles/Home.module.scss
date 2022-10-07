@@ -7,7 +7,7 @@ $bg-color: #dba514;
 $gold: #dba514;
 .container {
   font-family: "Montserrat";
-  max-width: 100%;
+  // max-width: 90%;
   margin: 0 auto;
 }
 
@@ -16,11 +16,11 @@ $gold: #dba514;
 .header {
   .hlogo {
     position: relative;
-    width: 185px;
-    height: 105px;
+    width: 125px;
+    height: 95px;
   }
   margin: 40px auto;
-  width: 95%;
+  width: 90%;
   // margin: 42px 194px 0px 193px;
   max-width: 1920px;
   display: flex;
@@ -28,17 +28,17 @@ $gold: #dba514;
   align-items: center;
   li {
     list-style-type: none;
-    font-size: 24px;
+    font-size: 18px;
   }
   ul {
     display: flex;
     color: $base-color;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     .btn {
       background-color: $base-color;
-      padding: 14px 30px 14px 29px;
+      padding: 14px 23px 14px 22px;
       color: $white;
       border-radius: 40px;
     }
@@ -61,10 +61,8 @@ $gold: #dba514;
 // }
 .wrapper {
   max-width: 1920px;
-  // margin: 0px 192px 0px 193px;
-
   position: relative;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -91,8 +89,8 @@ $gold: #dba514;
 .banner {
   max-width: 1920px;
   // margin: 0px 192px 0px 193px;
-  height: 1080px;
-  max-height: 890px;
+  height: 980px;
+  max-height: 790px;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -108,15 +106,15 @@ $gold: #dba514;
       padding: 25px 0px 0px 0px;
     }
     padding: 0px 0 30px;
-    width: 52%;
+    width: 36%;
     color: $white;
     p {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 600;
       line-height: 95px;
     }
     h2 {
-      font-size: 72px;
+      font-size: 64px;
       font-weight: 800;
     }
   }
@@ -125,11 +123,11 @@ $gold: #dba514;
   top: 0;
   width: 100%;
   max-height: 1080px !important;
-  height: 1080px;
+  height: 980px;
   position: absolute;
   z-index: -1;
   opacity: 0.8;
-  height: 1080px;
+  height: 980px;
   background-color: #000000;
 }
 .black {
@@ -137,7 +135,7 @@ $gold: #dba514;
   width: 100%;
   max-height: 1080px;
   position: absolute;
-  height: 1080px;
+  height: 980px;
   z-index: -12;
   opacity: 0.8;
   background-color: #000000;
@@ -149,7 +147,7 @@ $gold: #dba514;
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 0px 0px -6px 0px;
+  margin: 0px 0px -16px 0px;
 }
 .br {
   position: relative;
@@ -165,13 +163,13 @@ $gold: #dba514;
   width: 100%;
   justify-content: center;
   text-align: center;
-  margin: 102px 0px 245px 0px;
+  margin: 102px 0px 285px 0px;
   .yh {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 39.01px;
     color: $base-color;
-    padding-bottom: 30px;
+    padding-bottom: 8px;
   }
   .bh1 {
     display: none;
@@ -179,9 +177,9 @@ $gold: #dba514;
   .bh {
     font-weight: 600;
     margin: 0 auto;
-    width: 70%;
-    font-size: 48px;
-    line-height: 69px;
+    width: 50%;
+    font-size: 38px;
+    line-height: 48px;
     color: $black;
     padding-bottom: 54px;
   }
@@ -255,26 +253,27 @@ $gold: #dba514;
   margin: 102px 0px 0px 0px;
   .yh {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 39.01px;
     color: $base-color;
-    padding-bottom: 30px;
+    padding-bottom: 8px;
   }
   .bh {
     font-weight: 600;
     margin: 0 auto;
-    width: 925px;
-    font-size: 48px;
-    line-height: 69px;
+    width: 600px;
+    font-size: 38px;
+    line-height: 48px;
     color: $black;
-    padding-bottom: 70px;
+    padding-bottom: 45px;
   }
   .wrwp {
     font-family: "Montserrat";
     font-weight: 400;
-    line-height: 45px;
-    font-size: 24px;
+    line-height: 38px;
+    font-size: 18px;
     text-align: center;
+    width: 85.5%;
     color: $black;
     margin: 0 auto;
     padding: 0px 0px 70px 0px;
@@ -288,9 +287,9 @@ $gold: #dba514;
   color: $bg-color;
   h2 {
     text-align: center;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 600;
-    line-height: 75px;
+    line-height: 48px;
     padding: 241px 0px 240px 0px;
     margin: 0px auto;
     width: 82%;

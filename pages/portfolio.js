@@ -24,9 +24,13 @@ function Portfolio() {
       })
       .then((res) => {
         const heading = res;
-        setPoster(heading.splice(-3));
-        heading.splice(-3);
+        
+        // setPoster(heading.splice(-3));
+        console.log("oh bhains" , heading)
+        // heading.splice(-1);
         setDiscription(heading);
+        console.log("oh bhains" , discription)
+
         // setIsLoading(false);
 
       });
@@ -68,7 +72,7 @@ function Portfolio() {
           <div className={styles.phl}></div>
           <p className={styles.text}>Take a look at some of our best work!</p>
           {   discription.map((data, index) => {
-            if (data.id % 2 != 0) {
+            if (data.id_assign % 2 != 0) {
               return (<>
              
              <div key={index} className={styles.c1}>
@@ -154,7 +158,7 @@ function Portfolio() {
             }
             } ) }
 
-          <h2
+          {/* <h2
             className={styles.ph}
             style={{ color: "#FFD400", padding: "150px 0px 0px 0px " }}
           >
@@ -183,7 +187,7 @@ function Portfolio() {
                 </>
               );
             })}
-          </div>
+          </div> */}
         </div>
         <Footer />
       </motion.div>
