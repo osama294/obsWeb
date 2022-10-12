@@ -41,6 +41,12 @@ function Portfolio() {
 
   return (
     <>
+     <Head>
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width" />
+      <link rel="shortcut icon" href=" ../public/fav.png" />
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+      </Head>
      { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {

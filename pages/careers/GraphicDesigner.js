@@ -36,7 +36,7 @@ function GraphicDesigner() {
     lineHeight: "29.6px",
     borderRadius: "50px",
   };
-
+ let data ={job_id: "1"}
   return (
     <>
       <Header />
@@ -55,7 +55,13 @@ function GraphicDesigner() {
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'
           />
-         <Link href='/careers/forum'>
+         <Link 
+           href={{
+            pathname: "/careers/forum",
+            query: data, // the data
+          }}
+        //  href='/careers/forum'
+         >
             <div className={styles.submit_btn_container}>
               <p className='submit' style={submitStyle}>
                 Apply for this Job

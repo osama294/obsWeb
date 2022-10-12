@@ -30,7 +30,7 @@ export default function App() {
       <Head>
         <title>OBS TECHNOLOGIA</title>
         <meta name="viewport" content="width=device-width" />
-      <link rel="shortcut icon" href=" ../public/favicon2.ico" />
+      <link rel="shortcut icon" href=" ../public/fav.png" />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
       { isLoading ? <motion.div  variants={{

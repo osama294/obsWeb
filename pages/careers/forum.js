@@ -5,24 +5,40 @@ import Footer from "../../components/footer";
 import styles from "../../styles/Home.module.scss";
 import Input from "../../components/Input";
 import { RiDeleteBin7Line } from "react-icons/ri";
+import { useRouter } from 'next/router'
+import FormData from 'form-data'
 import Modal from "../../components/modal";
-import { useState } from "react";
+import axios from "axios";
+import { useState,useEffect } from "react";
 function Forum() {
+  const router = useRouter();
+const data = router.query.job_id;
+console.log(data);
+useEffect(() => {
+
+setJob_id(router.query.job_id)
+console.log("job",data)
+}, [])
+
   const [response, setResponse] = useState(""); 
    const [show, setShow] = useState(false);
+   const [job_id , setJob_id] = useState("0")
+   const [cv ,setCv] = useState({})
   const [inputs, setInputs] = useState({
     name: "",
     lastname: "",
     email: "",
     phone: "",
-    // cv: "",
+    // cv: {cv},
+    // job_id:"2"
   });
+  let formData = new FormData();
   const handleChange = (e) => {
     setInputs({
       ...inputs,
       [e.target.name]: e.target.value,
     });
-    console.log("$$$", inputs);
+    console.log("$$$", e.target.name);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,20 +51,46 @@ function Forum() {
       }, 5000);
       return;
     } else {
+      formData.append("name",inputs.name)
+      formData.append("lastname",inputs.lastname)
+      formData.append("email",inputs.email)
+      formData.append("phone",inputs.phone)
+      formData.append("cv", cv.cv)
+      formData.append("job_id", job_id)
+      
+      console.log("form",cv.cv)
+      // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(inputs),
+        headers: { 'Content-Type': 'multipart/form-data'},
+        body: JSON.stringify([inputs]),
       };
-      fetch("https://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
-      
-        .then((response) => response.json())
-        .then((res) => {
-          console.log(res);
-          setResponse(res);
-          console.log(res);
+      const config = {     
+        headers: { 'content-type': 'multipart/form-data' }
+    }
+    // url = 'https://globaltechnologia.org/webAdmin/api/apply_job'
+    axios.post('https://globaltechnologia.org/webAdmin/api/apply_job', formData, config)
+        .then(response => {
+            console.log(response);
+            if(response.status == 200) {
+            setResponse(response?.data?.message);}
+            else{
+              setResponse("try again")
+            }
+
+        })
+        .catch(error => {
+            console.log(error);
         });
-      setShow(true);
+      // fetch("https://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
+      
+      //   .then((response) => response.json())
+      //   .then((res) => {
+      //     console.log(res);
+      //     setResponse(res);
+      //     console.log(res);
+      //   });
+      // setShow(true);
       setTimeout(function () {
         setShow(false);
       }, 1000);
@@ -153,7 +195,11 @@ function Forum() {
                   className={styles.upload}
                   placeholder='Resume'
                   value={inputs.cv}
-                  onChange={handleChange}
+                  onChange={(e)=>{
+                    console.log("file", e.target.name)
+                    setCv({ [e.target.name]: e.target.files[0]})
+                    console.log("cv",cv)
+                  }}
                 />
               </div>
             </div>

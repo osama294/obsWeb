@@ -303,6 +303,7 @@ $gold: #dba514;
   display: flex;
   padding: 94px 0px 186px 0px;
   justify-content: flex-end;
+  align-items: center;
   position: relative;
   .pleft {
     position: absolute;
@@ -468,6 +469,7 @@ $gold: #dba514;
     align-items: flex-start;
 
     .card {
+      width: 23%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -475,10 +477,10 @@ $gold: #dba514;
       position: relative;
 
       .picture {
-        max-width: 351px;
-        width: 351px;
+        max-width: 301px;
+        width: 301px;
         position: relative;
-        height: 351px;
+        height: 301px;
       }
       .yc {
         width: 72px;
@@ -741,8 +743,18 @@ $gold: #dba514;
 //RESPONSIVENESS
 
 @media only screen and (max-width: 1550px) {
+  .wrapper {
+    max-width: 1920px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   // header
   .header {
+    width: 80%;
     margin: 30px auto !important;
   }
   .header li {
@@ -767,6 +779,7 @@ $gold: #dba514;
   .banner {
     max-height: 595px !important;
     .bl {
+      width: 54%;
       p {
         font-size: 24px !important;
       }
@@ -789,15 +802,16 @@ $gold: #dba514;
   }
   // CONTENT
   .content {
-    margin: 25px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
     .yh {
       padding: 0px 0px 15px 0px;
-      font-size: 26px;
+      font-size: 24px;
     }
     .bh {
       width: 60%;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 48px;
+      margin-bottom: 30px;
     }
   }
   .layout .center {
@@ -806,31 +820,32 @@ $gold: #dba514;
     margin: 0px 0px 190px 0px;
   }
   .mobile {
-    left: -20px !important;
-    width: 461px !important;
+    left: 10px !important;
+    width: 395px !important;
   }
   // WHO ARE WE
   .wrw {
     margin: 55px 0px 0px 0px;
     .yh {
       padding: 0px 0px 15px 0px;
-      font-size: 26px;
+      font-size: 24px;
     }
     .bh {
       width: 58%;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 48px;
       padding-bottom: 30px;
     }
     .wrwp {
       font-size: 22px;
       line-height: 40px;
+      width: 100%;
     }
   }
   .wrwbg {
     h2 {
       text-align: center;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 600;
       line-height: 50px;
       padding: 175px 0px 175px 0px;
@@ -851,13 +866,13 @@ $gold: #dba514;
   .portfolio {
     padding: 40px 0px 105px 0px;
     .pleft {
-      width: 796px;
-      height: 685px;
+      width: 655px;
+      height: 540px;
     }
     .pright {
       padding: 55px 0px 0px 0px;
       h4 {
-        font-size: 28px;
+        font-size: 24px;
         line-height: 26.01px;
         padding-bottom: 20px;
       }
@@ -867,7 +882,7 @@ $gold: #dba514;
       }
       h3 {
         padding: 30px 0px 25px 0px;
-        font-size: 31px;
+        font-size: 28px;
         line-height: 46px;
       }
     }
@@ -877,7 +892,7 @@ $gold: #dba514;
     margin-bottom: 25px;
   }
   .testimonials {
-    padding: 55px 0px 0px 0px;
+    padding: 100px 0px 0px 0px;
     h3 {
       font-size: 28px;
       line-height: 30.01px;
@@ -906,8 +921,9 @@ $gold: #dba514;
       padding-bottom: 20px;
     }
     .iq {
-      width: 468px !important;
-      height: 516px !important;
+      margin: 0px 0px 145px 0px;
+      width: 355px !important;
+      height: 275px !important;
     }
     .star {
       margin-bottom: 15px;
@@ -917,12 +933,56 @@ $gold: #dba514;
   // OUR TEAM
   .row_container {
     padding: 70px 0px 0px 0px !important;
+    //das
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .picture {
+        max-width: 240px !important;
+        width: 240px !important;
+        position: relative;
+        height: 240px !important;
+      }
+      .yc {
+        width: 55px !important;
+        height: 55px !important;
+        background-color: $base-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px !important;
+        line-height: 29.26px;
+        margin: 12px 0px 8px 0px !important;
+        border-radius: 444444px;
+      }
+      .cn {
+        font-size: 22px !important;
+        line-height: 14.38px;
+        color: $gold;
+        padding-bottom: 8px;
+      }
+      .cl {
+        width: 78px;
+        height: 3px;
+        background-color: $gold;
+        margin-bottom: 8px;
+      }
+      .position {
+        font-size: 16px !important;
+        text-align: center;
+        line-height: 14.94px;
+      }
+    }
   }
   .picture {
-    max-width: 285px !important;
-    width: 285px !important;
+    max-width: 225px !important;
+    width: 225px !important;
     position: relative;
-    height: 285px !important;
+    height: 225px !important;
   }
   .yc {
     width: 61px;
@@ -1103,11 +1163,14 @@ $gold: #dba514;
 //
 @media only screen and (max-width: 1300px) {
   .picture {
-    max-width: 245px !important;
-    width: 285px !important;
+    max-width: 230px !important;
+    width: 230px !important;
     position: relative;
-    height: 245px !important;
+    height: 230px !important;
   }
+  // .row_container{
+ 
+  // }
 }
 @media only screen and (max-width: 1098px) {
   .cover {
@@ -1320,9 +1383,9 @@ width: 100% !important;
   }
   .picture {
     max-width: 245px !important;
-    width: 185px !important;
+    width: 145px !important;
     position: relative;
-    height: 185px !important;
+    height: 145px !important;
   }
   .yc {
     width: 41px !important;
@@ -1345,6 +1408,7 @@ width: 100% !important;
   }
   .row_container {
     padding: 30px 0px 0px 0px !important;
+
   }
   .cn {
     font-size: 16px !important;

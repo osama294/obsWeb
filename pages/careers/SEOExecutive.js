@@ -11,6 +11,8 @@ import Link from "next/link";
 
 import Footer from "../../components/footer";
 function SEOExecutive() {
+  let data ={job_id: "4"}
+
   const job_title = "Frontend Developer- Full time / Onsite";
   const role_info =
     "We are looking for a Frontend Developer. If you are a hard working  individual who tends to think out of the box, then; we would like to meet you.";
@@ -60,7 +62,10 @@ function SEOExecutive() {
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'
           />
-       <Link href='/careers/forum'>
+       <Link     href={{
+            pathname: "/careers/forum",
+            query: data, // the data
+          }}>
             <div className={styles.submit_btn_container}>
               <p className='submit' style={submitStyle}>
                 Apply for this Job

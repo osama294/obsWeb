@@ -19,7 +19,7 @@ function TeamCard(props) {
         key={props.data.id}
         className={styles.card}
         whileHover={{
-          scale: 0.9999,
+          scale: 1,
           transition: { duration: 0.1 },
           boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
           padding: 20,
