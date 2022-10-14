@@ -18,7 +18,7 @@ useEffect(() => {
 
 setJob_id(router.query.job_id)
 console.log("job",data)
-}, [])
+}, [data])
 
   const [response, setResponse] = useState(""); 
    const [show, setShow] = useState(false);
@@ -73,7 +73,14 @@ console.log("job",data)
         .then(response => {
             console.log(response);
             if(response.status == 200) {
-            setResponse(response?.data?.message);}
+            setResponse(response?.data?.message);
+            setShow(true);
+            setInputs({
+              ...inputs,
+              [e.target.name]: '',
+            });
+          }
+
             else{
               setResponse("try again")
             }
@@ -93,7 +100,8 @@ console.log("job",data)
       // setShow(true);
       setTimeout(function () {
         setShow(false);
-      }, 1000);
+      }, 3000);
+      setInputs({name:'',lastname:'',email:'',phone:''}) 
     }
   };
   return (
