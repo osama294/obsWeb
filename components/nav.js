@@ -50,6 +50,9 @@ function Nav(props) {
             {" "}
             <Link href="/#about">About</Link>
           </li>
+          <li onClick={navHandle}>
+          <Link href="/careers">Careers</Link>
+          </li>
         </ul>
       </div>
     </div>
