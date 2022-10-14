@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import Header from "../components/header";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 import LoadingSpinner from "../components/spinner";
 import Footer from "../components/footer";
 import error from "../public/err.png";
