@@ -40,10 +40,11 @@ function Portfolio() {
               of local and foreign clients and worked on different projects from
               different domains.
             </p>
-            <h3>Want to see our projects ? Click on the Button!</h3>
+            <h3>Want to see our projects? Click on the Button!</h3>
             <div>
               <Link href="/portfolio">
                 <motion.button
+                className={styles.cursor}
                   whileHover={{
                     scale: 1.1,
                     transition: { duration: 0.1 },

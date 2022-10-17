@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/careers": [
+    "/careers/ReactNativeDeveloper": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/careers.js"
+      "static/chunks/pages/careers/ReactNativeDeveloper.js"
     ],
     "/careers/forum": [
       "static/chunks/webpack.js",

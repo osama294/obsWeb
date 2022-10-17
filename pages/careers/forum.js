@@ -76,9 +76,15 @@ console.log("job",data)
             setResponse(response?.data?.message);
             setShow(true);
             setInputs({
-              ...inputs,
-              [e.target.name]: '',
+             name:"",
+             email:"",
+             lastname:"",
+             phone:"",
             });
+            setCv({})
+            setTimeout(function () {
+              setShow(false);
+            }, 5000);
           }
 
             else{
@@ -98,10 +104,10 @@ console.log("job",data)
       //     console.log(res);
       //   });
       // setShow(true);
-      setTimeout(function () {
-        setShow(false);
-      }, 3000);
-      setInputs({name:'',lastname:'',email:'',phone:''}) 
+      // setTimeout(function () {
+      //   setShow(false);
+      // }, 1000);
+      // setInputs({name:'',lastname:'',email:'',phone:''}) 
     }
   };
   return (
@@ -115,7 +121,7 @@ console.log("job",data)
               <div className={styles.clear} onClick={()=>{
      setInputs({name:'',lastname:'',email:'',phone:'',cv:''}) 
               }}>
-                <RiDeleteBin7Line size={38} />
+                <RiDeleteBin7Line className={styles.svg} />
                 <p>Clear form</p>
               </div>
             </div>
