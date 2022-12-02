@@ -8,3 +8,13 @@
     height: 290px !important;
   }
 }
+/* @media only screen and (max-width: 1550px) {
+  .carousel .slide {
+    height: 95%!important;
+  }
+  .carousel .control-dots{
+    background-color: #FFD400;padding: 20px 0px 20px 0px !important;
+  }
+..carousel.carousel-slider{
+  bacl
+}} */
