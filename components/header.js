@@ -100,7 +100,7 @@ function Header() {
               About
             </Link>
           </motion.li>
-          <Link  href="/#contact" smooth="true"><li className={styles.btn}>Let&apos;s Talk</li></Link>
+          <Link  href="/Hire" smooth="true"><li className={styles.btn}>Let&apos;s Talk</li></Link>
         </ul>
         <span onClick={navHandle} className={styles.navbar}>
           <figure className={styles.ham}>
