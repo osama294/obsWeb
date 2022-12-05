@@ -8,7 +8,7 @@ import SubmitButtom from "../../../components/submitButton";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
 import {useRouter} from 'next/router' 
-function career(props) {
+function Career() {
   const router = useRouter()
   const {id,name} = router.query
   const  [ids ,setId] = useState({"id":id})
@@ -20,7 +20,6 @@ function career(props) {
 useEffect(() => {
   console.log("doom",id)
   console.log("doom",ids)
-
   setId(id)
 fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
 .then(res =>{ return res.json()})
@@ -94,4 +93,4 @@ fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
   );
 }
 
-export default career;
+export default Career;
