@@ -4,38 +4,50 @@ import styles from "../styles/Home.module.scss";
 import Header from "../components/header";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 import LoadingSpinner from "../components/spinner";
 import Footer from "../components/footer";
+import error from "../public/err.png";
 import Blur from "../components/blur";
 function Portfolio() {
   const [discription, setDiscription] = useState([]);
   const [poster, setPoster] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const domain = "https://obstechnologia.com/webAdmin/";
+  const domain = "https://globaltechnologia.org/webAdmin/";
   // const poster = [];
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://obstechnologia.com/webAdmin/api/portshow")
+    fetch("https://globaltechnologia.org/webAdmin/api/portshow")
       .then((res) => {
         setIsLoading(true)
         return res.json();
       })
       .then((res) => {
         const heading = res;
-        setPoster(heading.splice(-3));
-        heading.splice(-3);
+        
+        // setPoster(heading.splice(-3));
+        console.log("oh bhains" , heading)
+        // heading.splice(-1);
         setDiscription(heading);
+        console.log("oh bhains" , discription)
+
         // setIsLoading(false);
 
       });
       setTimeout(()=> {
         console.log("2222222222222222222")
-        setIsLoading(false)}, 2000)
+        setIsLoading(false)}, 1000)
   }, []);
 
   return (
     <>
+     <Head>
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width" />
+      <link rel="shortcut icon" href=" ../public/fav.png" />
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+      </Head>
      { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {
@@ -46,6 +58,8 @@ function Portfolio() {
                     },
                   },
                 }}><Blur/></motion.div>  :
+
+                discription.length != 0 ? 
      <motion.div
         className={styles.container}
         variants={{
@@ -64,12 +78,11 @@ function Portfolio() {
           <h2 className={styles.ph}>SELECTED PROJECTS</h2>
           <div className={styles.phl}></div>
           <p className={styles.text}>Take a look at some of our best work!</p>
-          { discription.length != 0 ?   discription.map((data, index) => {
-            if (data.id % 2 != 0) {
-              return (
-             isLoading ? (
-              <LoadingSpinner key={index} />
-            ) :   <div key={index} className={styles.c1}>
+          {   discription.map((data, index) => {
+            if (data.id_assign % 2 != 0) {
+              return (<>
+             
+             <div key={index} className={styles.c1}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -106,12 +119,11 @@ function Portfolio() {
                     </figure>
                   </motion.div>
                 </div>
+                </>
               );
             } else {
-              return (
-                isLoading ? (
-                  <LoadingSpinner key={index} />
-                ) :                <div key={index} className={styles.c2}>
+              return (<>
+                          <div key={index} className={styles.c2}>
                   <motion.div
                     className={styles.conl}
                     whileHover={{
@@ -148,11 +160,12 @@ function Portfolio() {
                     </figure>
                   </motion.div>
                 </div>
+                 </>
               );
             }
-            } ) : <Blur/>}
+            } ) }
 
-          <h2
+          {/* <h2
             className={styles.ph}
             style={{ color: "#FFD400", padding: "150px 0px 0px 0px " }}
           >
@@ -164,9 +177,7 @@ function Portfolio() {
           <div className={styles.pwork}>
             {poster.map((data, index) => {
               return (
-                isLoading ? (
-                  <LoadingSpinner key={index} />
-                ) :    <>
+               <>
                   {" "}
                   <figure key={index}>
                     <Image
@@ -183,10 +194,18 @@ function Portfolio() {
                 </>
               );
             })}
-          </div>
+          </div> */}
         </div>
         <Footer />
-      </motion.div>}
+      </motion.div>
+      :<><Header/>
+                       <figure className={styles.center}>
+                       <Image src={error} alt="web" width={450} height={340} />
+                    </figure>
+      </>
+      
+      
+      }
     </>
   );
 }

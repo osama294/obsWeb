@@ -11,9 +11,9 @@ function WhoAreWe() {
             <p className={styles.bh}>
               We are one of the fastest growing IT family in Pakistan.
             </p>
-            <p className={styles.bh1}>
+            {/* <p className={styles.bh1}>
               We build custom software that drives innovation and social impact
-            </p>
+            </p> */}
             <p className={styles.wrwp}>
               OBS Technologia is one of the fastest-growing IT companies
               providing various solutions and services across industries. We

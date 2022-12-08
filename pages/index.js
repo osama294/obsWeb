@@ -20,7 +20,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
 
-    setTimeout( ()=>{setIsLoading(false)}, 2000)
+    setTimeout( ()=>{setIsLoading(false)}, 1000)
   
   
   }, [])
@@ -30,6 +30,7 @@ export default function App() {
       <Head>
         <title>OBS TECHNOLOGIA</title>
         <meta name="viewport" content="width=device-width" />
+      <link rel="shortcut icon" href=" ../public/fav.png" />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
       { isLoading ? <motion.div  variants={{

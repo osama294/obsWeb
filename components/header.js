@@ -17,14 +17,14 @@ function Header() {
   return (
     <>
       <header className={styles.header}>
-        <figure className={styles.hlogo}>
+        <Link href="/"><figure className={styles.hlogo}>
           <Image
             src={logo}
             alt="OBS TECHNOLOGIA"
             layout="fill"
             objectFit="contain"
           />
-        </figure>
+        </figure></Link>
         <ul className={styles.center_nav}>
           <motion.li
             whileHover={{
@@ -100,7 +100,7 @@ function Header() {
               About
             </Link>
           </motion.li>
-          <li className={styles.btn}>Let&apos;s Talk</li>
+          <Link  href="/Hire" smooth="true"><li className={styles.btn}>Hire us</li></Link>
         </ul>
         <span onClick={navHandle} className={styles.navbar}>
           <figure className={styles.ham}>

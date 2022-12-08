@@ -12,7 +12,7 @@ function Ourteam() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://obstechnologia.com/webAdmin/api/teamshow")
+  fetch("https://globaltechnologia.org/webAdmin/api/teamshow")
       .then((res) => {
         setIsLoading(true);
         if (res.status == 200) {
@@ -48,7 +48,7 @@ function Ourteam() {
               return isLoading ? (
                 <LoadingSpinner key={index} />
               ) : (
-                <TeamCard data={mem} key={index} />
+                <TeamCard data={mem} key={index} num={index} />
               );
             })}
           </div>

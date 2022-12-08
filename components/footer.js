@@ -74,11 +74,11 @@ function Footer() {
                 </div>
                 <div className={styles.b2}>
                   <h3>Email</h3>
-                  <p className={styles.email}>
+                  {/* <p className={styles.email}>
                     <a href="mailto:ceo@obstechnologia.com">
                       ceo@obstechnologia.com
                     </a>{" "}
-                  </p>
+                  </p> */}
                   <p className={styles.email}>
                     <a href="mailto:hr@obstechnologia.com">
                       hr@obstechnologia.com
