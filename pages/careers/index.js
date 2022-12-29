@@ -99,7 +99,12 @@ function Careers() {
                  />
                </figure>{" "}
                {/* <motion.div Layout className={show ? styles.c_card : styles.cd_card}> */}
-               <motion.div className={styles.tab2 }>
+               <Link href={
+                {
+                  pathname:`/careers/${jobc.domain}`,
+                  query: { id: jobc.id },
+                }
+                }><motion.div className={styles.tab2 }>
                  <motion.p
                    layout='position'
                    className={ styles.horizontal}>
@@ -124,7 +129,7 @@ function Careers() {
               </motion.div>
             </Link>
                 
-               </motion.div>
+               </motion.div></Link>
              </motion.div> : <motion.div
           
                layout
