@@ -29,6 +29,8 @@ console.log("job",data)
     lastname: "",
     email: "",
     phone: "",
+    expected_salary:"",
+    experience:""   
     // cv: {cv},
     // job_id:"2"
   });
@@ -43,7 +45,7 @@ console.log("job",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "") {
+    if (inputs.name == "" || inputs.email == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "") {
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
@@ -57,7 +59,8 @@ console.log("job",data)
       formData.append("phone",inputs.phone)
       formData.append("cv", cv.cv)
       formData.append("job_id", job_id)
-      
+      formData.append("experience",inputs.experience)
+      formData.append("expected_salary",inputs.expected_salary)
       console.log("form",cv.cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
@@ -80,6 +83,8 @@ console.log("job",data)
              email:"",
              lastname:"",
              phone:"",
+            expected_salary:"",
+            experience:""   
             });
             setCv({})
             setTimeout(function () {
@@ -153,6 +158,37 @@ console.log("job",data)
                     className={styles.inputs}
                     placeholder='Last Name'
                     value={inputs.lastname}
+                    onChange={handleChange}
+                  />
+                </div>
+                {/* <input type='text' value='Last Name' className={styles.lname} /> */}
+              </div>
+              <div className={styles.name}>
+                <div className={styles.fieldset}>
+                  <label htmlFor='experience' className={styles.labels}>
+                    Experience
+                  </label>
+                  <input
+                    type='text'
+                    name='experience'
+                    id='experience'
+                    className={styles.inputs}
+                    placeholder='Experience'
+                    value={inputs.experience}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className={styles.fieldset}>
+                  <label htmlFor='expected_salary' className={styles.labels}>
+                    Last Name
+                  </label>
+                  <input
+                    type='text'
+                    name='expected_salary'
+                    id='expected_salary'
+                    className={styles.inputs}
+                    placeholder='Expected Salary'
+                    value={inputs.expected_salary}
                     onChange={handleChange}
                   />
                 </div>
