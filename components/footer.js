@@ -90,9 +90,12 @@ function Footer() {
           </div>{" "}
         </div>
         <div className={styles.seprator}></div>
-        <div className={styles.bottom_footer}>
+        <div className={styles.wrapper}>
+           <div className={styles.bottom_footer}>
           <p>@2021 FUTURE,OBS Technologia,All Rights Reserved</p>
         </div>
+        </div>
+       
       </div>
     </>
   );

@@ -172,9 +172,16 @@
   flex-direction: column;
 }
 .content .layout .center {
+  display: flex;
+  align-items: baseline;
   position: relative;
   width: 516px;
   height: 516px;
+}
+.content .layout .center .circle {
+  width: 576px;
+  height: 576px;
+  position: relative;
 }
 .content .layout .center .mobile {
   position: absolute;
@@ -495,7 +502,7 @@
   width: 100%;
   background-color: #ffd400;
   position: relative;
-  margin: 130px 0px 140px 0px;
+  margin: 200px 0px 140px 0px;
   padding: 0px 18px;
 }
 .contact .waves {
@@ -579,11 +586,22 @@
   border-radius: 40px;
 }
 
+.seprator {
+  border-top: 1px solid #ffd400;
+  width: 100%;
+  margin-top: 50px;
+}
+
 .footer {
   width: 100%;
   display: flex;
   margin: 114px 0px 0px 0px;
   flex-direction: column;
+}
+.footer .seprator {
+  border-top: 1px solid #ffd400;
+  width: 100%;
+  max-width: 1920px;
 }
 .footer .b1 {
   display: flex;
@@ -694,10 +712,6 @@
   display: flex;
 }
 
-.bottom_footer {
-  border-top: 1px solid #ffd400;
-  margin: 50px 0px 0px 0px;
-}
 .bottom_footer p {
   font-size: 20px;
   font-weight: 400;
@@ -782,6 +796,11 @@
     width: 305px !important;
     height: 366px !important;
     min-width: 305px;
+  }
+  .circle {
+    width: 305px !important;
+    height: 305px !important;
+    position: relative;
   }
   .mobile {
     left: 25px !important;
@@ -903,7 +922,7 @@
     max-width: 215px !important;
     width: 215px !important;
     position: relative;
-    height: 240px !important;
+    height: 240px;
   }
   .row_container .card .yc {
     width: 55px !important;
@@ -918,7 +937,7 @@
     border-radius: 444444px;
   }
   .row_container .card .cn {
-    font-size: 22px !important;
+    font-size: 22px;
     line-height: 14.38px;
     color: #dba514;
     padding-bottom: 8px;
@@ -935,10 +954,10 @@
     line-height: 14.94px;
   }
   .picture {
-    max-width: 225px !important;
-    width: 225px !important;
+    max-width: 225px;
+    width: 225px;
     position: relative;
-    height: 225px !important;
+    height: 225px;
   }
   .yc {
     width: 61px;
@@ -1095,29 +1114,26 @@
     display: flex;
   }
   .bottom_footer {
-    border-top: 1px solid #ffd400;
-    margin: 50px 0px 0px 0px;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
   }
   .bottom_footer p {
     font-size: 20px;
     font-weight: 400;
     line-height: 24.38px;
     max-width: 90%;
+    width: 100%;
+    margin: 0px;
     padding: 10px 0px 0px 0px;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 1300px) {
   .picture {
-    max-width: 230px !important;
-    width: 230px !important;
+    max-width: 230px;
+    width: 230px;
     position: relative;
-    height: 230px !important;
-  }
-}
-@media only screen and (max-width: 1098px) {
-  .cover {
-    margin: 0px 0px 0px 0px !important;
+    height: 230px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -1128,25 +1144,25 @@
     margin: 20px auto !important;
   }
   .header li {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   .hlogo {
-    width: 95px !important;
-    height: 55px !important;
+    width: 85px !important;
+    height: 50px !important;
   }
   ul .btn {
-    padding: 10px 15px 10px 15px !important;
+    padding: 7px 10px 7px 10px !important;
   }
   .b {
-    height: 645px !important;
-    max-height: 645px !important;
+    height: 621px !important;
+    max-height: 621px !important;
   }
   .black {
-    height: 645px !important;
-    max-height: 645px !important;
+    height: 621px !important;
+    max-height: 621px !important;
   }
   .banner {
-    max-height: 540px;
+    max-height: 530px !important;
   }
   .banner .bl {
     width: 50%;
@@ -1167,11 +1183,11 @@
   .cover {
     bottom: 0 !important;
     position: relative;
-    margin: 0px 0px 15px 0px;
+    margin: 168px 0px 15px 0px;
   }
   .br {
-    width: 410px;
-    height: 520px;
+    width: 320px;
+    height: 380px;
   }
   .content {
     margin: 25px 0px 0px 0px;
@@ -1186,14 +1202,19 @@
     width: 58% !important;
   }
   .layout .center {
-    width: 316px !important;
-    height: 316px !important;
+    width: 275px !important;
+    height: 275px !important;
     margin: 0px 0px 115px 0px;
   }
+  .circle {
+    width: 275px !important;
+    height: 275px !important;
+    position: relative;
+  }
   .mobile {
-    left: -5px !important;
+    left: 15px !important;
     top: -20px !important;
-    width: 330px !important;
+    width: 270px !important;
   }
   .box figure {
     padding: 0px 30px 0px 0px !important;
@@ -1220,12 +1241,12 @@
   }
   .wrwbg h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 50px;
     padding: 115px 0px 115px 0px;
     margin: 0px auto;
-    width: 82%;
+    width: 70%;
   }
   .detail {
     width: 220px;
@@ -1241,11 +1262,21 @@
     padding: 40px 0px 105px 0px;
   }
   .portfolio .pleft {
-    width: 696px;
-    height: 585px;
+    width: 508px;
+    height: 435px;
   }
   .portfolio .pright {
     padding: 50px 0px 0px 0px;
+  }
+  .portfolio .pright button {
+    background-color: #ffd400;
+    color: #ffffff;
+    padding: 6px 14px 8px 11px;
+    font-size: 18px;
+    line-height: 24.26px;
+    border: none;
+    width: 120px;
+    border-radius: 40px;
   }
   .portfolio .pright h4 {
     font-size: 28px;
@@ -1253,8 +1284,8 @@
     padding-bottom: 20px;
   }
   .portfolio .pright p {
-    font-size: 18px;
-    line-height: 38px;
+    font-size: 16px;
+    line-height: 28px;
   }
   .portfolio .pright h3 {
     padding: 12px 0px 19px 0px;
@@ -1443,19 +1474,15 @@
   }
   .bottom_footer p {
     font-size: 14px;
+    margin: 0px;
     line-height: 24.38px;
     padding: 10px 0px 0px 0px;
-  }
-}
-@media only screen and (max-width: 1100px) {
-  .br {
-    height: 505px !important;
   }
 }
 @media only screen and (max-width: 1030px) {
   .br {
     width: 371px !important;
-    height: 506px !important;
+    height: 322px !important;
   }
   .cover {
     bottom: 32px !important;
@@ -1471,9 +1498,6 @@
   }
 }
 @media only screen and (max-width: 1027px) {
-  .br {
-    height: 464px !important;
-  }
   .cover {
     bottom: 40px !important;
   }
@@ -2260,7 +2284,7 @@
     border-radius: 444444px;
   }
   .ourteam .row_container .card .cn {
-    font-size: 12px !important;
+    font-size: 12px;
     line-height: 14.38px;
     color: #dba514;
     padding-bottom: 8px;
@@ -2345,6 +2369,7 @@
   }
   .form .row input {
     width: 100% !important;
+    font-size: 8px !important;
     height: 23px !important;
     background: #ffd400 !important;
     border: 1px solid #000000 !important;
@@ -2388,7 +2413,7 @@
     height: 94px !important;
     word-wrap: break-word;
     word-break: break-all;
-    padding: 14px 31px 10px 50px !important;
+    padding: 9px 20px 10px 10px !important;
     border: none;
     outline: none;
     font-family: "Montserrat";
@@ -2420,6 +2445,11 @@
     display: flex;
     margin: 0px 0px 0px 0px;
     flex-direction: column;
+  }
+  .footer .seprator {
+    border-top: 1px solid #ffd400;
+    width: 100%;
+    max-width: 1920px;
   }
   .footer .b1 {
     display: flex;
@@ -2510,7 +2540,8 @@
   }
   .seprator {
     margin-top: 24px;
-    border-top: 1px solid black;
+    border-top: 1px solid #ffd400;
+    width: 100%;
   }
   .bottom_footer {
     border-top: none;
@@ -3037,9 +3068,13 @@
 }
 
 .career_row {
+  flex-wrap: wrap;
   display: flex;
   gap: 30px;
-  margin: 100px 0px;
+  justify-content: center;
+  max-width: 80%;
+  margin: 100px auto;
+  width: 100%;
 }
 
 .cardb {
@@ -3359,13 +3394,13 @@
   }
   .career .cayh {
     font-family: Montserrat;
-    font-size: 22px;
+    font-size: 22px !important;
     font-weight: 600;
     line-height: 45px;
   }
   .career .cabh {
     font-family: Montserrat;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     margin: 24px 0px 0px 0px;
     line-height: 34px;

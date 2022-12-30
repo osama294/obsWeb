@@ -12,6 +12,9 @@ function Career() {
   const router = useRouter()
   const {id,name} = router.query
   const  [ids ,setId] = useState({"id":id})
+  const  [data ,setData] = useState({})
+  const [isLoading, setIsLoading] = useState(true);
+
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -20,10 +23,15 @@ function Career() {
 useEffect(() => {
   console.log("doom",id)
   console.log("doom",ids)
-  setId(id)
+  setId(id);
+  setIsLoading(true);
 fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
 .then(res =>{ return res.json()})
-.then(res => console.log("doom",res))
+.then(res => {
+  setData(res.data)
+  console.log("doom",res);
+
+})
 
 }, [])
 
@@ -64,14 +72,15 @@ fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
       <div className={styles.wrapper}>
         <div className={styles.contain}>
           <div className={styles.heading}>
-            <h3 className={styles.title}>{job_title}</h3>
+            <h3 className={styles.title}>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
             <hr className={styles.hr1} />
             <h2 className={styles.desc}>
-              Creative - Full time - Islamabad - Pakistan
+            {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
             </h2>
           </div>
           <RoleInfo role_info={role_info} />
-          <RoleResp role_resp={role_resp} />
+          {/* {data.description} */}
+          <RoleResp role_resp={data.description} />
           <RoleDesc
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'

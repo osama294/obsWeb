@@ -14,12 +14,36 @@ import { motion } from "framer-motion";
 import Blur from "../components/blur";
 import { useEffect,useState } from "react";
 
+import { useRouter } from 'next/router';
+import { AnimatePresence } from 'framer-motion';
 
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-
+    if (typeof window !== 'undefined') {
+      // Get the hash from the url
+      const hashId = window.location.hash;
+  
+      if (hashId) {
+        // Use the hash to find the first element with that id
+        const element = document.querySelector(hashId);
+        
+        console.log("bhosri",hashId)
+        if (element) {
+          // Smooth scroll to that elment
+          console.log("bhosri",hashId)
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }
+      }else{
+        console.log("bhosri",hashId)
+  
+      }
+    }
     setTimeout( ()=>{setIsLoading(false)}, 1000)
   
   
@@ -58,12 +82,12 @@ export default function App() {
       >
         <Header />
         <Banner />
-        <Content />
+        <Content id="services"/>
         <WhoAreWe />
         <Portfolio />
         <Carousel />
         <Ourteam />
-        <Contact />
+        <Contact id="contact"/>
         <Footer />
         {/* <Testimonials /> */}
       </motion.div>}

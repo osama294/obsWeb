@@ -145,8 +145,9 @@ function Content() {
                   },
                 },
               }}
-            >
-              <Image src={circle} alt="circle" width={576} height={576} />
+            > <figure className={styles.circle}>
+              <Image src={circle} alt="circle" />
+            </figure>
               <figure className={styles.mobile}>
                 <Image src={mobiles} alt="mobile" width={619} height={860} />
               </figure>

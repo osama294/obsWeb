@@ -10,9 +10,8 @@ export default function RoleResp(props) {
       <ul
         className={styles.role_req}
         style={{ listStyleType: "inherit", margin: " 10px 0px 0px 70px" }}>
-        {props.role_resp.map((resp,index) => (
-          <li key={index}>{resp}</li>
-        ))}
+        
+          <li>{props.role_resp}</li>
       </ul>
     </div>
   );

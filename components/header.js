@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Nav from "./nav";
 import hamburger from "../public/ham.png";
 function Header() {
+  const router = useRouter();
   const [nav, setNav] = useState(false);
   const navHandle = () => {
     console.log("$$$$$$$$$$$$$$$$$$$$$$$$", nav);
@@ -57,8 +59,10 @@ function Header() {
               border: `1px solid #ffd400`,
               borderRadius: 30,
             }}
+            // onClick={() => router.push("/#services")}
           >
-            <Link href="/#services">Services </Link>
+            {/* Services */}
+            <Link href="/#services" >Services </Link>
           </motion.li>
           <motion.li
             whileHover={{
@@ -80,9 +84,7 @@ function Header() {
               borderRadius: 30,
             }}
           >
-            <Link href="/#contact" smooth="true">
-              Contact
-            </Link>
+            <Link href="/#contact"  ><a>Contact</a></Link>
           </motion.li>
         </ul>
         <ul className="right-nav">
@@ -97,7 +99,7 @@ function Header() {
           >
             {" "}
             <Link href="/#about" smooth="true">
-              About
+              <a>About</a>
             </Link>
           </motion.li>
           <Link  href="/Hire" smooth="true"><li className={styles.btn}>Hire us</li></Link>
