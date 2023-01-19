@@ -20,30 +20,10 @@ import { AnimatePresence } from 'framer-motion';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter()
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Get the hash from the url
-      const hashId = window.location.hash;
+console.log("router",router)
   
-      if (hashId) {
-        // Use the hash to find the first element with that id
-        const element = document.querySelector(hashId);
-        
-        console.log("bhosri",hashId)
-        if (element) {
-          // Smooth scroll to that elment
-          console.log("bhosri",hashId)
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest',
-          });
-        }
-      }else{
-        console.log("bhosri",hashId)
-  
-      }
-    }
     setTimeout( ()=>{setIsLoading(false)}, 1000)
   
   

@@ -25,6 +25,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="shortcut icon" href=" ../public/fav.png" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

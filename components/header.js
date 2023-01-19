@@ -1,20 +1,30 @@
-import React from "react";
+import React,{ useEffect,useState } from "react";
 import logo from "../public/logo.png";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import  from "react";
 import { useRouter } from "next/router";
 import Nav from "./nav";
 import hamburger from "../public/ham.png";
-function Header() {
+function Header(props) {
   const router = useRouter();
-  const [nav, setNav] = useState(false);
+ const [color,setColor]=useState("#ffd400")
+ const [bg,setBg]=useState("#000000")
+
+ const [nav, setNav] = useState(false);
   const navHandle = () => {
-    console.log("$$$$$$$$$$$$$$$$$$$$$$$$", nav);
+    console.log("$$$$$$$$$$$$$$$$$$$$$$$$", router);
     setNav(!nav);
   };
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$", router);
+useEffect(() => {
+  if(router.pathname == "/portfolio"){
+   setColor("#000000")
+   setBg("#ffffff")
+  }
+}, [])
 
   return (
     <>
@@ -27,7 +37,7 @@ function Header() {
             objectFit="contain"
           />
         </figure></Link>
-        <ul className={styles.center_nav}>
+        <ul className={styles.center_nav} style={{color:`${color}`}}>
           <motion.li
             whileHover={{
               scale: 1.1,
@@ -87,7 +97,7 @@ function Header() {
             <Link href="/#contact"  ><a>Contact</a></Link>
           </motion.li>
         </ul>
-        <ul className="right-nav">
+        <ul className="right-nav" style={{color:`${color}`}}>
           <motion.li
             whileHover={{
               scale: 1.1,
@@ -102,7 +112,7 @@ function Header() {
               <a>About</a>
             </Link>
           </motion.li>
-          <Link  href="/Hire" smooth="true"><li className={styles.btn}>Hire us</li></Link>
+          <Link  href="/Hire" smooth="true"><li className={styles.btn} style={{background:`${color}`,color:`${bg}`}}>Hire us</li></Link>
         </ul>
         <span onClick={navHandle} className={styles.navbar}>
           <figure className={styles.ham}>

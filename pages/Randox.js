@@ -1,5 +1,5 @@
-import React,{ useEffect, useState } from "react";
-// import  from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Header from "../components/header";
 import { motion } from "framer-motion";
@@ -7,23 +7,16 @@ import Image from "next/image";
 import Head from "next/head";
 import LoadingSpinner from "../components/spinner";
 import Footer from "../components/footer";
-import Carousel from '../components/Projects/Carousel'
 import error from "../public/err.png";
-import { useRouter } from "next/router";
 import Blur from "../components/blur";
-import Randoxc from "../components/Projects/Randoxc";
-function Portfolio() {
+function Randox() {
   const [discription, setDiscription] = useState([]);
   const [poster, setPoster] = useState([]);
-  const [color ,setColor] = useState("#ffd400")
   const [isLoading, setIsLoading] = useState(true);
   const domain = "https://globaltechnologia.org/webAdmin/";
   // const poster = [];
-const router = useRouter()
+
   useEffect(() => {
-    if(router.pathname == "/portfolio"){
-      setColor("#000000")
-    }
     setIsLoading(true);
     fetch("https://globaltechnologia.org/webAdmin/api/portshow")
       .then((res) => {
@@ -67,7 +60,6 @@ const router = useRouter()
                 }}><Blur/></motion.div>  :
 
                 discription.length != 0 ? 
-
      <motion.div
         className={styles.container}
         variants={{
@@ -80,9 +72,8 @@ const router = useRouter()
             },
           },
         }}
-      > 
-        <Header  color={color}/>
-       <Carousel/>
+      >
+        <Header />
         <div className={styles.portfolio_wrapper}>
           <h2 className={styles.ph}>SELECTED PROJECTS</h2>
           <div className={styles.phl}></div>
@@ -219,4 +210,4 @@ const router = useRouter()
   );
 }
 
-export default Portfolio;
+export default Randox;
