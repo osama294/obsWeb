@@ -41,6 +41,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {/* <link rel="shortcut icon"href="../public/fav.png" /> */}
+        {/* <link rel="icon" sizes="16x16" href="../public/favicon.png"/> */}
+
       </Head>
       <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
        <Component {...pageProps} key={router.route} />
