@@ -56,6 +56,7 @@ function Careers() {
 
   return (
     <>
+    
   { isLoading ? <motion.div  variants={{
                   hidden: { scale: 0.8, opacity: 0 },
                   visible: {
