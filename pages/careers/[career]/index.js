@@ -25,17 +25,18 @@ useEffect(() => {
   console.log("doom",ids)
   setId(id);
   setIsLoading(true);
+  console.log("dooms")
 fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
 .then(res =>{ return res.json()})
 .then(res => {
   setData(res.data)
-  console.log("doom",res);
-  das = res.data
-
+  // console.log("doomss",res);
+  // das = res.data
+  // console.log("doomss",data);
 })
-
-}, [data])
-console.log("doom",data);
+// console.log("doomss",data);
+}, [])
+console.log("doomss",data);
   const job_title = "Frontend Developer- Full time / Onsite";
   const role_info =
     "We are looking for a Frontend Developer. If you are a hard working  individual who tends to think out of the box, then; we would like to meet you.";
