@@ -187,7 +187,7 @@ console.log("job",data)
                 </div>
                 <div className={styles.fieldset}>
                   <label htmlFor='expected_salary' className={styles.labels}>
-                    Last Name
+                  Expected Salary
                   </label>
                   <input
                     type='text'
