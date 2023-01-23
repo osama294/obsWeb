@@ -87,7 +87,7 @@ fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
           />
           <Link href={{
                 pathname: "/careers/forum",
-                // query: data, // the data
+                query: data, // the data
               }}>
             <div className={styles.submit_btn_container}>
               <p className='submit' style={submitStyle}>

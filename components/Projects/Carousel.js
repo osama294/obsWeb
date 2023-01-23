@@ -43,7 +43,7 @@ data = [
      },
      {image:webgl ,
        name:"webgl",
-       link:""
+       link:"https://youtu.be/yyrBcmuIk4Q"
      }
     ]
     console.log("datassss", data);

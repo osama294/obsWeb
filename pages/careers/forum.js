@@ -12,8 +12,8 @@ import axios from "axios";
 import { useState,useEffect } from "react";
 function Forum() {
   const router = useRouter();
-const data = router.query.job_id;
-console.log(data);
+const data = router.query;
+console.log("data",router);
 useEffect(() => {
 
 setJob_id(router.query.job_id)
@@ -120,6 +120,13 @@ console.log("job",data)
       <Header />
       <div className={styles.wrapper}>
         <div className={styles.career}>
+        <div className={styles.heading}>
+            <h3 className={styles.title}>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
+            <hr className={styles.hr1} />
+            <h2 className={styles.desc}>
+            {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
+            </h2>
+          </div>
           <div className={styles.form}>
             <div className={styles.form_desc}>
               <h3 className={styles.form_title}>Personal Information</h3>
