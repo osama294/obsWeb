@@ -17,7 +17,7 @@ console.log("data",router);
 useEffect(() => {
 
 setJob_id(router.query.job_id)
-console.log("job",data)
+console.log("jobs",data)
 }, [data])
 
   const [response, setResponse] = useState(""); 
@@ -45,7 +45,7 @@ console.log("job",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "") {
+    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "") {
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {

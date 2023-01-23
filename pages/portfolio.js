@@ -90,9 +90,9 @@ const router = useRouter()
         <Header  color={color}/>
        <Carousel/>
         <div className={styles.portfolio_wrapper}>
-          <h2 className={styles.ph}>SELECTED PROJECTS</h2>
+          {/* <h2 className={styles.ph}>SELECTED PROJECTS</h2>
           <div className={styles.phl}></div>
-          <p className={styles.text}>Take a look at some of our best work!</p>
+          <p className={styles.text}>Take a look at some of our best work!</p> */}
           {   discription.map((data, index) => {
             if (data.id_assign % 2 != 0) {
               return (<>

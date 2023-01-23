@@ -14,7 +14,7 @@ function Career() {
   const  [ids ,setId] = useState({"id":id})
   const  [data ,setData] = useState({})
   const [isLoading, setIsLoading] = useState(true);
-
+  var  das = {}
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -30,11 +30,12 @@ fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
 .then(res => {
   setData(res.data)
   console.log("doom",res);
+  das = res.data
 
 })
 
-}, [])
-
+}, [data])
+console.log("doom",data);
   const job_title = "Frontend Developer- Full time / Onsite";
   const role_info =
     "We are looking for a Frontend Developer. If you are a hard working  individual who tends to think out of the box, then; we would like to meet you.";
@@ -72,7 +73,7 @@ fetch("https://globaltechnologia.org/webAdmin/api/jobshowbyid",requestOptions)
       <div className={styles.wrapper}>
         <div className={styles.contain}>
           <div className={styles.heading}>
-            <h3 className={styles.title}>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
+            <h3 className={styles.title}>{`${data?.title} - ${data?.type}/${data?.jobeMode}`}</h3>
             <hr className={styles.hr1} />
             <h2 className={styles.desc}>
             {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
