@@ -12,6 +12,7 @@ import image3 from '../public/randox3.png'
 import image4 from '../public/randox4.png'
 import image5 from '../public/randox5.png'
 import image6 from '../public/randox6.png'
+import randi from '../public/randi.png'
 import image7 from '../public/randox7.png'
 import image8 from '../public/randox8.png'
 import image9 from '../public/randox9.png'
@@ -102,7 +103,7 @@ function Randox() {
             />
           </figure>
           <h2 className={styles.ph}>Randox | Certifly</h2>
-          <p className={styles.content}>Randox is committed to enhancing healthcare through cutting-edge diagnostic technology. We worked on the Randox iOS <br></br>app, Web app, customer support, IT support, and web portal which allowed us to create certificates for both national and<br></br> international passengers.</p>
+          <p className={styles.content}>Randox is committed to enhancing healthcare through cutting-edge diagnostic technology. We worked on the Randox iOS app, Web app, customer support, IT support, and web portal which allowed us to create certificates for both national and international passengers.</p>
           </div>
         <div className={styles.sectionr2}>
              
@@ -191,6 +192,7 @@ function Randox() {
               objectFit="contain"
             />
           </figure>
+        
          
               <div className={styles.right}>
               <h2 className={styles.ph}>Customer support</h2>
@@ -202,6 +204,14 @@ function Randox() {
           <figure className={styles.randox8}>
             <Image
               src={image8}
+              alt="OBS TECHNOLOGIA"
+              layout="fill"
+              objectFit="contain"
+            />
+          </figure>
+          <figure className={styles.randi}>
+            <Image
+              src={randi}
               alt="OBS TECHNOLOGIA"
               layout="fill"
               objectFit="contain"
