@@ -1137,6 +1137,14 @@
 }
 @media only screen and (max-width: 1200px) {
   .inputs {
+    height: 45px !important;
+    margin: 0;
+    padding: 7px 16px !important;
+    font-size: 16px !important;
+    line-height: 29px;
+    font-weight: 500;
+    caret-color: #ffd400;
+    margin-bottom: 15px !important;
     width: 100% !important;
   }
   .header {
@@ -3641,6 +3649,7 @@
     text-align: center;
     line-height: 16px;
     color: #665f5f;
+    display: none;
   }
   .portfolio_wrapper .c2 {
     display: flex;
@@ -3671,6 +3680,7 @@
   }
   .portfolio_wrapper .c2 .conl p {
     font-size: 10px;
+    display: none;
     text-align: center;
     line-height: 16px;
     color: #665f5f;
@@ -3975,14 +3985,14 @@
   flex-grow: 1;
   flex-shrink: 1;
   align-self: stretch;
-  height: 83px;
+  height: 50px;
   margin: 0;
-  padding: 27px 46px;
-  font-size: 29px;
-  line-height: 29px;
+  padding: 7px 16px;
+  font-size: 18px;
+  line-height: 19px;
   font-weight: 500;
   caret-color: #ffd400;
-  margin-bottom: 53px;
+  margin-bottom: 20px;
   background: rgba(217, 217, 217, 0.5);
   border: 2px solid #000000;
   border-radius: 10px;
@@ -4053,7 +4063,7 @@
   line-height: 34px;
   transform: rotate(180deg) !important;
   margin: 134px 45px 43px 45px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .cd_card {
@@ -4103,7 +4113,7 @@
   display: flex;
   gap: 30px;
   justify-content: center;
-  max-width: 80%;
+  max-width: 38%;
   margin: 100px auto;
   width: 100%;
 }
@@ -4198,6 +4208,10 @@
 }
 
 @media only screen and (max-width: 1550px) {
+  .career_row {
+    max-width: 49%;
+    width: 49%;
+  }
   .hire {
     display: flex;
     flex-direction: column;
@@ -4289,14 +4303,14 @@
     flex-grow: 1;
     flex-shrink: 1;
     align-self: stretch;
-    height: 60px !important;
+    height: 50px;
     margin: 0;
-    padding: 7px 16px !important;
-    font-size: 18px !important;
-    line-height: 29px;
+    padding: 7px 16px;
+    font-size: 18px;
+    line-height: 19px;
     font-weight: 500;
     caret-color: #ffd400;
-    margin-bottom: 30px !important;
+    margin-bottom: 20px;
     background: rgba(217, 217, 217, 0.5);
     border: 2px solid #000000;
     border-radius: 10px;
@@ -4369,7 +4383,7 @@
     line-height: 26px;
     transform: rotate(180deg) !important;
     margin: 59px 3px 50px 7px;
-    color: #ffffff;
+    color: #000000;
   }
   .cd_card {
     display: flex;
@@ -6828,5 +6842,11 @@
     color: #665f5f;
     line-height: 28px;
     text-align: center;
+  }
+  .career .career_row {
+    margin: 10px;
+  }
+  .career .cayh {
+    font-size: 18px !important;
   }
 }/*# sourceMappingURL=Home.module.css.map */
