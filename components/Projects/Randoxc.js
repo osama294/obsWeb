@@ -16,7 +16,7 @@ function Randoxc(props) {
             <div className={styles.wrapper}>
                 <div className={styles.randoxc}>
                     <div className={styles.leftr}>
-                        <h2 className={styles.h2}>Sneak Peek to some of<br></br> our Best Work!</h2>
+                        <h2 className={styles.h2}>Sneak Peek to some of our Best Work!</h2>
                         <figure className={styles.liner}>
                             <Image src={liner} alt="web" layout="fill" objectFit="contain" />
                         </figure>

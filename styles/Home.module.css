@@ -4907,9 +4907,9 @@
   }
   .rightr {
     width: 100%;
-    max-width: 410px;
+    max-width: 530px;
     height: 100%;
-    max-height: 430px;
+    max-height: 530px;
     z-index: -1;
     position: relative;
     justify-content: space-between;
@@ -4928,22 +4928,22 @@
     position: relative;
   }
   .randoxc .leftr {
-    width: 43%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
   }
   .randoxc .leftr .h2 {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 36px;
     color: #000000;
   }
   .randoxc .leftr .liner {
     width: 100%;
-    max-width: 425px;
+    max-width: 319px;
     height: 37px;
     position: relative;
   }
@@ -4952,12 +4952,131 @@
     margin-top: 5px;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 29px;
     color: #000000;
   }
   .randoxc .leftr .btner {
     width: 288px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 50px;
+  }
+  .rightr {
+    width: 100%;
+    max-width: 410px;
+    height: 100%;
+    max-height: 430px;
+    z-index: -1;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .randoxc {
+    width: 100%;
+    height: 660px;
+    margin: 100px 0px 50px 0px;
+    top: 0;
+    right: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  .randoxc .leftr {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .randoxc .leftr .h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    color: #000000;
+  }
+  .randoxc .leftr .liner {
+    width: 100%;
+    max-width: 100%;
+    height: 25px;
+    position: relative;
+  }
+  .randoxc .leftr .p {
+    font-family: "Montserrat";
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    color: #000000;
+  }
+  .randoxc .leftr .btner {
+    width: 288px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 50px;
+  }
+  .rightr {
+    width: 100%;
+    max-width: 410px;
+    height: 100%;
+    max-height: 430px;
+    z-index: -1;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .randoxc {
+    width: 100%;
+    height: 660px;
+    margin: 100px 0px 50px 0px;
+    top: 0;
+    right: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  .randoxc .leftr {
+    width: 292px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .randoxc .leftr .h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+  }
+  .randoxc .leftr .liner {
+    width: 100%;
+    max-width: 100%;
+    height: 25px;
+    position: relative;
+  }
+  .randoxc .leftr .p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+  }
+  .randoxc .leftr .btner {
+    width: 146px;
     padding: 10px;
     background-color: #000000;
     color: white;
