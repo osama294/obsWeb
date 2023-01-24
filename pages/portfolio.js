@@ -101,7 +101,7 @@ const router = useRouter()
                   <motion.div
                     className={styles.conl}
                     whileHover={{
-                      scale: 0.9,
+                      // scale: 0.9,
                       transition: { duration: 0.1 },
                       padding: 20,
                       border: `1px solid #ffd400`,
@@ -115,7 +115,7 @@ const router = useRouter()
                   <motion.div
                     className={styles.conr}
                     whileHover={{
-                      scale: 0.9,
+                      // scale: 0.9,
                       transition: { duration: 0.1 },
                       padding: 10,
                       borderRadius: 10,
@@ -142,7 +142,7 @@ const router = useRouter()
                   <motion.div
                     className={styles.conl}
                     whileHover={{
-                      scale: 0.9,
+                      // scale: 0.9,
                       transition: { duration: 0.1 },
                       padding: 20,
                       border: `1px solid #ffd400`,
@@ -156,7 +156,7 @@ const router = useRouter()
                   <motion.div
                     className={styles.conr}
                     whileHover={{
-                      scale: 0.9,
+                      // scale: 0.9,
                       transition: { duration: 0.1 },
                       padding: 10,
                       borderRadius: 10,

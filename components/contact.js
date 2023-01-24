@@ -52,6 +52,9 @@ function Contact() {
           setResponse(res.message);
           console.log(res.message);
         });
+        setInputs({ name: "",
+        email: "",
+        message: "",})
       setShow(true);
       setTimeout(function () {
         setShow(false);

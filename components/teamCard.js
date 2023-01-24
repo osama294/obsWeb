@@ -22,7 +22,7 @@ function TeamCard(props) {
           // scale: 1,
           transition: { duration: 0.1 },
           boxShadow: `rgba(100, 100, 111, 0.2) 0px 7px 29px 0px`,
-          padding: `10px 0px`,
+          padding: `0px 0px 10px 0px`,
           borderRadius: 30,
         }}>
         <figure className={styles.picture}>
