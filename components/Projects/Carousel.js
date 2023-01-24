@@ -39,11 +39,13 @@ data = [
    const  data = [
     {image:randox ,
       name:"randox", 
-      link:"/Randox"
+      link:"/Randox",
+      btn:"view more"
      },
      {image:webgl ,
        name:"webgl",
-       link:"https://youtu.be/yyrBcmuIk4Q"
+       link:"https://youtu.be/yyrBcmuIk4Q",
+       btn:"watch"
      }
     ]
     console.log("datassss", data);
@@ -59,12 +61,13 @@ data = [
     // };
     return (
       <div>
-        <Carousel>
+        <Carousel autoPlay>
           {data?.map((child, index) => {
             return (
               <Randoxc
                 image={child.image}
                 link={child.link}
+                btn={child.btn}
                 name = {child.name}
                 key={index}
               />

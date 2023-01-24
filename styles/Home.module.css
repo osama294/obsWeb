@@ -5081,6 +5081,7 @@
     background-color: #000000;
     color: white;
     border-radius: 50px;
+    cursor: pointer;
   }
   .rightr {
     width: 100%;
