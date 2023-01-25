@@ -4,7 +4,7 @@ import liner from '../../public/liner.png'
 import Image from "next/image";
 import randox from '../../public/rando.png'
 import Link from 'next/link';
-function wRandoxc(props) {
+function Randoxc(props) {
     const [name ,setName ] = useState(props.name)
     useEffect(() => {
        setName(props.name)
