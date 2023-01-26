@@ -881,7 +881,7 @@ $gold: #dba514;
       padding-bottom: 30px;
     }
     .wrwp {
-      font-size: 22px;
+      font-size: 19px;
       line-height: 32px;
       width: 100%;
     }
@@ -943,14 +943,15 @@ $gold: #dba514;
       padding: 0px 0px 20px 0px;
     }
     h2 {
-      font-size: 42px;
+      font-size: 32px;
       font-weight: 600;
       line-height: 42px;
       padding-bottom: 25px;
     }
     .review {
-      font-size: 28px;
-      line-height: 48px;
+      
+    font-size: 22px;
+    line-height: 40px;
       padding-bottom: 40px;
       width: 70%;
     }
@@ -959,7 +960,7 @@ $gold: #dba514;
       height: 2px;
     }
     .cname {
-      font-size: 36px;
+      font-size: 32px;
       line-height: 34.76px;
       font-weight: 700;
       padding-bottom: 20px;
@@ -1128,10 +1129,11 @@ $gold: #dba514;
         height: 82px;
       }
       p {
-        font-size: 21px;
-        line-height: 38px;
-        width: 82%;
+        
         margin: 0px 0px 0px 0px;
+        font-size: 18px;
+        line-height: 29px;
+        width: 90%;
       }
     }
     .b2 {
@@ -1151,8 +1153,8 @@ $gold: #dba514;
       }
       p {
         margin: 0px 32px 0px 30px;
-        font-size: 21px;
-        line-height: 38px;
+        font-size: 18px;
+        line-height: 29px;
       }
     }
     .b3 {
@@ -1182,7 +1184,7 @@ $gold: #dba514;
     }
     .address {
       width: 235px;
-      margin: 0px 42px 0px 48px !important;
+      margin: 0px 0px 0px 56px !important;
     }
     .email {
       margin: 0px 0px 0px 28px !important;
@@ -1349,7 +1351,7 @@ width: 100% !important;
     }
 
     .wrwp {
-      font-size: 18px;
+      font-size: 16px;
       padding: 0px 0px 50px 0px;
       line-height: 34px;
     }
@@ -1414,19 +1416,19 @@ width: 100% !important;
   .testimonials {
     padding: 55px 0px 0px 0px;
     h3 {
-      font-size: 24px;
+      font-size: 21px;
       line-height: 30.01px;
       padding: 0px 0px 20px 0px;
     }
     h2 {
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 600;
       line-height: 28px;
       padding-bottom: 25px;
     }
     .review {
-      font-size: 21px;
-      line-height: 38px;
+      font-size: 18px;
+      line-height: 28px;
       padding-bottom: 25px;
       width: 73%;
     }
@@ -1435,7 +1437,7 @@ width: 100% !important;
       height: 2px;
     }
     .cname {
-      font-size: 28px;
+      font-size: 24px;
       line-height: 28.76px;
       font-weight: 700;
       padding-bottom: 15px;
@@ -1566,7 +1568,7 @@ width: 100% !important;
     .b2 {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       margin: 55px 0px 0px 0px;
       width: 70%;
@@ -1597,6 +1599,27 @@ width: 100% !important;
     }
     .email {
       margin: 0px 0px 0px 28px !important;
+    }
+  }
+  .b3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 55px 0px 0px 0px;
+    width: 70%;
+    border-left: 1px solid $black;
+    h3 {
+      color: $base-color;
+      padding: 0px 0px 15px 0px;
+      font-weight: 600;
+      line-height: 15px !important;
+      font-size: 18px !important; 
+    }
+    p {
+      margin: 0px 32px 0px 30px;
+      font-size: 21px;
+      line-height: 38px;
     }
   }
   .footer_row {
