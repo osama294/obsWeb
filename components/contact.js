@@ -34,21 +34,23 @@ function Contact() {
     e.preventDefault();
 
     if (inputs.name == "" || inputs.email == "" || inputs.message == "") {
-      if(!inputs.email.match(validRegex)){
- 
-        setShow(true);
-        setResponse("Enter Valid Email");
-        setTimeout(function () {
-          setShow(false);
-        }, 5000);
-      }else{
+    
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
         setShow(false);
-      }, 5000);}
+      }, 5000);
       return;
-    } else {
+    } 
+    if(!inputs.email.match(validRegex)){
+ 
+      setShow(true);
+      setResponse("Enter Valid Email");
+      setTimeout(function () {
+        setShow(false);
+      }, 5000);
+    }
+    else {
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -59,7 +61,7 @@ function Contact() {
         .then((response) => response.json())
         .then((res) => {
           console.log(res);
-          setResponse(res.message);
+          setResponse("Your Response Is Sumbitted");
           console.log(res.message);
         });
         setInputs({ name: "",
