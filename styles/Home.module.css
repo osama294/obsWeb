@@ -1347,6 +1347,7 @@
   }
   .picture {
     max-width: 245px !important;
+    margin: 0 !important;
     width: 145px !important;
     position: relative;
     height: 145px !important;
@@ -7083,5 +7084,141 @@
   }
   .career .cayh {
     font-size: 18px !important;
+  }
+  .hire {
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    width: 90%;
+    align-items: stretch;
+  }
+  .hire .fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .hire .fieldsets {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .hire .fieldsets .inputs {
+    width: 100%;
+    max-width: 100%;
+    height: 240px !important;
+    padding: 20px 10px 20px 40px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: none;
+    outline: none;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.94px;
+    margin-bottom: 30px;
+  }
+  .hire .labels {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-bottom: 10px !important;
+  }
+  .hire .ebox {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .hire .ebox .email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+  }
+  .hire .buttns {
+    padding: 11px 19px !important;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    margin-top: 25px !important;
+    border-radius: 50px !important;
+    font-size: 14px !important;
+  }
+  .hire .upload {
+    width: 100%;
+    background: rgba(217, 217, 217, 0.5);
+    padding: 114px 0px 114px 35%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+  .hire .name {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+  }
+  .hire .labels:before {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    font-weight: 600 !important;
+    content: "* ";
+    color: red;
+  }
+  .hire .inputs {
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: stretch;
+    height: 40px !important;
+    margin: 0;
+    padding: 7px 16px;
+    font-size: 14px !important;
+    line-height: 19px;
+    font-weight: 500;
+    caret-color: #ffd400;
+    margin-bottom: 20px;
+    background: rgba(217, 217, 217, 0.5);
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+  .hire .form_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hire .form_desc p {
+    max-width: 52% !important;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .hire .form_desc .line {
+    margin: 10px 0px;
+    width: 172px;
+  }
+  .hire .form_desc .form_title {
+    margin: 0;
+    font-size: 22px !important;
+    line-height: 29px !important;
+    font-weight: 600;
+  }
+  .hire .form_desc .picture {
+    margin: 30px 0px;
+    max-width: 339px !important;
+    width: 326px !important;
+    position: relative;
+    height: 312px !important;
+  }
+  .hire .hr2 {
+    display: none;
   }
 }/*# sourceMappingURL=Home.module.css.map */
