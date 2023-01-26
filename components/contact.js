@@ -16,6 +16,7 @@ function Contact() {
     email: "",
     message: "",
   });
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const handleChange = (e) => {
     setInputs({
@@ -28,15 +29,24 @@ function Contact() {
     setShow(false);
   }, 1000);
   // setShow(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (inputs.name == "" || inputs.email == "" || inputs.message == "") {
+      if(!inputs.email.match(validRegex)){
+ 
+        setShow(true);
+        setResponse("Enter Valid Email");
+        setTimeout(function () {
+          setShow(false);
+        }, 5000);
+      }else{
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
         setShow(false);
-      }, 5000);
+      }, 5000);}
       return;
     } else {
       const requestOptions = {
