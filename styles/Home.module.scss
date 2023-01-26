@@ -6978,7 +6978,23 @@ position: relative;
     }
   }
   @media only screen and (max-width: 550px) {
-   
+    .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      padding: 30px 20px;
+      font-size: 14px !important;
+      min-width: 200px !important;
+      width: 300px !important;
+      max-width: 300px !important;
+      z-index: 111111111111111111111111111111;
+      color: black;
+      background-color: #fff;
+      border-radius: 1em;
+      transform: translate(-50%, -50%);
+      outline: transparent;
+    }
     .randox_wrapper{
       max-width: 95%;
       position: relative;

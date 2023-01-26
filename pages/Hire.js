@@ -41,6 +41,8 @@ console.log("job",data)
     // cv: {cv},
     // job_id:"2"
   });
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   let formData = new FormData();
   const handleChange = (e) => {
     setInputs({
@@ -52,12 +54,27 @@ console.log("job",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.youremail == "" || inputs.message == "" ||inputs.lastname == "" || inputs.detail == "") {
-      setShow(true);
+    if (inputs.name == "" || inputs.youremail == ""  || inputs.message == "" ||inputs.lastname == "" || inputs.detail == "") {
+      
+      if(inputs.youremail !== inputs.confirmemail ){    
+         setShow(true);   
+          setResponse("Enter Same Email");
+          setTimeout(function () {
+            setShow(false);
+          }, 5000);
+             }else if(!inputs.youremail.match(validRegex)){
+              setShow(true);   
+              setResponse("Enter Valid Email");
+              setTimeout(function () {
+                setShow(false);
+              }, 5000);
+             }
+      else
+{  setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
         setShow(false);
-      }, 5000);
+      }, 5000);}
       return;
     } else {
       formData.append("name",inputs.name)
@@ -353,7 +370,7 @@ console.log("job",data)
           </div>
         </div>
       </div>
-      {/* {show == true && <Modal message={response} />} */}
+      {show == true && <Modal message={response} />}
       <Footer />
     </>
   );
