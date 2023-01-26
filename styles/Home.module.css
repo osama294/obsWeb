@@ -4507,11 +4507,11 @@
     flex-shrink: 1;
   }
   .career .form .labels {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
   .career .form .upload {
     width: 100%;
@@ -4529,7 +4529,7 @@
          column-gap: 34px;
   }
   .career .form .labels:before {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 29px;
     font-weight: 600;
     content: "* ";
@@ -4539,14 +4539,14 @@
     flex-grow: 1;
     flex-shrink: 1;
     align-self: stretch;
-    height: 83px;
+    height: 53px;
     margin: 0;
-    padding: 27px 46px;
-    font-size: 29px;
-    line-height: 29px;
+    padding: 14px 21px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 500;
     caret-color: #ffd400;
-    margin-bottom: 53px;
+    margin-bottom: 20px;
     background: rgba(217, 217, 217, 0.5);
     border: 2px solid #000000;
     border-radius: 10px;
@@ -4558,7 +4558,7 @@
   }
   .career .form .form_desc .form_title {
     margin: 0;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 69px;
     font-weight: 600;
   }
@@ -4573,7 +4573,7 @@
   .career .form .form_desc .clear p {
     color: black;
     margin: 0;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 69px;
   }
   .career .form .hr2 {
