@@ -40,12 +40,12 @@ data = [
     {image:randox ,
       name:"randox", 
       link:"/Randox",
-      btn:"view more"
+      btn:"View More"
      },
      {image:webgl ,
        name:"webgl",
        link:"https://youtu.be/yyrBcmuIk4Q",
-       btn:"watch"
+       btn:"Watch Now"
      }
     ]
     console.log("datassss", data);

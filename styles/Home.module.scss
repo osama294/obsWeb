@@ -103,6 +103,9 @@ $gold: #dba514;
   align-items: center;
   justify-content: space-between;
   .bl {
+    .hired{
+      display: none;
+    }
     .mv {
       display: none;
     }
@@ -2162,8 +2165,23 @@ width: 100% !important;
     justify-content: space-between;
     .bl {
       padding: 30px 35px 30px 35px !important;
+      .hired{
+        display: block;
+        padding: 10px 30px;
+        background-color: #ffd400;
+        color: black;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 20px;
+        border: none;
+       border-radius: 132px;
+        font-size: 12px;
+        line-height: 15px;
+      }
       .dv {
         display: none;
+        
       }
       .bannerp {
         display: none;
@@ -3625,6 +3643,7 @@ width: 100% !important;
     .contact_us {
       position: relative;
       top: 23px;
+      margin: 0px 10px 0px 0px ;
       width: 200px;
       left: 0;
       h3 {
@@ -3648,9 +3667,9 @@ width: 100% !important;
   }
   .contact_cell {
     right: 0px;
-    top: 105px;
-    height: 213px !important;
-    width: 167px !important;
+    top: 160px;
+    height: 151px !important;
+    width: 118px !important;
   }
   .form {
     .form_desc{
@@ -3668,7 +3687,7 @@ width: 100% !important;
       }
     .row {
       display: flex;
-      width: 117px !important;
+      width: 170px !important;
       gap: 0px;
       flex-direction: column;
       input{
@@ -3720,7 +3739,7 @@ width: 100% !important;
 
     }
     .message {
-      width: 117px !important;
+      width: 170px !important;
       height: 94px !important;
       word-wrap: break-word;
       word-break: break-all;
@@ -7292,6 +7311,85 @@ position: relative;
     .career{
       .career_row{
         margin: 10px;
+        max-width: 90%;
+        width: 90%;    
+        .c_card {
+          display: flex;
+          background-color: #ffd400;
+          border-radius: 55px;
+          flex-direction: column;
+          border-radius: 90px;
+          justify-content: flex-end;
+          position: relative;
+          align-items: center;
+          .tab {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 111;
+            .arrow {
+              margin: 0px 17px 20px 17px;
+              width: 45px;
+              color: white;
+              height: 45px;
+              font-size: 45px;
+            }
+            .vertical {
+              writing-mode: vertical-lr;
+              font-family: Montserrat;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 34px;
+              transform: rotate(180deg) !important;
+              margin: 29px 13px 35px 14px;
+              color: #000000;
+            }
+          }
+        }
+        
+        .cd_card {
+          display: flex;
+          background-color: #ffd400;
+          border-radius: 55px;
+          // border-radius: 30px;
+    height: 350px;
+    width: 300px;
+          flex-direction: row-reverse;
+          border-radius: 38px;
+          justify-content: center;
+          transition-delay: 1ms;
+          position: relative;
+          transition: ease-out;
+          align-items: flex-end;
+          .tab2 {
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            position: relative;
+            z-index: 1111;
+            flex-direction: row-reverse;
+            background: white;
+            width: 90%;
+            border-radius: 66px;
+            color: #000000;
+            padding: 10px;
+            margin: 20px;
+          }
+          .arrow2 {
+            // margin: 0px 24px 0px 0px;
+            width: 45px;
+            color: black !important;
+            height: 45px;
+            // transform: rotate(90deg) !important;
+            font-size: 45px;
+          }
+          .horizontal {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 34px;
+          }
+        }
       }
       .cayh{
       font-size: 18px !important;

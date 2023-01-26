@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import Link from "next/link"
 import img from "../public/right.png";
 import { motion } from "framer-motion";
 function Banner() {
@@ -26,6 +27,7 @@ function Banner() {
                 We help businesses digitally transform by building innovative
                 products{" "}
               </p>
+              <Link  href="/Hire" smooth="true"><button className={styles.hired}>Hire Us</button></Link>
             </div>
             <div className={styles.cover}>
               <motion.div

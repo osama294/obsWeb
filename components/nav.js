@@ -42,17 +42,18 @@ function Nav(props) {
           </li>
           <li onClick={navHandle}>
             <Link href="/#services">Services </Link>
+          </li> 
+          <li onClick={navHandle}>
+          <Link href="/careers">Careers</Link>
           </li>
           <li onClick={navHandle}>
-            <Link href="/#contact">Contact</Link>
+            <Link href="/#contact">Contact Us</Link>
           </li>
           <li onClick={navHandle}>
             {" "}
             <Link href="/#about">About</Link>
           </li>
-          <li onClick={navHandle}>
-          <Link href="/careers">Careers</Link>
-          </li>
+         
         </ul>
       </div>
     </div>
