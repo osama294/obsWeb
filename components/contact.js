@@ -67,10 +67,13 @@ function Contact() {
         setInputs({ name: "",
         email: "",
         message: "",})
-      setShow(true);
+      // setShow(true);
+      setTimeout(function () {
+        setShow(true);
+      }, 1000);
       setTimeout(function () {
         setShow(false);
-      }, 1000);
+      }, 3000);
     }
   };
   return (
