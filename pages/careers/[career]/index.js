@@ -70,7 +70,7 @@ console.log("doomss",data);
 
   return (
     <>
-      <Header />
+      <Header color="#000000"/>
       <div className={styles.wrapper}>
         <div className={styles.contain}>
           <div className={styles.heading}>

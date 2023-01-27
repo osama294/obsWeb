@@ -147,6 +147,7 @@ console.log("job",data)
       // setInputs({name:'',lastname:'',email:'',phone:''}) 
     }
   };
+  const color = "#000000"
   return (
     <>
           <Head>
@@ -161,7 +162,7 @@ console.log("job",data)
 	<meta name="theme-color" content="#ffffff"/>
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
-      <Header />
+      <Header  color={color}/>
       <div className={styles.wrapper}>
         <div className={styles.career}>
           <div className={styles.hire}>

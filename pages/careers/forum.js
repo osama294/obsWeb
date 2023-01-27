@@ -117,7 +117,7 @@ console.log("jobs",data)
   };
   return (
     <>
-      <Header />
+      <Header color="#000000" />
       <div className={styles.wrapper}>
         <div className={styles.career}>
         <div className={styles.heading}>

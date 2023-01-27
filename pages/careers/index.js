@@ -69,7 +69,7 @@ function Careers() {
                 }}><Blur/></motion.div>   :
                 
                 job.length != 0 ? <ErrorBoundary>
-      <Header />
+      <Header  color="#000000"/>
       <div className={styles.wrapper}>
         <div className={styles.career}>
           <p className={styles.cayh}>Careers at OBS Technologia</p>

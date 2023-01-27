@@ -25,7 +25,7 @@ function Randox() {
   const [isLoading, setIsLoading] = useState(true);
   const domain = "https://globaltechnologia.org/webAdmin/";
   // const poster = [];
-
+  const color = "#000000"
   useEffect(() => {
     // setIsLoading(true);
     // fetch("https://globaltechnologia.org/webAdmin/api/portshow")
@@ -95,7 +95,7 @@ function Randox() {
           },
         }}
       >
-        <Header />
+        <Header color={color} />
         <div className={styles.randox_wrapper}>
           <div className={styles.sectionr}>
                    <figure className={styles.image}>
