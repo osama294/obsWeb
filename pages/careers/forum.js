@@ -16,7 +16,7 @@ const data = router.query;
 console.log("data",router);
 useEffect(() => {
 
-setJob_id(router.query.job_id)
+setJob_id(router.query.id)
 console.log("jobs",data)
 }, [data])
 
@@ -45,7 +45,7 @@ console.log("jobs",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "") {
+    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "" || cv == (""|| {} || null) || cv.cv == (""|| {} || null)) {
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
@@ -61,7 +61,7 @@ console.log("jobs",data)
       formData.append("job_id", job_id)
       formData.append("experience",inputs.experience)
       formData.append("expected_salary",inputs.expected_salary)
-      console.log("form",cv.cv)
+      console.log("form",cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
