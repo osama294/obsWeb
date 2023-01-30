@@ -40,12 +40,16 @@ console.log("jobs",data)
       ...inputs,
       [e.target.name]: e.target.value,
     });
-    console.log("$$$", e.target.name);
+    console.log("$$$", cv);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == "" || cv == (""|| {} || null) || cv.cv == (""|| {} || null)) {
+    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == ""   ) {
+      console.log("cv", cv ,cv.cv)
+      if(cv == {}){
+        console.log("bsdk")
+      }
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
