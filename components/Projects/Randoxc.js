@@ -26,7 +26,7 @@ function Randoxc(props) {
   {props.name == "randox" &&<div className={styles.rightr}>
                 <Image src={props.image} alt="web" fill objectFit="fill" />
             </div> }
-            {props.name == "webgl" &&<div className={styles.rights}>
+            {props.name == "webgl" &&<div className={styles.rightr}>
                 <Image src={props.image} alt="web" fill objectFit="fill" />
             </div> }
                 </div>
