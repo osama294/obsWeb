@@ -15,6 +15,13 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
 # nyc test coverage
 .nyc_output
 

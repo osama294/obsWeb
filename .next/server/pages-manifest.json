@@ -1,14 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/Hire": "pages/Hire.html",
-  "/Randox": "pages/Randox.html",
-  "/api/hello": "pages/api/hello.js",
-  "/careers/[career]": "pages/careers/[career].html",
-  "/careers/forum": "pages/careers/forum.html",
-  "/careers": "pages/careers.html",
-  "/": "pages/index.html",
-  "/portfolio": "pages/portfolio.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }
