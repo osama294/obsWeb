@@ -11,33 +11,33 @@ import FormData from 'form-data'
 import Modal from "../components/modal";
 import axios from "axios";
 import hire from '../public/hire.png'
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 function Hire() {
   const router = useRouter();
-const data = router.query.job_id;
-console.log(data);
-useEffect(() => {
+  const data = router.query.job_id;
+  console.log(data);
+  useEffect(() => {
 
-setJob_id(router.query.job_id)
-console.log("job",data)
-}, [data])
+    setJob_id(router.query.job_id)
+    console.log("job", data)
+  }, [data])
 
-  const [response, setResponse] = useState(""); 
-   const [show, setShow] = useState(false);
-   const [job_id , setJob_id] = useState("0")
-   const [cv ,setCv] = useState({})
+  const [response, setResponse] = useState("");
+  const [show, setShow] = useState(false);
+  const [job_id, setJob_id] = useState("0")
+  const [cv, setCv] = useState({})
   const [inputs, setInputs] = useState({
-             name:"",
-             cname:"",
-             url:"",
-             youremail:"",
-             confirmemail:"",
-             lastname:"",
-             platform:"",
-             budget:"",
-             time:"",
-             detail:""
+    name: "",
+    cname: "",
+    url: "",
+    youremail: "",
+    confirmemail: "",
+    lastname: "",
+    platform: "",
+    budget: "",
+    time: "",
+    detail: ""
     // cv: {cv},
     // job_id:"2"
   });
@@ -54,69 +54,70 @@ console.log("job",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.youremail == ""  || inputs.message == "" ||inputs.lastname == "" || inputs.detail == "") {
-      
-      if(inputs.youremail !== inputs.confirmemail ){    
-         setShow(true);   
-          setResponse("Enter Same Email");
-          setTimeout(function () {
-            setShow(false);
-          }, 5000);
-             }else if(!inputs.youremail.match(validRegex)){
-              setShow(true);   
-              setResponse("Enter Valid Email");
-              setTimeout(function () {
-                setShow(false);
-              }, 5000);
-             }
-      else
-{  setShow(true);
-      setResponse("Enter Required Details");
-      setTimeout(function () {
-        setShow(false);
-      }, 5000);}
+    if (inputs.name == "" || inputs.youremail == "" || inputs.message == "" || inputs.lastname == "" || inputs.detail == "") {
+
+      if (inputs.youremail !== inputs.confirmemail) {
+        setShow(true);
+        setResponse("Enter Same Email");
+        setTimeout(function () {
+          setShow(false);
+        }, 5000);
+      } else if (!inputs.youremail.match(validRegex)) {
+        setShow(true);
+        setResponse("Enter Valid Email");
+        setTimeout(function () {
+          setShow(false);
+        }, 5000);
+      }
+      else {
+        setShow(true);
+        setResponse("Enter Required Details");
+        setTimeout(function () {
+          setShow(false);
+        }, 5000);
+      }
       return;
     } else {
-      formData.append("name",inputs.name)
-      formData.append("cname",inputs.cname)
-      formData.append("platform",inputs.platform)
-      formData.append("budget",inputs.budget)
-      formData.append("detail",inputs.detail)
-      formData.append("lastname",inputs.lastname)
-      formData.append("youremail",inputs.youremail)
-      formData.append("confirmemail",inputs.confirmemail)
-      formData.append("time",inputs.time)
+      formData.append("name", inputs.name)
+      formData.append("cname", inputs.cname)
+      formData.append("platform", inputs.platform)
+      formData.append("budget", inputs.budget)
+      formData.append("detail", inputs.detail)
+      formData.append("lastname", inputs.lastname)
+      formData.append("youremail", inputs.youremail)
+      formData.append("confirmemail", inputs.confirmemail)
+      formData.append("time", inputs.time)
       formData.append("url", inputs.url)
       // formData.append("job_id", job_id)
-      
-      console.log("form",cv.cv)
+
+      console.log("form", cv.cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
-        headers: { 'Content-Type': 'multipart/form-data'},
+        headers: { 'Content-Type': 'multipart/form-data' },
         body: JSON.stringify([inputs]),
       };
-      const config = {     
+      const config = {
         headers: { 'content-type': 'multipart/form-data' }
-    }
-    // url = 'https://globaltechnologia.org/webAdmin/api/apply_job'
-    axios.post('https://globaltechnologia.org/webAdmin/api/budget_contact', formData, config)
+      }
+      // url = 'https://globaltechnologia.org/webAdmin/public/api/apply_job'
+      axios.post('https://globaltechnologia.org/webAdmin/public/api/budget_contact', formData, config)
         .then(response => {
-            console.log(response);
-            if(response.status == 200) {
+          console.log(response);
+          if (response.status == 200) {
             setResponse(response?.data?.message);
             setShow(true);
             setInputs({
-             name:"",
-             cname:"",
-             url:"",
-             youremail:"",
-             confirmemail:"",
-             detail:"",
-             lastname:"",
-             platform:"",
-             detail:"",
-             time:"",
+              name: "",
+              cname: "",
+              url: "",
+              youremail: "",
+              confirmemail: "",
+              detail: "",
+              lastname: "",
+              platform: "",
+              detail: "",
+              time: "",
             });
             setCv({})
             setTimeout(function () {
@@ -124,16 +125,16 @@ console.log("job",data)
             }, 5000);
           }
 
-            else{
-              setResponse("try again")
-            }
+          else {
+            setResponse("try again")
+          }
 
         })
         .catch(error => {
-            console.log(error);
+          console.log(error);
         });
-      // fetch("https://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
-      
+      // fetch("https://globaltechnologia.org/webAdmin/public/api/apply_job", requestOptions)
+
       //   .then((response) => response.json())
       //   .then((res) => {
       //     console.log(res);
@@ -150,19 +151,19 @@ console.log("job",data)
   const color = "#000000"
   return (
     <>
-          <Head>
+      <Head>
         <title>OBS TECHNOLOGIA</title>
         <meta name="viewport" content="width=device-width" />
-        <link rel="apple-touch-icon" sizes="180x180" href="../public/apple.png"/>
-	<link rel="icon" type="image/png" sizes="32x32" href="../public/favicon32.png"/>
-	<link rel="icon" type="image/png" sizes="16x16" href="../public/favicon16.png"/>
-	{/* <link rel="manifest" href="../public/site.webmanifest"/> */}
-	<link rel="mask-icon" href="../public/safari-pinned-tab.svg" color="#5bbad5"/>
-	<meta name="msapplication-TileColor" content="#da532c"/>
-	<meta name="theme-color" content="#ffffff"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="../public/apple.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon16.png" />
+        {/* <link rel="manifest" href="../public/site.webmanifest"/> */}
+        <link rel="mask-icon" href="../public/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
-      <Header  color={color}/>
+      <Header color={color} />
       <div className={styles.wrapper}>
         <div className={styles.career}>
           <div className={styles.hire}>
@@ -171,14 +172,14 @@ console.log("job",data)
               <div className={styles.line}></div>
               <p className={styles.pascal}>We collaborate with platforms and companies to transform innovative concepts into stunning digital goods and experiences.</p>
               <figure className={styles.picture}>
-          <Image
-            src={hire}
-            alt='member'
-            layout='fill'
-            objectFit='contain'
-            priority
-          />
-        </figure>
+                <Image
+                  src={hire}
+                  alt='member'
+                  layout='fill'
+                  objectFit='contain'
+                  priority
+                />
+              </figure>
             </div>
             <hr className={styles.hr2} />
             <div className={styles.form_content}>
@@ -213,37 +214,37 @@ console.log("job",data)
                 </div>
                 {/* <input type='text' value='Last Name' className={styles.lname} /> */}
               </div>
-            <div className={styles.ebox}>
-          
-              <div className={styles.email}>
-                <label htmlFor='youremail' className={styles.labels}>
-                  Your Email
-                </label>
-                <input
-                  type='text'
-                  name='youremail'
-                  id='youremail'
-                  className={`${styles.inputs} "" ${styles.email}` }
-                  placeholder='Your Email'
-                  value={inputs.youremail}
-                  onChange={handleChange}
-                />
-              </div>  
-              <div className={styles.email}>
-                <label htmlFor='email' className={styles.labels}>
-                 Confirm Email
-                </label>
-                <input
-                  type='text'
-                  name='confirmemail'
-                  id='confirmemail'
-                  className={`${styles.inputs} "" ${styles.email}` }
-                  placeholder='Confirm Email'
-                  value={inputs.confirmemail}
-                  onChange={handleChange}
-                />
+              <div className={styles.ebox}>
+
+                <div className={styles.email}>
+                  <label htmlFor='youremail' className={styles.labels}>
+                    Your Email
+                  </label>
+                  <input
+                    type='text'
+                    name='youremail'
+                    id='youremail'
+                    className={`${styles.inputs} "" ${styles.email}`}
+                    placeholder='Your Email'
+                    value={inputs.youremail}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className={styles.email}>
+                  <label htmlFor='email' className={styles.labels}>
+                    Confirm Email
+                  </label>
+                  <input
+                    type='text'
+                    name='confirmemail'
+                    id='confirmemail'
+                    className={`${styles.inputs} "" ${styles.email}`}
+                    placeholder='Confirm Email'
+                    value={inputs.confirmemail}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
-            </div>
               <div className={styles.fieldset}>
                 <label htmlFor='time' className={styles.labels}>
                   What is your timeline for the project

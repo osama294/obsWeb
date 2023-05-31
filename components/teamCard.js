@@ -10,9 +10,9 @@ import styles from "../styles/Home.module.scss";
 function TeamCard(props) {
   var i = 0;
   useEffect(() => {
-   
+
   }, []);
-  const domain = "https://globaltechnologia.org/webAdmin/";
+  const domain = "https://globaltechnologia.org/webAdmin/public/";
   return (
     <>
       <motion.div

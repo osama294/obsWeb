@@ -34,16 +34,16 @@ function Contact() {
     e.preventDefault();
 
     if (inputs.name == "" || inputs.email == "" || inputs.message == "") {
-    
+
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
         setShow(false);
       }, 5000);
       return;
-    } 
-    if(!inputs.email.match(validRegex)){
- 
+    }
+    if (!inputs.email.match(validRegex)) {
+
       setShow(true);
       setResponse("Enter Valid Email");
       setTimeout(function () {
@@ -57,16 +57,18 @@ function Contact() {
         body: JSON.stringify(inputs),
       };
 
-      fetch("https://globaltechnologia.org/webAdmin/api/contactus", requestOptions)
+      fetch("https://globaltechnologia.org/webAdmin/public/api/contactus", requestOptions)
         .then((response) => response.json())
         .then((res) => {
           console.log(res);
           setResponse("Your Response Is Sumbitted");
           console.log(res.message);
         });
-        setInputs({ name: "",
+      setInputs({
+        name: "",
         email: "",
-        message: "",})
+        message: "",
+      })
       // setShow(true);
       setTimeout(function () {
         setShow(true);

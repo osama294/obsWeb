@@ -9,28 +9,28 @@ import { useRouter } from 'next/router'
 import FormData from 'form-data'
 import Modal from "../../components/modal";
 import axios from "axios";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 function Forum() {
   const router = useRouter();
-const data = router.query;
-console.log("data",router);
-useEffect(() => {
+  const data = router.query;
+  console.log("data", router);
+  useEffect(() => {
 
-setJob_id(router.query.id)
-console.log("jobs",data)
-}, [data])
+    setJob_id(router.query.id)
+    console.log("jobs", data)
+  }, [data])
 
-  const [response, setResponse] = useState(""); 
-   const [show, setShow] = useState(false);
-   const [job_id , setJob_id] = useState("0")
-   const [cv ,setCv] = useState({})
+  const [response, setResponse] = useState("");
+  const [show, setShow] = useState(false);
+  const [job_id, setJob_id] = useState("0")
+  const [cv, setCv] = useState({})
   const [inputs, setInputs] = useState({
     name: "",
     lastname: "",
     email: "",
     phone: "",
-    expected_salary:"",
-    experience:""   
+    expected_salary: "",
+    experience: ""
     // cv: {cv},
     // job_id:"2"
   });
@@ -45,9 +45,9 @@ console.log("jobs",data)
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == ""|| inputs.cv == "" || inputs.message == "" ||inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == ""|| inputs.experience == ""   ) {
-      console.log("cv", cv ,cv.cv)
-      if(cv == {}){
+    if (inputs.name == "" || inputs.email == "" || inputs.cv == "" || inputs.message == "" || inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == "" || inputs.experience == "") {
+      console.log("cv", cv, cv.cv)
+      if (cv == {}) {
         console.log("bsdk")
       }
       setShow(true);
@@ -57,38 +57,38 @@ console.log("jobs",data)
       }, 5000);
       return;
     } else {
-      formData.append("name",inputs.name)
-      formData.append("lastname",inputs.lastname)
-      formData.append("email",inputs.email)
-      formData.append("phone",inputs.phone)
+      formData.append("name", inputs.name)
+      formData.append("lastname", inputs.lastname)
+      formData.append("email", inputs.email)
+      formData.append("phone", inputs.phone)
       formData.append("cv", cv.cv)
       formData.append("job_id", job_id)
-      formData.append("experience",inputs.experience)
-      formData.append("expected_salary",inputs.expected_salary)
-      console.log("form",cv)
+      formData.append("experience", inputs.experience)
+      formData.append("expected_salary", inputs.expected_salary)
+      console.log("form", cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
-        headers: { 'Content-Type': 'multipart/form-data'},
+        headers: { 'Content-Type': 'multipart/form-data' },
         body: JSON.stringify([inputs]),
       };
-      const config = {     
+      const config = {
         headers: { 'content-type': 'multipart/form-data' }
-    }
-    // url = 'https://globaltechnologia.org/webAdmin/api/apply_job'
-    axios.post('https://globaltechnologia.org/webAdmin/api/apply_job', formData, config)
+      }
+      // url = 'https://globaltechnologia.org/webAdmin/public/api/apply_job'
+      axios.post('https://globaltechnologia.org/webAdmin/public/api/apply_job', formData, config)
         .then(response => {
-            console.log(response);
-            if(response.status == 200) {
+          console.log(response);
+          if (response.status == 200) {
             setResponse(response?.data?.message);
             setShow(true);
             setInputs({
-             name:"",
-             email:"",
-             lastname:"",
-             phone:"",
-            expected_salary:"",
-            experience:""   
+              name: "",
+              email: "",
+              lastname: "",
+              phone: "",
+              expected_salary: "",
+              experience: ""
             });
             setCv({})
             setTimeout(function () {
@@ -96,16 +96,16 @@ console.log("jobs",data)
             }, 5000);
           }
 
-            else{
-              setResponse("try again")
-            }
+          else {
+            setResponse("try again")
+          }
 
         })
         .catch(error => {
-            console.log(error);
+          console.log(error);
         });
-      // fetch("https://globaltechnologia.org/webAdmin/api/apply_job", requestOptions)
-      
+      // fetch("https://globaltechnologia.org/webAdmin/public/api/apply_job", requestOptions)
+
       //   .then((response) => response.json())
       //   .then((res) => {
       //     console.log(res);
@@ -124,18 +124,18 @@ console.log("jobs",data)
       <Header color="#000000" />
       <div className={styles.wrapper}>
         <div className={styles.career}>
-        <div className={styles.heading}>
+          <div className={styles.heading}>
             <h3 className={styles.title}>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
             <hr className={styles.hr1} />
             <h2 className={styles.desc}>
-            {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
+              {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
             </h2>
           </div>
           <div className={styles.form}>
             <div className={styles.form_desc}>
               <h3 className={styles.form_title}>Personal Information</h3>
-              <div className={styles.clear} onClick={()=>{
-     setInputs({name:'',lastname:'',email:'',phone:'',cv:''}) 
+              <div className={styles.clear} onClick={() => {
+                setInputs({ name: '', lastname: '', email: '', phone: '', cv: '' })
               }}>
                 <RiDeleteBin7Line className={styles.svg} />
                 <p>Clear form</p>
@@ -191,7 +191,7 @@ console.log("jobs",data)
                 </div>
                 <div className={styles.fieldset}>
                   <label htmlFor='expected_salary' className={styles.labels}>
-                  Expected Salary
+                    Expected Salary
                   </label>
                   <input
                     type='text'
@@ -256,10 +256,10 @@ console.log("jobs",data)
                   className={styles.upload}
                   placeholder='Resume'
                   value={inputs.cv}
-                  onChange={(e)=>{
+                  onChange={(e) => {
                     console.log("file", e.target.name)
-                    setCv({ [e.target.name]: e.target.files[0]})
-                    console.log("cv",cv)
+                    setCv({ [e.target.name]: e.target.files[0] })
+                    console.log("cv", cv)
                   }}
                 />
               </div>

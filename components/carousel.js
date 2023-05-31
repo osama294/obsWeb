@@ -15,7 +15,7 @@ export default class NextJsCarousel extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://globaltechnologia.org/webAdmin/api/testomshow")
+    fetch("https://globaltechnologia.org/webAdmin/public/api/testomshow")
       .then((response) => response.json())
       .then((data) => this.setState({ data }));
     console.log("SSS", this.state);

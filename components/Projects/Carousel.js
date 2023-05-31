@@ -17,36 +17,40 @@ export default class NextJsCarousel extends Component {
       data: null,
     };
   }
-//   componentDidMount() {
-//     fetch("https://globaltechnologia.org/webAdmin/api/testomshow")
-//       .then((response) => response.json())
-//       .then((data) => this.setState({ data }));
-//     console.log("SSS", this.state);
-//   }
-data = [
-    {image:randox ,
-     name:"randox", 
-     link:""
+  //   componentDidMount() {
+  //     fetch("https://globaltechnologia.org/webAdmin/public/api/testomshow")
+  //       .then((response) => response.json())
+  //       .then((data) => this.setState({ data }));
+  //     console.log("SSS", this.state);
+  //   }
+  data = [
+    {
+      image: randox,
+      name: "randox",
+      link: ""
     },
-    {image:webgl ,
-      name:"webgl",
-      link:""
+    {
+      image: webgl,
+      name: "webgl",
+      link: ""
     }
-]
+  ]
 
   render() {
     // const { data } = this.state;
-   const  data = [
-    {image:randox ,
-      name:"randox", 
-      link:"/Randox",
-      btn:"View More"
-     },
-     {image:webgl ,
-       name:"webgl",
-       link:"https://youtu.be/yyrBcmuIk4Q",
-       btn:"Watch Now"
-     }
+    const data = [
+      {
+        image: randox,
+        name: "randox",
+        link: "/Randox",
+        btn: "View More"
+      },
+      {
+        image: webgl,
+        name: "webgl",
+        link: "https://youtu.be/yyrBcmuIk4Q",
+        btn: "Watch Now"
+      }
     ]
     console.log("datassss", data);
 
@@ -68,7 +72,7 @@ data = [
                 image={child.image}
                 link={child.link}
                 btn={child.btn}
-                name = {child.name}
+                name={child.name}
                 key={index}
               />
             );
