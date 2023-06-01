@@ -20,7 +20,7 @@ function Ourteam() {
         }
       })
       .then((res) => {
-        console.log("&&&&&&&&&&&&&", res);
+        //console.log("&&&&&&&&&&&&&", res);
         if (res?.length > 0) {
           const team = res;
           setTeam(team);
@@ -29,7 +29,7 @@ function Ourteam() {
           return;
         }
       });
-    console.log("EEEEEE", team);
+    //console.log("EEEEEE", team);
   }, []);
   const domain = "https://obstechnologia.com/webAdmin/";
   return (

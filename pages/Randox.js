@@ -37,21 +37,21 @@ function Randox() {
     //     const heading = res;
 
     //     // setPoster(heading.splice(-3));
-    //     console.log("oh bhains" , heading)
+    //     //console.log("oh bhains" , heading)
     //     // heading.splice(-1);
     //     setDiscription(heading);
-    //     console.log("oh bhains" , discription)
+    //     //console.log("oh bhains" , discription)
 
     //     // setIsLoading(false);
 
     //   });
     setTimeout(() => {
-      // console.log("2222222222222222222")
+      // //console.log("2222222222222222222")
       setIsLoading(false)
-      // console.log("first",isLoading)
+      // //console.log("first",isLoading)
     }, 1000)
   }, []);
-  console.log("first", isLoading)
+  //console.log("first", isLoading)
   return (
     <>
       <Head>

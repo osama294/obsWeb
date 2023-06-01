@@ -16,11 +16,11 @@ import Image from "next/image";
 function Hire() {
   const router = useRouter();
   const data = router.query.job_id;
-  console.log(data);
+  //console.log(data);
   useEffect(() => {
 
     setJob_id(router.query.job_id)
-    console.log("job", data)
+    //console.log("job", data)
   }, [data])
 
   const [response, setResponse] = useState("");
@@ -49,7 +49,7 @@ function Hire() {
       ...inputs,
       [e.target.name]: e.target.value,
     });
-    console.log("$$$", e.target.name);
+    //console.log("$$$", e.target.name);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -90,7 +90,7 @@ function Hire() {
       formData.append("url", inputs.url)
       // formData.append("job_id", job_id)
 
-      console.log("form", cv.cv)
+      //console.log("form", cv.cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
@@ -103,7 +103,7 @@ function Hire() {
       // url = 'https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job'
       axios.post('https://globaltechnologia.org/webAdmin/public/index.php/api/budget_contact', formData, config)
         .then(response => {
-          console.log(response);
+          //console.log(response);
           if (response.status == 200) {
             setResponse(response?.data?.message);
             setShow(true);
@@ -131,15 +131,15 @@ function Hire() {
 
         })
         .catch(error => {
-          console.log(error);
+          //console.log(error);
         });
       // fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {
-      //     console.log(res);
+      //     //console.log(res);
       //     setResponse(res);
-      //     console.log(res);
+      //     //console.log(res);
       //   });
       // setShow(true);
       // setTimeout(function () {
@@ -353,9 +353,9 @@ function Hire() {
                   placeholder='Resume'
                   value={inputs.cv}
                   onChange={(e)=>{
-                    console.log("file", e.target.name)
+                    //console.log("file", e.target.name)
                     setCv({ [e.target.name]: e.target.files[0]})
-                    console.log("cv",cv)
+                    //console.log("cv",cv)
                   }}
                 />
               </div> */}

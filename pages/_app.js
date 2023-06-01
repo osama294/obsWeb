@@ -11,14 +11,14 @@ const handExitComplete = () => {
   if (typeof window !== 'undefined') {
     // Get the hash from the url
     const hashId = window.location.hash;
-    
+
     if (hashId) {
       // Use the hash to find the first element with that id
       const element = document.querySelector(hashId);
-      console.log("bhosri",element)
+      //console.log("bhosri",element)
       if (element) {
         // Smooth scroll to that elment
-        console.log("bhosri",element)
+        //console.log("bhosri",element)
         element.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -26,10 +26,10 @@ const handExitComplete = () => {
         });
         $([document.documentElement, document.body]).animate({
           scrollTop: $(hashId).offset().top
-      }, 2000);
+        }, 2000);
       }
-    }else{
-      // console.log("bhosri",element)
+    } else {
+      // //console.log("bhosri",element)
 
     }
   }
@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }) {
 
       </Head>
       <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
-       <Component {...pageProps} key={router.route} />
+        <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </>
   );

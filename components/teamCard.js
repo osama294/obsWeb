@@ -12,7 +12,7 @@ function TeamCard(props) {
   useEffect(() => {
 
   }, []);
-  const domain = "https://globaltechnologia.org/webAdmin/public/index.php/";
+  const domain = "https://globaltechnologia.org/webAdmin/public/";
   return (
     <>
       <motion.div

@@ -21,7 +21,7 @@ export default class NextJsCarousel extends Component {
   //     fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/testomshow")
   //       .then((response) => response.json())
   //       .then((data) => this.setState({ data }));
-  //     console.log("SSS", this.state);
+  //     //console.log("SSS", this.state);
   //   }
   data = [
     {
@@ -52,7 +52,7 @@ export default class NextJsCarousel extends Component {
         btn: "Watch Now"
       }
     ]
-    console.log("datassss", data);
+    //console.log("datassss", data);
 
     // const arrowStyles = {
     //   position: "absolute",

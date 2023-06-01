@@ -14,7 +14,7 @@ export default class ErrorBoundary extends Component {
     };
   }
   componentDidCatch(error, errorInfo) {
-    console.log("dam dama dam", error, errorInfo);
+    //console.log("dam dama dam", error, errorInfo);
   }
 
   render() {

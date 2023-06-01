@@ -18,13 +18,13 @@ export default class NextJsCarousel extends Component {
     fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/testomshow")
       .then((response) => response.json())
       .then((data) => this.setState({ data }));
-    console.log("SSS", this.state);
+    //console.log("SSS", this.state);
   }
 
   render() {
     const { data } = this.state;
 
-    console.log("data", data);
+    //console.log("data", data);
 
     const arrowStyles = {
       position: "absolute",

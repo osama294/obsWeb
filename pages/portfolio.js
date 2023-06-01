@@ -17,7 +17,7 @@ function Portfolio() {
   const [poster, setPoster] = useState([]);
   const [color, setColor] = useState("#ffd400")
   const [isLoading, setIsLoading] = useState(true);
-  const domain = "https://globaltechnologia.org/webAdmin/public/index.php/";
+  const domain = "https://globaltechnologia.org/webAdmin/public/";
   // const poster = [];
   const router = useRouter()
   useEffect(() => {
@@ -34,16 +34,16 @@ function Portfolio() {
         const heading = res;
 
         // setPoster(heading.splice(-3));
-        console.log("oh bhains", heading)
+        //console.log("oh bhains", heading)
         // heading.splice(-1);
         setDiscription(heading);
-        console.log("oh bhains", discription)
+        //console.log("oh bhains", discription)
 
         // setIsLoading(false);
 
       });
     setTimeout(() => {
-      console.log("2222222222222222222")
+      //console.log("2222222222222222222")
       setIsLoading(false)
     }, 1000)
   }, []);

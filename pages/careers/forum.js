@@ -13,11 +13,11 @@ import { useState, useEffect } from "react";
 function Forum() {
   const router = useRouter();
   const data = router.query;
-  console.log("data", router);
+  //console.log("data", router);
   useEffect(() => {
 
     setJob_id(router.query.id)
-    console.log("jobs", data)
+    //console.log("jobs", data)
   }, [data])
 
   const [response, setResponse] = useState("");
@@ -40,15 +40,15 @@ function Forum() {
       ...inputs,
       [e.target.name]: e.target.value,
     });
-    console.log("$$$", cv);
+    //console.log("$$$", cv);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (inputs.name == "" || inputs.email == "" || inputs.cv == "" || inputs.message == "" || inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == "" || inputs.experience == "") {
-      console.log("cv", cv, cv.cv)
+      //console.log("cv", cv, cv.cv)
       if (cv == {}) {
-        console.log("bsdk")
+        //console.log("bsdk")
       }
       setShow(true);
       setResponse("Enter Required Details");
@@ -65,7 +65,7 @@ function Forum() {
       formData.append("job_id", job_id)
       formData.append("experience", inputs.experience)
       formData.append("expected_salary", inputs.expected_salary)
-      console.log("form", cv)
+      //console.log("form", cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
@@ -78,7 +78,7 @@ function Forum() {
       // url = 'https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job'
       axios.post('https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job', formData, config)
         .then(response => {
-          console.log(response);
+          //console.log(response);
           if (response.status == 200) {
             setResponse(response?.data?.message);
             setShow(true);
@@ -102,15 +102,15 @@ function Forum() {
 
         })
         .catch(error => {
-          console.log(error);
+          //console.log(error);
         });
       // fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {
-      //     console.log(res);
+      //     //console.log(res);
       //     setResponse(res);
-      //     console.log(res);
+      //     //console.log(res);
       //   });
       // setShow(true);
       // setTimeout(function () {
@@ -257,9 +257,9 @@ function Forum() {
                   placeholder='Resume'
                   value={inputs.cv}
                   onChange={(e) => {
-                    console.log("file", e.target.name)
+                    //console.log("file", e.target.name)
                     setCv({ [e.target.name]: e.target.files[0] })
-                    console.log("cv", cv)
+                    //console.log("cv", cv)
                   }}
                 />
               </div>

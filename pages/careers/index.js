@@ -19,7 +19,7 @@ function Careers() {
 
   const [job, setJob] = useState([]);
   const [show, setShow] = useState("");
-  const domain = "https://globaltechnologia.org/webAdmin/public/index.php/";
+  const domain = "https://globaltechnologia.org/webAdmin/public/";
 
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -33,7 +33,7 @@ function Careers() {
         }
       })
       .then((res) => {
-        console.log("&&&&&&&&&&&&&", res);
+        //console.log("&&&&&&&&&&&&&", res);
         if (res?.length > 0) {
           const job = res;
           setJob(job);
@@ -43,13 +43,13 @@ function Careers() {
         }
       });
     setTimeout(() => {
-      console.log("2222222222222222222")
+      //console.log("2222222222222222222")
       setIsLoading(false)
     }, 2000)
-    console.log("EEEEEE", job);
+    //console.log("EEEEEE", job);
     if (job.length != 0) {
       for (var i = 0; i < job.length; i++) {
-        console.log("pain", job[i].id)
+        //console.log("pain", job[i].id)
 
       }
     }

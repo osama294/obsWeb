@@ -60,9 +60,9 @@ function Contact() {
       fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/contactus", requestOptions)
         .then((response) => response.json())
         .then((res) => {
-          console.log(res);
+          //console.log(res);
           setResponse("Your Response Is Sumbitted");
-          console.log(res.message);
+          //console.log(res.message);
         });
       setInputs({
         name: "",
