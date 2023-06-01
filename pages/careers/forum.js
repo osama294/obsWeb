@@ -75,8 +75,8 @@ function Forum() {
       const config = {
         headers: { 'content-type': 'multipart/form-data' }
       }
-      // url = 'https://globaltechnologia.org/webAdmin/public/api/apply_job'
-      axios.post('https://globaltechnologia.org/webAdmin/public/api/apply_job', formData, config)
+      // url = 'https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job'
+      axios.post('https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job', formData, config)
         .then(response => {
           console.log(response);
           if (response.status == 200) {
@@ -104,7 +104,7 @@ function Forum() {
         .catch(error => {
           console.log(error);
         });
-      // fetch("https://globaltechnologia.org/webAdmin/public/api/apply_job", requestOptions)
+      // fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {
