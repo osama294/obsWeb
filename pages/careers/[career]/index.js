@@ -26,7 +26,7 @@ function Career() {
     setId(id);
     setIsLoading(true);
     //console.log("dooms")
-    fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/jobshowbyid", requestOptions)
+    fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/jobshowbyid", requestOptions)
       .then(res => { return res.json() })
       .then(res => {
         setData(res.data)

@@ -23,12 +23,12 @@ function Randox() {
   const [discription, setDiscription] = useState([]);
   const [poster, setPoster] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const domain = "https://globaltechnologia.org/webAdmin/public/index.php/";
+  const domain = "https://globaltechnologia.com/webAdmin/public/index.php/";
   // const poster = [];
   const color = "#000000"
   useEffect(() => {
     // setIsLoading(true);
-    // fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/portshow")
+    // fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/portshow")
     //   .then((res) => {
     //     setIsLoading(true)
     //     return res.json();

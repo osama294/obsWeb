@@ -100,8 +100,8 @@ function Hire() {
       const config = {
         headers: { 'content-type': 'multipart/form-data' }
       }
-      // url = 'https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job'
-      axios.post('https://globaltechnologia.org/webAdmin/public/index.php/api/budget_contact', formData, config)
+      // url = 'https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job'
+      axios.post('https://globaltechnologia.com/webAdmin/public/index.php/api/budget_contact', formData, config)
         .then(response => {
           //console.log(response);
           if (response.status == 200) {
@@ -133,7 +133,7 @@ function Hire() {
         .catch(error => {
           //console.log(error);
         });
-      // fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/apply_job", requestOptions)
+      // fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {

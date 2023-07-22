@@ -19,12 +19,12 @@ function Careers() {
 
   const [job, setJob] = useState([]);
   const [show, setShow] = useState("");
-  const domain = "https://globaltechnologia.org/webAdmin/public/";
+  const domain = "https://globaltechnologia.com/webAdmin/public/";
 
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/jobshow")
+    fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/jobshow")
 
       .then((res) => {
         setIsLoading(true);

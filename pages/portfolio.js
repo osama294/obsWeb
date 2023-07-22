@@ -17,7 +17,7 @@ function Portfolio() {
   const [poster, setPoster] = useState([]);
   const [color, setColor] = useState("#ffd400")
   const [isLoading, setIsLoading] = useState(true);
-  const domain = "https://globaltechnologia.org/webAdmin/public/";
+  const domain = "https://globaltechnologia.com/webAdmin/public/";
   // const poster = [];
   const router = useRouter()
   useEffect(() => {
@@ -25,7 +25,7 @@ function Portfolio() {
       setColor("#000000")
     }
     setIsLoading(true);
-    fetch("https://globaltechnologia.org/webAdmin/public/index.php/api/portshow")
+    fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/portshow")
       .then((res) => {
         setIsLoading(true)
         return res.json();
