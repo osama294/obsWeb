@@ -6,11 +6,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Input from "../components/Input";
 import { RiDeleteBin7Line } from "react-icons/ri";
-import { useRouter } from 'next/router'
-import FormData from 'form-data'
+import { useRouter } from "next/router";
+import FormData from "form-data";
 import Modal from "../components/modal";
 import axios from "axios";
-import hire from '../public/hire.png'
+import hire from "../public/hire.png";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 function Hire() {
@@ -18,15 +18,14 @@ function Hire() {
   const data = router.query.job_id;
   //console.log(data);
   useEffect(() => {
-
-    setJob_id(router.query.job_id)
+    setJob_id(router.query.job_id);
     //console.log("job", data)
-  }, [data])
+  }, [data]);
 
   const [response, setResponse] = useState("");
   const [show, setShow] = useState(false);
-  const [job_id, setJob_id] = useState("0")
-  const [cv, setCv] = useState({})
+  const [job_id, setJob_id] = useState("0");
+  const [cv, setCv] = useState({});
   const [inputs, setInputs] = useState({
     name: "",
     cname: "",
@@ -37,11 +36,12 @@ function Hire() {
     platform: "",
     budget: "",
     time: "",
-    detail: ""
+    detail: "",
     // cv: {cv},
     // job_id:"2"
   });
-  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   let formData = new FormData();
   const handleChange = (e) => {
@@ -54,8 +54,13 @@ function Hire() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.youremail == "" || inputs.message == "" || inputs.lastname == "" || inputs.detail == "") {
-
+    if (
+      inputs.name == "" ||
+      inputs.youremail == "" ||
+      inputs.message == "" ||
+      inputs.lastname == "" ||
+      inputs.detail == ""
+    ) {
       if (inputs.youremail !== inputs.confirmemail) {
         setShow(true);
         setResponse("Enter Same Email");
@@ -68,8 +73,7 @@ function Hire() {
         setTimeout(function () {
           setShow(false);
         }, 5000);
-      }
-      else {
+      } else {
         setShow(true);
         setResponse("Enter Required Details");
         setTimeout(function () {
@@ -78,31 +82,36 @@ function Hire() {
       }
       return;
     } else {
-      formData.append("name", inputs.name)
-      formData.append("cname", inputs.cname)
-      formData.append("platform", inputs.platform)
-      formData.append("budget", inputs.budget)
-      formData.append("detail", inputs.detail)
-      formData.append("lastname", inputs.lastname)
-      formData.append("youremail", inputs.youremail)
-      formData.append("confirmemail", inputs.confirmemail)
-      formData.append("time", inputs.time)
-      formData.append("url", inputs.url)
+      formData.append("name", inputs.name);
+      formData.append("cname", inputs.cname);
+      formData.append("platform", inputs.platform);
+      formData.append("budget", inputs.budget);
+      formData.append("detail", inputs.detail);
+      formData.append("lastname", inputs.lastname);
+      formData.append("youremail", inputs.youremail);
+      formData.append("confirmemail", inputs.confirmemail);
+      formData.append("time", inputs.time);
+      formData.append("url", inputs.url);
       // formData.append("job_id", job_id)
 
       //console.log("form", cv.cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
-        headers: { 'Content-Type': 'multipart/form-data' },
+        headers: { "Content-Type": "multipart/form-data" },
         body: JSON.stringify([inputs]),
       };
       const config = {
-        headers: { 'content-type': 'multipart/form-data' }
-      }
-      // url = 'https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job'
-      axios.post('https://globaltechnologia.com/webAdmin/public/index.php/api/budget_contact', formData, config)
-        .then(response => {
+        headers: { "content-type": "multipart/form-data" },
+      };
+      // url = 'https://globaltechnologia.com/webAdmin/public/api/apply_job'
+      axios
+        .post(
+          "https://globaltechnologia.com/webAdmin/public/api/budget_contact",
+          formData,
+          config
+        )
+        .then((response) => {
           //console.log(response);
           if (response.status == 200) {
             setResponse(response?.data?.message);
@@ -119,21 +128,18 @@ function Hire() {
               detail: "",
               time: "",
             });
-            setCv({})
+            setCv({});
             setTimeout(function () {
               setShow(false);
             }, 5000);
+          } else {
+            setResponse("try again");
           }
-
-          else {
-            setResponse("try again")
-          }
-
         })
-        .catch(error => {
+        .catch((error) => {
           //console.log(error);
         });
-      // fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job", requestOptions)
+      // fetch("https://globaltechnologia.com/webAdmin/public/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {
@@ -145,22 +151,40 @@ function Hire() {
       // setTimeout(function () {
       //   setShow(false);
       // }, 1000);
-      // setInputs({name:'',lastname:'',email:'',phone:''}) 
+      // setInputs({name:'',lastname:'',email:'',phone:''})
     }
   };
-  const color = "#000000"
+  const color = "#000000";
   return (
     <>
       <Head>
         <title>OBS TECHNOLOGIA</title>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="apple-touch-icon" sizes="180x180" href="../public/apple.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon16.png" />
+        <meta name='viewport' content='width=device-width' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='../public/apple.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='../public/favicon32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='../public/favicon16.png'
+        />
         {/* <link rel="manifest" href="../public/site.webmanifest"/> */}
-        <link rel="mask-icon" href="../public/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+        <link
+          rel='mask-icon'
+          href='../public/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff' />
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
       </Head>
       <Header color={color} />
@@ -170,7 +194,10 @@ function Hire() {
             <div className={styles.form_desc}>
               <h3 className={styles.form_title}>Got a project for us?</h3>
               <div className={styles.line}></div>
-              <p className={styles.pascal}>We collaborate with platforms and companies to transform innovative concepts into stunning digital goods and experiences.</p>
+              <p className={styles.pascal}>
+                We collaborate with platforms and companies to transform
+                innovative concepts into stunning digital goods and experiences.
+              </p>
               <figure className={styles.picture}>
                 <Image
                   src={hire}
@@ -215,7 +242,6 @@ function Hire() {
                 {/* <input type='text' value='Last Name' className={styles.lname} /> */}
               </div>
               <div className={styles.ebox}>
-
                 <div className={styles.email}>
                   <label htmlFor='youremail' className={styles.labels}>
                     Your Email

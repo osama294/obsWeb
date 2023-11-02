@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import RoleDesc from "../../../components/roleDesc";
@@ -7,18 +9,18 @@ import RoleResp from "../../../components/roleResp";
 import SubmitButtom from "../../../components/submitButton";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 function Career() {
-  const router = useRouter()
-  const { id, name } = router.query
-  const [ids, setId] = useState({ "id": id })
-  const [data, setData] = useState({})
+  const router = useRouter();
+  const { id, name } = router.query;
+  const [ids, setId] = useState({ id: id });
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  var das = {}
+  var das = {};
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(ids)
+    body: JSON.stringify(ids),
   };
   useEffect(() => {
     //console.log("doom", id)
@@ -26,16 +28,21 @@ function Career() {
     setId(id);
     setIsLoading(true);
     //console.log("dooms")
-    fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/jobshowbyid", requestOptions)
-      .then(res => { return res.json() })
-      .then(res => {
-        setData(res.data)
+    fetch(
+      "https://globaltechnologia.com/webAdmin/public/api/jobshowbyid",
+      requestOptions
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setData(res.data);
         // //console.log("doomss",res);
         // das = res.data
         // //console.log("doomss",data);
-      })
+      });
     // //console.log("doomss",data);
-  }, [])
+  }, []);
   //console.log("doomss", data);
   const job_title = "Frontend Developer- Full time / Onsite";
   const role_info =
@@ -70,11 +77,14 @@ function Career() {
 
   return (
     <>
-      <Header color="#000000" />
+      <Header color='#000000' />
       <div className={styles.wrapper}>
         <div className={styles.contain}>
           <div className={styles.heading}>
-            <h3 className={styles.title}>{`${data?.title} - ${data?.type}/${data?.jobeMode}`}</h3>
+            <h3
+              className={
+                styles.title
+              }>{`${data?.title} - ${data?.type}/${data?.jobeMode}`}</h3>
             <hr className={styles.hr1} />
             <h2 className={styles.desc}>
               {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
@@ -87,10 +97,11 @@ function Career() {
             salary='Market Competitive'
             location='I-8 Markaz Islamabad'
           />
-          <Link href={{
-            pathname: "/careers/forum",
-            query: data, // the data
-          }}>
+          <Link
+            href={{
+              pathname: "/careers/forum",
+              query: data, // the data
+            }}>
             <div className={styles.submit_btn_container}>
               <p className='submit' style={submitStyle}>
                 Apply for this Job

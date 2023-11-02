@@ -16,7 +16,8 @@ function Contact() {
     email: "",
     message: "",
   });
-  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const handleChange = (e) => {
     setInputs({
@@ -34,7 +35,6 @@ function Contact() {
     e.preventDefault();
 
     if (inputs.name == "" || inputs.email == "" || inputs.message == "") {
-
       setShow(true);
       setResponse("Enter Required Details");
       setTimeout(function () {
@@ -43,21 +43,22 @@ function Contact() {
       return;
     }
     if (!inputs.email.match(validRegex)) {
-
       setShow(true);
       setResponse("Enter Valid Email");
       setTimeout(function () {
         setShow(false);
       }, 5000);
-    }
-    else {
+    } else {
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(inputs),
       };
 
-      fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/contactus", requestOptions)
+      fetch(
+        "https://globaltechnologia.com/webAdmin/public/api/contactus",
+        requestOptions
+      )
         .then((response) => response.json())
         .then((res) => {
           //console.log(res);
@@ -68,7 +69,7 @@ function Contact() {
         name: "",
         email: "",
         message: "",
-      })
+      });
       // setShow(true);
       setTimeout(function () {
         setShow(true);

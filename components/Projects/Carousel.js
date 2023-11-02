@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { Component, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -6,9 +8,9 @@ import Randoxc from "./Randoxc";
 import Image from "next/image";
 // import next from "../public/next.png";
 // import prev from "../public/prev.png";
-import webgl from '../../public/webg.png'
+import webgl from "../../public/webg.png";
 
-import randox from '../../public/rando.png'
+import randox from "../../public/rando.png";
 export default class NextJsCarousel extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,7 @@ export default class NextJsCarousel extends Component {
     };
   }
   //   componentDidMount() {
-  //     fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/testomshow")
+  //     fetch("https://globaltechnologia.com/webAdmin/public/api/testomshow")
   //       .then((response) => response.json())
   //       .then((data) => this.setState({ data }));
   //     //console.log("SSS", this.state);
@@ -27,14 +29,14 @@ export default class NextJsCarousel extends Component {
     {
       image: randox,
       name: "randox",
-      link: ""
+      link: "",
     },
     {
       image: webgl,
       name: "webgl",
-      link: ""
-    }
-  ]
+      link: "",
+    },
+  ];
 
   render() {
     // const { data } = this.state;
@@ -43,15 +45,15 @@ export default class NextJsCarousel extends Component {
         image: randox,
         name: "randox",
         link: "/Randox",
-        btn: "View More"
+        btn: "View More",
       },
       {
         image: webgl,
         name: "webgl",
         link: "https://youtu.be/yyrBcmuIk4Q",
-        btn: "Watch Now"
-      }
-    ]
+        btn: "Watch Now",
+      },
+    ];
     //console.log("datassss", data);
 
     // const arrowStyles = {

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { Component, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -15,7 +17,7 @@ export default class NextJsCarousel extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/testomshow")
+    fetch("https://globaltechnologia.com/webAdmin/public/api/testomshow")
       .then((response) => response.json())
       .then((data) => this.setState({ data }));
     //console.log("SSS", this.state);
@@ -41,28 +43,27 @@ export default class NextJsCarousel extends Component {
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
               <button
-                type="button"
+                type='button'
                 onClick={onClickHandler}
                 title={label}
-                className="arrow"
+                className='arrow'
                 style={{
                   ...arrowStyles,
                   left: "0",
                   backgroundColor: "transparent",
                   border: "none",
                   margin: "auto 74px ",
-                }}
-              >
+                }}>
                 {" "}
-                <Image src={prev} alt="quote" width={52} height={52} smooth />
+                <Image src={prev} alt='quote' width={52} height={52} smooth />
               </button>
             )
           }
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
               <button
-                type="button"
-                className="arrow"
+                type='button'
+                className='arrow'
                 onClick={onClickHandler}
                 title={label}
                 style={{
@@ -71,18 +72,16 @@ export default class NextJsCarousel extends Component {
                   background: "transparent",
                   border: "none",
                   margin: "auto 74px ",
-                }}
-              >
+                }}>
                 {" "}
-                <Image src={next} alt="quote" width={52} height={52} />
+                <Image src={next} alt='quote' width={52} height={52} />
               </button>
             )
           }
           showStatus={false}
           showThumbs={false}
           // autoPlay={true}
-          style={{ ...arrowStyles, left: 15 }}
-        >
+          style={{ ...arrowStyles, left: 15 }}>
           {data?.map((child, index) => {
             return (
               <Testimonials

@@ -5,8 +5,8 @@ import Footer from "../../components/footer";
 import styles from "../../styles/Home.module.scss";
 import Input from "../../components/Input";
 import { RiDeleteBin7Line } from "react-icons/ri";
-import { useRouter } from 'next/router'
-import FormData from 'form-data'
+import { useRouter } from "next/router";
+import FormData from "form-data";
 import Modal from "../../components/modal";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -15,22 +15,21 @@ function Forum() {
   const data = router.query;
   //console.log("data", router);
   useEffect(() => {
-
-    setJob_id(router.query.id)
+    setJob_id(router.query.id);
     //console.log("jobs", data)
-  }, [data])
+  }, [data]);
 
   const [response, setResponse] = useState("");
   const [show, setShow] = useState(false);
-  const [job_id, setJob_id] = useState("0")
-  const [cv, setCv] = useState({})
+  const [job_id, setJob_id] = useState("0");
+  const [cv, setCv] = useState({});
   const [inputs, setInputs] = useState({
     name: "",
     lastname: "",
     email: "",
     phone: "",
     expected_salary: "",
-    experience: ""
+    experience: "",
     // cv: {cv},
     // job_id:"2"
   });
@@ -45,7 +44,16 @@ function Forum() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputs.name == "" || inputs.email == "" || inputs.cv == "" || inputs.message == "" || inputs.lastname == "" || inputs.phone == "" || inputs.expected_salary == "" || inputs.experience == "") {
+    if (
+      inputs.name == "" ||
+      inputs.email == "" ||
+      inputs.cv == "" ||
+      inputs.message == "" ||
+      inputs.lastname == "" ||
+      inputs.phone == "" ||
+      inputs.expected_salary == "" ||
+      inputs.experience == ""
+    ) {
       //console.log("cv", cv, cv.cv)
       if (cv == {}) {
         //console.log("bsdk")
@@ -57,27 +65,32 @@ function Forum() {
       }, 5000);
       return;
     } else {
-      formData.append("name", inputs.name)
-      formData.append("lastname", inputs.lastname)
-      formData.append("email", inputs.email)
-      formData.append("phone", inputs.phone)
-      formData.append("cv", cv.cv)
-      formData.append("job_id", job_id)
-      formData.append("experience", inputs.experience)
-      formData.append("expected_salary", inputs.expected_salary)
+      formData.append("name", inputs.name);
+      formData.append("lastname", inputs.lastname);
+      formData.append("email", inputs.email);
+      formData.append("phone", inputs.phone);
+      formData.append("cv", cv.cv);
+      formData.append("job_id", job_id);
+      formData.append("experience", inputs.experience);
+      formData.append("expected_salary", inputs.expected_salary);
       //console.log("form", cv)
       // formData.append("fname",inputs.fname)
       const requestOptions = {
         method: "POST",
-        headers: { 'Content-Type': 'multipart/form-data' },
+        headers: { "Content-Type": "multipart/form-data" },
         body: JSON.stringify([inputs]),
       };
       const config = {
-        headers: { 'content-type': 'multipart/form-data' }
-      }
-      // url = 'https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job'
-      axios.post('https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job', formData, config)
-        .then(response => {
+        headers: { "content-type": "multipart/form-data" },
+      };
+      // url = 'https://globaltechnologia.com/webAdmin/public/api/apply_job'
+      axios
+        .post(
+          "https://globaltechnologia.com/webAdmin/public/api/apply_job",
+          formData,
+          config
+        )
+        .then((response) => {
           //console.log(response);
           if (response.status == 200) {
             setResponse(response?.data?.message);
@@ -88,23 +101,20 @@ function Forum() {
               lastname: "",
               phone: "",
               expected_salary: "",
-              experience: ""
+              experience: "",
             });
-            setCv({})
+            setCv({});
             setTimeout(function () {
               setShow(false);
             }, 5000);
+          } else {
+            setResponse("try again");
           }
-
-          else {
-            setResponse("try again")
-          }
-
         })
-        .catch(error => {
+        .catch((error) => {
           //console.log(error);
         });
-      // fetch("https://globaltechnologia.com/webAdmin/public/index.php/api/apply_job", requestOptions)
+      // fetch("https://globaltechnologia.com/webAdmin/public/api/apply_job", requestOptions)
 
       //   .then((response) => response.json())
       //   .then((res) => {
@@ -116,16 +126,19 @@ function Forum() {
       // setTimeout(function () {
       //   setShow(false);
       // }, 1000);
-      // setInputs({name:'',lastname:'',email:'',phone:''}) 
+      // setInputs({name:'',lastname:'',email:'',phone:''})
     }
   };
   return (
     <>
-      <Header color="#000000" />
+      <Header color='#000000' />
       <div className={styles.wrapper}>
         <div className={styles.career}>
           <div className={styles.heading}>
-            <h3 className={styles.title}>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
+            <h3
+              className={
+                styles.title
+              }>{`${data.title} - ${data.type}/${data.jobeMode}`}</h3>
             <hr className={styles.hr1} />
             <h2 className={styles.desc}>
               {`${data.domain} - ${data.type}`} - Islamabad - Pakistan
@@ -134,9 +147,17 @@ function Forum() {
           <div className={styles.form}>
             <div className={styles.form_desc}>
               <h3 className={styles.form_title}>Personal Information</h3>
-              <div className={styles.clear} onClick={() => {
-                setInputs({ name: '', lastname: '', email: '', phone: '', cv: '' })
-              }}>
+              <div
+                className={styles.clear}
+                onClick={() => {
+                  setInputs({
+                    name: "",
+                    lastname: "",
+                    email: "",
+                    phone: "",
+                    cv: "",
+                  });
+                }}>
                 <RiDeleteBin7Line className={styles.svg} />
                 <p>Clear form</p>
               </div>
@@ -258,7 +279,7 @@ function Forum() {
                   value={inputs.cv}
                   onChange={(e) => {
                     //console.log("file", e.target.name)
-                    setCv({ [e.target.name]: e.target.files[0] })
+                    setCv({ [e.target.name]: e.target.files[0] });
                     //console.log("cv", cv)
                   }}
                 />
