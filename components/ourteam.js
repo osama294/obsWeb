@@ -12,15 +12,20 @@ function Ourteam() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://globaltechnologia.com/webAdmin/public/api/teamshow")
+    fetch("https://globaltechnologia.com/webAdmin/public/api/teamshow", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+    })
       .then((res) => {
         setIsLoading(true);
-        if (res.status == 200) {
+        if (res.status === 200) {
           return res.json();
         }
       })
       .then((res) => {
-        //console.log("&&&&&&&&&&&&&", res);
         if (res?.length > 0) {
           const team = res;
           setTeam(team);
@@ -31,7 +36,6 @@ function Ourteam() {
       });
     //console.log("EEEEEE", team);
   }, []);
-  const domain = "https://obstechnologia.com/webAdmin/";
   return (
     <>
       <div className={styles.wrapper}>
