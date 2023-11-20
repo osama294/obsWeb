@@ -17,8 +17,6 @@ function Ourteam() {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "cors",
-      credentials: "include",
     })
       .then((res) => {
         setIsLoading(true);
