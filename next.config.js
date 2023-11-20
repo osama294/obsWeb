@@ -1,9 +1,22 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @format
+ * @type {import('next').NextConfig}
+ */
+
 const nextConfig = {
   reactStrictMode: true,
 };
 {
-  swcMinify: false 
+  swcMinify: false;
 }
 
-module.exports = nextConfig;
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "https://globaltechnologia.com/webAdmin/public/:path*",
+      },
+    ];
+  },
+};
