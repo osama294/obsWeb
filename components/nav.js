@@ -37,15 +37,15 @@ function Nav(props) {
           <li onClick={navHandle}>
             <Link href="/">Agency</Link>
           </li>
-          <li onClick={navHandle}>
+          {/* <li onClick={navHandle}>
             <Link href="/portfolio">Portfolio</Link>
-          </li>
+          </li> */}
           <li onClick={navHandle}>
             <Link href="/#services">Services </Link>
-          </li> 
-          <li onClick={navHandle}>
-          <Link href="/careers">Careers</Link>
           </li>
+          {/* <li onClick={navHandle}>
+            <Link href="/careers">Careers</Link>
+          </li> */}
           <li onClick={navHandle}>
             <Link href="/#contact">Contact Us</Link>
           </li>
@@ -53,7 +53,7 @@ function Nav(props) {
             {" "}
             <Link href="/#about">About</Link>
           </li>
-         
+
         </ul>
       </div>
     </div>

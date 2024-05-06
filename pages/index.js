@@ -71,9 +71,9 @@ export default function App() {
           <Banner />
           <Content id="services" />
           <WhoAreWe />
-          <Portfolio />
+          <Portfolio id="portfolio" />
           <Carousel />
-          <Ourteam />
+          {/* <Ourteam /> */}
           <Contact id="contact" />
           <Footer />
           {/* <Testimonials /> */}

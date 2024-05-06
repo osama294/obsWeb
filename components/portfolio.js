@@ -40,8 +40,8 @@ function Portfolio() {
               of local and foreign clients and worked on different projects from
               different domains.
             </p>
-            <h3>Want to see our projects? Click on the Button!</h3>
-            <div>
+            {/* <h3>Want to see our projects? Click on the Button!</h3> */}
+            {/* <div>
               <Link href="/portfolio">
                 <motion.button
                 className={styles.cursor}
@@ -54,7 +54,7 @@ function Portfolio() {
                   Let’s go
                 </motion.button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

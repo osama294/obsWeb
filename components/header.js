@@ -65,7 +65,7 @@ function Header(props) {
           >
             <Link href="/">Agency</Link>
           </motion.li >}
-          {router.pathname == "/portfolio" ? <motion.li
+          {/* {router.pathname == "/portfolio" ? <motion.li
             className={styles.lis}
             whileHover={{
               scale: 1.1,
@@ -86,7 +86,7 @@ function Header(props) {
             }}
           >
             <Link href="/portfolio">Portfolio</Link>
-          </motion.li>}
+          </motion.li>} */}
           {router.asPath == "/#services" ? <motion.li
             className={styles.lis}
             whileHover={{
@@ -115,7 +115,7 @@ function Header(props) {
             <Link href="/#services" >Services </Link>
             {/* <Link  href= {{pathname:"/#services"}}>Services</Link> */}
           </motion.li>}
-          {router.pathname.includes("/careers") ? <motion.li
+          {/* {router.pathname.includes("/careers") ? <motion.li
             className={styles.lis}
             whileHover={{
               scale: 1.1,
@@ -136,7 +136,7 @@ function Header(props) {
             }}
           >
             <Link href="/careers">Careers</Link>
-          </motion.li>}
+          </motion.li>} */}
           {router.asPath == "/#contact" ? <motion.li
             className={styles.lis}
             whileHover={{
