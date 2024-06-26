@@ -10,24 +10,22 @@
     "build2": "react-scripts build"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "form-data": "^4.0.0",
-    "framer-motion": "^6.3.16",
-    "jquery": "^3.6.3",
-    "next": "^12.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-tsparticles": "^2.1.3",
-    "sass": "^1.52.2",
-    "sharp": "^0.30.7",
-    "yarn": "^1.22.19"
+    "axios": "^1.7.2",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-card-flip": "^1.2.2",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.2",
+    "react-icons": "^4.12.0",
+    "react-modal": "^3.16.1",
+    "react-scroll": "^1.9.0",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
-    "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.210",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "autoprefixer": "^10.4.19",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
   }
 }
