@@ -36,6 +36,26 @@ export default function PortfolioSlider() {
         return () => clearInterval(timer);
     }, [currentIndex, SliderData.length]);
 
+
+    const [speed, setSpeed] = useState(120); // Default speed for web
+
+    useEffect(() => {
+        const updateSpeed = () => {
+            if (window.innerWidth <= 768) {
+                setSpeed(40); // Speed for mobile
+            } else {
+                setSpeed(120); // Speed for web
+            }
+        };
+
+        window.addEventListener('resize', updateSpeed);
+        updateSpeed(); // Set initial speed
+
+        return () => window.removeEventListener('resize', updateSpeed);
+    }, []);
+
+
+
     return (
         <div className="flex flex-col  py-2 lg:py-10 xl:py-10 ">
             <div className="flex-1">
@@ -57,7 +77,7 @@ export default function PortfolioSlider() {
                     Take a look at how our digital exploits have come to life. Our highly equipped heroes make apps that rescue users from boredom by creating solutions that vanquish business challenges. Our extensive portfolio showcases the legendary work of our team.
                 </div>
 
-                <Marquee speed={150} pauseOnHover={true}>
+                <Marquee speed={speed} pauseOnHover={true}>
                     <div className="flex lg:hidden xl:hidden xl:h-[445px] lg:h-[445px] xl:mt-[77px] lg:mt-[44px] mt-10 xl:w-[100%] lg:w-[100%] self-center py-2">
                         {SliderData.map((item, index) => {
                             return (
