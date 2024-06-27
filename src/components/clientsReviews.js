@@ -1,5 +1,6 @@
 import { appIcons } from "@/assets/utilities";
 import Image from 'next/image'
+import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 
@@ -15,6 +16,8 @@ const ReviewData = [
 
 
 const ReviewCard = ({ item }) => {
+
+
     return (
 
         <div className="md:w-[515px] w-[200px] h-[240px]  md:h-[368px] bg-white md:rounded-[20px] md:mb-0 mb-4 rounded-[10px] drop-shadow-lg  mx-5 p-5 md:p-5 justify-center items-center ">
@@ -42,6 +45,26 @@ const ReviewCard = ({ item }) => {
 
 
 export default function ClientsReviews() {
+
+
+    const [speed, setSpeed] = useState(80); // Default speed for web
+
+    useEffect(() => {
+        const updateSpeed = () => {
+            if (window.innerWidth <= 768) {
+                setSpeed(40); // Speed for mobile
+            } else {
+                setSpeed(120); // Speed for web
+            }
+        };
+
+        window.addEventListener('resize', updateSpeed);
+        updateSpeed(); // Set initial speed
+
+        return () => window.removeEventListener('resize', updateSpeed);
+    }, []);
+
+
 
     return (
         <div className="flex flex-col bg-stone-50 ">
@@ -73,7 +96,8 @@ export default function ClientsReviews() {
                 <div className="flex justify-center w-[100%] md:h-[675px] py-5 md:py-0    ">
                     <div className="md:w-[100%]   md:h-full  md:absolute " />
 
-                    <Marquee speed={150}
+                    <Marquee
+                        speed={speed}
                         pauseOnHover={true}
                     >
                         {ReviewData.map((item) => (
