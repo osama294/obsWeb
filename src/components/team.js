@@ -31,10 +31,14 @@ export default function TEAM() {
                 </div>
 
                 {/* My code */}
+                <div className="h-[50px] lg:block xl:block  mb-[13px] text-[9px] lg:mt-0 xl:mt-0 w-[70%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
+                    Behold the driving forces behind our innovative solutions.
+                </div>
 
-                <div className="lg:block xl:block hidden w-[84%] xl:h-[500px] lg:h-[490px] relative ml-[10%] select-none xl:pb-8 xl:mt-14 lg:my-5">
+                <div className="lg:block xl:block hidden w-[84%] xl:h-[100%] lg:h-[100%] relative ml-[10%] select-none xl:pb-8 xl:mt-14 lg:my-5">
                     <Image alt='teamImage' src={appImages?.teamDesktop} height={551} width={1152} className="w-full h-full object-contain" />
                 </div>
+
 
             </div>
         </div>

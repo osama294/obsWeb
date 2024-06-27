@@ -253,14 +253,14 @@ export default function ApplicationForm() {
 
                         {/* NAME */}
 
-                        <div className="mb-4 flex flex-row mt-[5%]  xl:mt-[1%] lg:mt-[1%]">
+                        <label htmlFor="firstName">
+                            <span className="text-black md:text-[15px] text-[10px] font-medium">Name</span>
+                        </label>
+                        <div className="flex gap-6 ">
 
                             {/* First Name */}
                             <div className="w-full md:w-[40%] mb-2 md:mr-2">
 
-                                <label htmlFor="firstName">
-                                    <span className="text-black md:text-[15px] text-[10px] font-medium">Name</span>
-                                </label>
                                 <input
 
                                     className="w-full md:h-[45px] lg:px-1 xl:px-1 rounded-none border-b border-black md:text-[15px] text-[9px] md:mb-[3px] px-1 py-1 mb-1 focus:outline-none focus:border-obsYellow"
@@ -275,9 +275,9 @@ export default function ApplicationForm() {
 
                             {/* Last Name */}
 
-                            <div className="w-full md:w-[40%] mt-[6px] md:ml-[2%] ml-14">
+                            <div className="w-full md:w-[40%]  ">
                                 <input
-                                    className="md:w-full w-[93%] md:h-[45px] lg:px-1 xl:px-1 rounded-none  h-[43px] border-b border-black md:text-[15px] text-[9px]  md:mt-[23px] mb-1 px-1 focus:outline-none focus:border-obsYellow"
+                                    className="md:w-full w-[93%] md:h-[45px] lg:px-1 xl:px-1 rounded-none  border-b border-black md:text-[15px] text-[9px]   mb-1 px-1 py-1 focus:outline-none focus:border-obsYellow"
                                     type="text"
                                     id="lastName"
                                     name="lastName"
@@ -511,7 +511,7 @@ export default function ApplicationForm() {
                             />
                         </div>
 
-                        <div className="lg:hidden xl:hidden flex w-[100%]  justify-between mt-10 ">
+                        <div className="lg:hidden xl:hidden flex w-[100%] flex-row items-center justify-between mt-10">
 
                             <div className="flex flex-col items-start gap-2">
                                 <span className="text-[7px] font-medium text-[black] ">Upload Resume</span>
@@ -527,27 +527,24 @@ export default function ApplicationForm() {
 
                             </div>
 
-                            <div className="flex flex-col items-start  gap-2">
-                                <span className="text-[7px] font-medium text-[black] text-start">Any other Documents to Upload</span>
+                            <div className="flex flex-col items-start gap-2 ">
+                                <span className="text-[7px] font-medium text-[black] ">Any other Documents to Upload</span>
                                 <button
                                     onClick={() => AdditionalDataRef.current.click()}
-                                    className="bg-[#0047FF] rounded-[50px] text-[10px] text-[white] flex font-medium items-center gap-1 justify-evenly px-3 py-1">
+                                    className="bg-[#0047FF] rounded-[50px] text-[9px] text-[white] flex font-medium items-center gap-1 justify-evenly px-3 py-1">
                                     <Image src={appIcons.uploadDocIcon} alt="uploadIcon" height={10} width={10} className="object-contain h-3 w-3" />
                                     <span>
                                         Upload File
                                     </span>
 
                                 </button>
-
-                                <span className="text-[6px] font-normal text-[#535353]">
-                                    You can share certificates, diplomas etc.
-                                </span>
-
                             </div>
+                        </div>
 
-
-
-
+                        <div className="xl:hidden lg:hidden flex items-end justify-end mt-1">
+                            <span className="text-[6px] font-normal text-[#535353] self-end">
+                                You can share certificates, diplomas etc.
+                            </span>
                         </div>
 
 

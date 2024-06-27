@@ -135,7 +135,7 @@ export default function HireUs() {
                         <div className="mb-4 mt-[5% md:mt-[1%]">
                             <label htmlFor="timelineForProject" className="flex items-center">
                                 <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
-                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timelineForProject for the project?</span>
+                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline For Project for the project?</span>
                             </label>
                             <input
                                 className="w-full  md:my-3 px-3 py-2 rounded-none  md:text-[15px] text-[12px] border-b border-black focus:outline-none focus:border-obsYellow"

@@ -46,7 +46,7 @@ export default function Main() {
                             </ul>
                         </span>
                         <p className="text-[#0B121580] text-[11px] lg:text-[16px] xl:text-[20px] font-normal -z-10 mt-5 lg:w-full xl:w-full w-[70%] lg:ml-0 xl:ml-0 ml-14 leading-[20px] lg:leading-[28px] xl:leading-[28px]">
-                            Empowering your businesses with cutting-edge tech<br className="lg:block xl:block hidden" />
+                            Empowering your businesses with cutting-edge tech <br className="lg:block xl:block hidden" />
                             and supercharged solutions.
                         </p>
                     </span>
