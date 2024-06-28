@@ -59,7 +59,7 @@ export default function Main() {
                         <div
                             ref={(el) => (textRefs.current[0] = el)}
                             className="opacity-0 transform translate-y-8 transition-opacity duration-1000 absolute top-24 left-44 px-4 py-3 w-full">
-                            <h1 className="text-[#00A7D9] lg:text-[35px] xl:text-[55px] font-[600]"> {`Rita's Ice`}</h1>
+                            <h1 className="text-[#00A7D9] lg:text-[35px] xl:text-[55px] font-[600]"> {`Spot Park`}</h1>
                         </div>
                         <div
                             ref={(el) => (textRefs.current[1] = el)}
