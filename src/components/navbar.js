@@ -32,11 +32,11 @@ export default function Navbar({ position }) {
     const [activeLink, setActiveLink] = useState('/');
     const [nav, setNav] = useState(false);
 
-    const handleLinkClick = (url) => {
-        setActiveLink(url);
-        // Close the mobile menu when a link is clicked
-        setShowMobileMenu(false);
-    };
+    // const handleLinkClick = (url) => {
+    //     setActiveLink(url);
+    //     // Close the mobile menu when a link is clicked
+    //     setShowMobileMenu(false);
+    // };
 
     const handleNav = () => {
         setNav(!nav);
@@ -50,6 +50,21 @@ export default function Navbar({ position }) {
     }, []);
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+
+
+    const handleLinkClick = (url) => {
+        if (url.startsWith('#')) {
+            // If the link is a scroll link, navigate to home with a query parameter
+            const section = url.substring(1);
+            setActiveLink('/');
+            setShowMobileMenu(false);
+            window.location.href = `/?scrollTo=${section}`;
+        } else {
+            setActiveLink(url);
+            setShowMobileMenu(false);
+        }
+    };
 
     return (
         <nav className={`w-[100%] lg:px-[45px]  xl:px-[168px] px-0 pt-10 lg:pt-[49px] xl:pt-[49px] ${position} `}>
@@ -71,19 +86,14 @@ export default function Navbar({ position }) {
                                 className={`lg:block xl:block lg:text-[15px] xl:text-[18px] text-[18px] lg:p-1 xl:p-1 antialiased font-medium leading-normal transition-all duration-100 border-transparent border-1 cursor-pointer ${activeLink === navItem.url ? 'border-yellow-400 border-b-2 ' : ''
                                     }`}
                             >
-                                {navItem.url.startsWith('/') ? (
+                                {navItem.url.startsWith('#') ? (
+                                    <a onClick={() => handleLinkClick(navItem.url)} className="flex items-center transition-colors text-black xl:text-[16px] lg:text-[16px]">
+                                        {navItem.name}
+                                    </a>
+                                ) : (
                                     <Link onClick={() => handleLinkClick(navItem.url)} href={navItem.url} className="flex items-center transition-colors text-black xl:text-[16px] lg:text-[16px]">
                                         {navItem.name}
                                     </Link>
-                                ) : (
-                                    <ScrollLink
-                                        to={navItem.url.substring(1)}
-                                        smooth={true}
-                                        duration={500}
-                                        className="flex items-center transition-colors text-black xl:text-[16px] lg:text-[16px]"
-                                    >
-                                        {navItem.name}
-                                    </ScrollLink>
                                 )}
                             </li>
                         ))}

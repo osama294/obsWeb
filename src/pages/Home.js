@@ -8,8 +8,9 @@ import Navbar from '@/components/navbar';
 import PortfolioSlider from '@/components/portfolioSlider';
 import Services from '@/components/services';
 import TEAM from '@/components/team';
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react'
-import { Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 const HomePage = () => {
 
@@ -101,6 +102,19 @@ const HomePage = () => {
     //     };
     // },);
 
+
+    const router = useRouter();
+    const { scrollTo } = router.query;
+
+    useEffect(() => {
+        if (scrollTo) {
+            scroller.scrollTo(scrollTo, {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            });
+        }
+    }, [scrollTo]);
 
 
     return (
