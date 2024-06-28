@@ -50,7 +50,7 @@ export default function Main() {
                             and supercharged solutions.
                         </p>
                     </span>
-                    <Link href={'/hireUs'} className='border-[#FFD400] lg:hidden xl:hidden border-2 p-1 w-[97px] bg-[#FFD400] flex justify-center items-center font-sans text-sm antialiased font-extrabold leading-normal text-black rounded-md mt-5 '
+                    <Link href={'/hireUs'} className='border-[#FFD400] lg:hidden xl:hidden border-2 p-1 w-[97px] bg-[#FFD400] flex justify-center items-center font-sans text-sm antialiased font-extrabold leading-normal text-white rounded-md mt-5 '
                     >
                         Hire Us
                     </Link>
