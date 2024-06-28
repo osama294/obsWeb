@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { appImages } from '../assets/utilities';
-import { Link as ScrollLink } from 'react-scroll';
+import { scroller, Link as ScrollLink } from 'react-scroll';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 export default function Navbar({ position }) {
@@ -54,12 +54,20 @@ export default function Navbar({ position }) {
 
 
     const handleLinkClick = (url) => {
+        const isHomePage = window.location.pathname === '/';
         if (url.startsWith('#')) {
-            // If the link is a scroll link, navigate to home with a query parameter
             const section = url.substring(1);
-            setActiveLink('/');
-            setShowMobileMenu(false);
-            window.location.href = `/?scrollTo=${section}`;
+            if (isHomePage) {
+                scroller.scrollTo(section, {
+                    duration: 800,
+                    delay: 0,
+                    smooth: 'easeInOutQuart'
+                });
+            } else {
+                setActiveLink('/');
+                setShowMobileMenu(false);
+                window.location.href = `/?scrollTo=${section}`;
+            }
         } else {
             setActiveLink(url);
             setShowMobileMenu(false);
@@ -83,8 +91,7 @@ export default function Navbar({ position }) {
                         {NavItem.map((navItem, index) => (
                             <li
                                 key={index}
-                                className={`lg:block xl:block lg:text-[15px] xl:text-[18px] text-[18px] lg:p-1 xl:p-1 antialiased font-medium leading-normal transition-all duration-100 border-transparent border-1 cursor-pointer ${activeLink === navItem.url ? 'border-yellow-400 border-b-2 ' : ''
-                                    }`}
+                                className={`lg:block xl:block lg:text-[15px] xl:text-[18px] text-[18px] lg:p-1 xl:p-1 antialiased font-medium leading-normal transition-all duration-100 border-transparent border-1 cursor-pointer ${activeLink === navItem.url ? 'border-yellow-400 border-b-2 ' : ''}`}
                             >
                                 {navItem.url.startsWith('#') ? (
                                     <a onClick={() => handleLinkClick(navItem.url)} className="flex items-center transition-colors text-black xl:text-[16px] lg:text-[16px]">
@@ -115,14 +122,14 @@ export default function Navbar({ position }) {
                             key={index}
                             className={`p-4 ml-[7%] rounded-xl text-gray-600 duration-300`}
                         >
-                            {navItem.url.startsWith('/') ? (
+                            {navItem.url.startsWith('#') ? (
+                                <a onClick={() => handleLinkClick(navItem.url)} className="flex items-center transition-colors text-black xl:text-[16px] lg:text-[16px]">
+                                    {navItem.name}
+                                </a>
+                            ) : (
                                 <Link onClick={() => handleLinkClick(navItem.url)} href={navItem.url}>
                                     {navItem.name}
                                 </Link>
-                            ) : (
-                                <ScrollLink to={navItem.url.substring(1)} smooth={true} duration={500}>
-                                    {navItem.name}
-                                </ScrollLink>
                             )}
                         </li>
                     ))}
