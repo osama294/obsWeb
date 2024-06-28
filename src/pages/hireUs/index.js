@@ -82,7 +82,7 @@ export default function HireUs() {
 
                         <div className="mb-4 mt-[5%] md:mt-8">
                             <label htmlFor="name" className="flex items-center">
-                                <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
+                                <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
                                 <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">Your Name</span>
                             </label>
                             <input
@@ -100,7 +100,7 @@ export default function HireUs() {
                         <div className="mb-4 flex mt-[5%] md:mt-[1%]">
                             <div className="w-[40%] mr-2">
                                 <label htmlFor="email" className="flex items-center">
-                                    <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
+                                    <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
                                     <span className="text-black md:text-[15px] text-[9px] font-medium"> Your Email</span>
                                 </label>
                                 <input
@@ -117,7 +117,7 @@ export default function HireUs() {
 
                             <div className="w-[40%] ml-[10%] ">
                                 <label htmlFor="confirmEmail" className="flex items-center">
-                                    <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
+                                    <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
                                     <span className="text-black md:text-[15px] text-[9px] font-medium"> Confirm Email</span>
                                 </label>
                                 <input
@@ -134,7 +134,7 @@ export default function HireUs() {
                         {/* Project timelineForProject */}
                         <div className="mb-4 mt-[5% md:mt-[1%]">
                             <label htmlFor="timelineForProject" className="flex items-center">
-                                <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
+                                <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
                                 <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline For Project for the project?</span>
                             </label>
                             <input
@@ -233,7 +233,7 @@ export default function HireUs() {
                         <div className="mb-4 mt-[5%] md:mt-[4%]">
 
                             <label htmlFor="projectDescription" className="flex items-center">
-                                <span className="text-red-600 text-[15px] mr-4 font-medium  md:block hidden">*</span>
+                                <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
                                 <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">Tell us about your Project?</span>
                             </label>
                             <textarea

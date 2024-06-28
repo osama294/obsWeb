@@ -19,19 +19,25 @@ export default function TEAM() {
 
                 {/* Subheader */}
                 <div className=" mb-[13px] xl:mt-5 lg:mt-5 w-[80%] self-center ml-[8%]">
-                    <span className="text-[#0B1215] lg:text-[36px] xl:text-[48px] text-[13px] font-semibold lg:mt-12 xl:mt-12">
+                    <span className="text-[#0B1215] lg:text-[36px] xl:text-[48px] text-[20px] font-semibold lg:mt-12 xl:mt-12">
                         <span className='text-obsYellow mr-2'>Our Top Talent</span>Heros Leading The Way
                     </span>
                 </div>
 
+                <div className="h-[50px] xl:hidden lg:hidden mb-[13px] text-[10px] lg:mt-0 xl:mt-0 w-[7x0%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
+                    Behold the driving forces behind our innovative solutions.
+                </div>
+
                 <div className="lg:hidden xl:hidden flex flex-col select-none items-center justify-center mb-10 gap-4">
-                    <Image src={appImages.responsiveCEO} alt="Our Team" height={551} width={1152} className="w-[50%] h-[50%] object-contain" />
+                    <Image src={appImages.mobileResponsiveTeamImage} alt="Our Team" height={551} width={1152} className="w-[100%] h-[50%] object-contain" />
+
+                    {/* <Image src={appImages.responsiveCEO} alt="Our Team" height={551} width={1152} className="w-[50%] h-[50%] object-contain" />
                     <Image src={appImages.responsiveHR} alt="Our Team" height={551} width={1152} className="w-[50%] h-[50%] object-contain" />
-                    <Image src={appImages.responsivePM} alt="Our Team" height={551} width={1152} className="w-[50%] h-[50%] object-contain" />
+                    <Image src={appImages.responsivePM} alt="Our Team" height={551} width={1152} className="w-[50%] h-[50%] object-contain" /> */}
                 </div>
 
                 {/* My code */}
-                <div className="h-[50px] lg:block xl:block  mb-[13px] text-[9px] lg:mt-0 xl:mt-0 w-[70%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
+                <div className="h-[50px] hidden lg:block xl:block  mb-[13px] text-[9px] lg:mt-0 xl:mt-0 w-[70%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
                     Behold the driving forces behind our innovative solutions.
                 </div>
 

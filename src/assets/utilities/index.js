@@ -46,6 +46,7 @@ const appImages = {
     // Team Desktop
 
     teamDesktop: require('../images/teamDesktop.png'),
+    mobileResponsiveTeamImage: require('../images/mobileResponsiveTeamImage.png'),
 
 
     // Portfolio Projects 
