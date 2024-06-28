@@ -43,6 +43,7 @@ export default function ContactUs() {
         }
     };
 
+
     return (
         <div className="flex flex-col select-none lg:py-3 xl:py-3 lg:my-0 xl:my-0 py-3 bg-stone-50">
             <div className="flex-1">
@@ -96,10 +97,10 @@ export default function ContactUs() {
                             <select
                                 id="preferredContactMethod"
                                 name="preferredContactMethod"
-                                defaultValue="What’s your preferred method of contact?"
+                                // defaultValue="What’s your preferred method of contact?"
                                 value={formData.preferredContactMethod}
                                 onChange={handleChange}
-                                className="lg:w-[100%] xl:w-[80%] lg:h-[45px] xl:h-[44px] rounded-[5px] lg:text-[16px] xl:text-[16px] text-[12px] border-[0.5px] border-[#949494] lg:border xl:border lg:px-4 xl:px-4 lg:mb-[40px] xl:mb-[40px] lg:py-0 focus:outline-none focus:border-obsYellow px-2 py-4 h-[22px] w-[100%] placeholder-[#595959]"
+                                className="lg:w-[100%] xl:w-[80%] lg:h-[45px] xl:h-[44px] rounded-[5px] lg:text-[16px] xl:text-[16px] text-[12px] border-[0.5px] border-[#949494] lg:border xl:border lg:px-4 xl:px-4 lg:mb-[40px] xl:mb-[40px] lg:py-0 focus:outline-none focus:border-obsYellow px-2 h-[32px] w-[100%] placeholder-[#595959]"
                             >
                                 <option disabled>What’s your preferred method of contact?</option>
                                 <option value="Phone Call">Phone Call</option>

@@ -24,7 +24,7 @@ export default function TEAM() {
                     </span>
                 </div>
 
-                <div className="h-[50px] mb-[13px] text-[10px] lg:mt-0 xl:mt-0 w-[7x0%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
+                <div className="h-[50px] xl:hidden lg:hidden mb-[13px] text-[10px] lg:mt-0 xl:mt-0 w-[7x0%] self-center text-black xl:text-[18px] lg:text-[16px] ml-[8%] font-light lg:leading-[30px] xl:leading-[30px]">
                     Behold the driving forces behind our innovative solutions.
                 </div>
 
