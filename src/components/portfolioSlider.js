@@ -99,8 +99,8 @@ export default function PortfolioSlider() {
                 </Marquee>
 
                 <div className="xl:h-1/4 lg:h-1/4 flex flex-row xl:my-0 lg:my-0 my-5 items-center w-[80%] self-center ml-[8%] justify-center">
-                    <Link href={'/portfolio'} className="xl:w-44 lg:w-44 xl:h-[42px] lg:h-[42px] h-[18px] xl:py-0 lg:py-0 py-3 xl:px-0 lg:px-0  rounded-[7px] border border-yellow-400 flex justify-center items-center text-center text-black xl:text-[16px] lg:text-[16px] text-[12px] px-5 font-semibold hover:bg-yellow-400 hover:text-white
-                           before:ease transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:-translate-x-1 before:rotate-6 before:bg-white before:opacity-15 before:duration-1000 hover:shadow-yellow-500 hover:before:-translate-x-48 overflow-hidden relative">
+                    <Link href={'/portfolio'} className="xl:w-44 lg:w-44 xl:h-[42px] lg:h-[42px] h-[18px] xl:py-0 lg:py-0 py-3 xl:px-0 lg:px-0  rounded-[7px] border border-yellow-400 flex justify-center items-center text-center bg-obsYellow text-white xl:text-[16px] lg:text-[16px] text-[12px] px-5 font-semibold hover:bg-yellow-400 hover:text-white
+                           before:ease transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:-translate-x-[-30px] before:rotate-6 before:bg-white before:opacity-15 before:duration-1000 hover:shadow-yellow-500 hover:before:-translate-x-48 overflow-hidden relative">
                         View All
                     </Link>
                 </div>

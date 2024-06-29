@@ -35,8 +35,8 @@ export default function About() {
 
                 <div className="lg:h-1/5 xl:h-1/5 lg:w-[80%] xl:w-[80%] flex lg:self-center xl:self-center ml-[8%]">
                     <Link href={'/hireUs'} className="
-                        ml-[5px] mt-[13px] lg:ml-0 xl:ml-0 lg:mt-0 xl:mt-0 px-3 py-1 lg:w-48 xl:w-48 lg:h-[42px] xl:h-[42px] rounded-[4px] flex text-sm lg:text-lg xl:text-lg font-semibold border border-yellow-400 bg-white text-black justify-center items-center 
-                        before:ease transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:-translate-x-1 before:rotate-6 before:bg-white before:opacity-15 before:duration-1000 hover:shadow-yellow-500 hover:before:-translate-x-48 hover:text-white hover:bg-yellow-400 overflow-hidden relative
+                        ml-[5px] mt-[13px] lg:ml-0 xl:ml-0 lg:mt-0 xl:mt-0 px-3 py-1 lg:w-48 xl:w-48 lg:h-[42px] xl:h-[42px] rounded-[4px] flex text-sm lg:text-lg xl:text-lg font-semibold border border-yellow-400 bg-obsYellow text-white justify-center items-center 
+                        before:ease transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:-translate-x-[-30px] before:rotate-6 before:bg-white before:opacity-15 before:duration-1000 hover:shadow-yellow-500 hover:before:-translate-x-48 hover:text-white hover:bg-yellow-400 overflow-hidden relative
                     ">
                         Hire Us
                     </Link>

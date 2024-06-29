@@ -111,7 +111,7 @@ export default function ContactUs() {
 
                         <button
                             onClick={() => { handleSubmit() }}
-                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] bg-yellow-400 rounded-[7px] lg:block xl:block hidden">
+                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden">
                             Submit your message
                         </button>
                     </div>
@@ -152,7 +152,7 @@ export default function ContactUs() {
                                 rows={10} cols={27}
                             />
                         </div>
-                        <button className="w-[165px] h-[23px] bg-yellow-400 rounded-[3px] my-5 mx-auto text-[11px] lg:hidden xl:hidden block font-semibold ">
+                        <button className="w-[165px] h-[23px] bg-yellow-400 text-white rounded-[3px] my-5 mx-auto text-[11px] lg:hidden xl:hidden block font-semibold ">
                             Submit your Message
                         </button>
                     </div>
