@@ -108,7 +108,7 @@ export default function Navbar({ position }) {
                 </div>
                 <Link
                     href={'/hireUs'}
-                    className='hidden border-yellow-400 border-2 p-1 w-36 bg-yellow-400 rounded-[7px] lg:flex xl:flex justify-center items-center font-sans text-sm antialiased font-medium leading-normal text-black hover:bg-transparent '
+                    className='hidden border-yellow-400 border-2 p-1 w-36 bg-yellow-400 rounded-[7px] lg:flex xl:flex justify-center items-center font-sans text-sm antialiased font-medium leading-normal text-white hover:bg-transparent hover:text-obsYellow '
                 >
                     Hire Us
                 </Link>
