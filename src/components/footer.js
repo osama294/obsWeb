@@ -24,7 +24,7 @@ export default function Footer() {
                                 together<br />
                             </span>
                         </div>
-                        <Link href={'/hireUs'} className='border-yellow-400 border-2 p-1 lg:w-[97px] xl:w-[97px] w-[55px] bg-yellow-400 lg:mt-0 xl:mt-0 mt-7 flex justify-center items-center font-sans lg:text-sm xl:text-sm text-[10px] antialiased font-extrabold leading-normal text-black'>
+                        <Link href={'/hireUs'} className='border-yellow-400 border-2 p-1 lg:w-[97px] xl:w-[97px] w-[55px] bg-yellow-400 lg:mt-0 xl:mt-0 mt-7 flex justify-center items-center font-sans lg:text-sm xl:text-sm text-[10px] antialiased font-extrabold leading-normal text-white'>
                             Hire Us
                         </Link>
                     </div>
