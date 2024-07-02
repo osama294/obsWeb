@@ -1,5 +1,5 @@
 import { submitApplicationForm } from "@/assets/apiCalls/applicationFrom";
-import { appIcons } from "@/assets/utilities";
+import { appIcons, appImages } from "@/assets/utilities";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
@@ -233,8 +233,8 @@ export default function ApplicationForm() {
                 <div className="flex-1 mt-[5%]">
                     {/* Header */}
                     <div className="h-1/6 flex flex-row items-center w-[80%] self-center ml-[8%]">
-                        <div className="bg-[url('../assets/images/headingDash.png')] h-[1px] md:w-[48px] w-[25px]"></div>
-                        <span className="md:text-[25px] text-[14] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
+                        <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[12px] xl:h-[12px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
+                        <span className="md:text-[25px] text-[14px] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
                             Application Form
                         </span>
                     </div>
