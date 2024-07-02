@@ -132,7 +132,7 @@ export default function ContactUs() {
 
                         <button
                             onClick={() => { handleSubmit() }}
-                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden">
+                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden hover:shadow-lg">
                             Submit your message
                         </button>
                     </div>
@@ -169,7 +169,7 @@ export default function ContactUs() {
                                 name="additionalInformation"
                                 value={formData.additionalInformation}
                                 onChange={handleChange}
-                                className="mt-1 p-2 rounded-[5px] lg:w-[100%] xl:w-[100%] w-[100%] lg:text-[16px] xl:text-[16px] text-[12px] px-4 border-[0.5px] border-[#949494] lg:border xl:border focus:outline-none focus:border-obsYellow placeholder-[#595959]"
+                                className="mt-1 p-2 rounded-[5px] lg:w-[100%] xl:w-[100%] w-[100%] lg:text-[16px] xl:text-[16px] text-[12px] px-4 border-[0.5px] border-[#949494] lg:border xl:border focus:outline-none focus:border-obsYellow placeholder-[#595959] "
                                 rows={10} cols={27}
                             />
                         </div>
