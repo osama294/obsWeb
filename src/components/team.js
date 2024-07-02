@@ -3,6 +3,14 @@ import Image from "next/image"
 
 export default function TEAM() {
 
+    const TeamMembers = [
+        { id: 1, name: 'Hamza Bin Shiraz', designation: 'Business Analyst', image: appImages.teamHamzaPicture },
+        { id: 2, name: 'Junaid Saeed', designation: 'Project Manager', image: appImages.teamJdPicture },
+        { id: 3, name: 'Sharjeel Khan', designation: 'Full-Stack Developer', image: appImages.teamSharjeelPicture },
+        { id: 4, name: 'Aadil Khan', designation: 'Back-End Developer', image: appImages.teamAadilPicture },
+        { id: 5, name: 'M.Asjad Raja', designation: 'Front-End Developer', image: appImages.teamAsjadPicture },
+    ]
+
     return (
 
         <div className="flex flex-col">
@@ -42,7 +50,27 @@ export default function TEAM() {
                 </div>
 
                 <div className="lg:block xl:block hidden w-[84%] xl:h-[100%] lg:h-[100%] relative ml-[10%] select-none xl:pb-8 xl:mt-14 lg:my-5">
-                    <Image alt='teamImage' src={appImages?.teamDesktop} height={551} width={1152} className="w-full h-full object-contain" />
+                    {/* <Image alt='teamImage' src={appImages?.teamDesktop} height={551} width={1152} className="w-full h-full object-contain" /> */}
+                    <div className="flex flex-wrap justify-between after:">
+                        {TeamMembers.map(member => (
+                            <div key={member.id} className="w-[260px] overflow-hidden mb-8">
+                                <div className="h-[300px] w-full relative flex items-end group">
+                                    <div className="h-[85%] w-[45%] bg-[#9B9B9A] transition-all duration-700 ease-in-out group-hover:h-[100%] group-hover:bg-obsYellow" />
+                                    <Image alt="teamMember" src={member.image} height={100} width={100} className="object-contain h-full w-[100%] transition-all duration-700 ease-in-out absolute group-hover:-translate-x-4" />
+                                </div>
+
+                                <div className=" w-full flex flex-col justify-center items-center gap-1 mt-4">
+                                    <span className="font-semibold text-[#121212] text-[18px]">
+                                        {member.name}
+                                    </span>
+                                    <div className="border border-b border-b-obsYellow w-[40%]" />
+                                    <span className="font-normal text-[#0B1215] text-[13px]">
+                                        {member.designation}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
 

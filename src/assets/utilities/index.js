@@ -43,6 +43,14 @@ const appImages = {
     responsiveHR: require('../images/responsiveHR.png'),
     responsivePM: require('../images/responsivePM.png'),
 
+    // new teams pictures
+
+    teamJdPicture: require('../images/teamJdPicture.png'),
+    teamHamzaPicture: require('../images/teamHamzaPicture.png'),
+    teamSharjeelPicture: require('../images/teamSharjeelPicture.png'),
+    teamAadilPicture: require('../images/teamAadilPicture.png'),
+    teamAsjadPicture: require('../images/teamAsjadPicture.png'),
+
     // Team Desktop
 
     teamDesktop: require('../images/teamDesktop.png'),
