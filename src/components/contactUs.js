@@ -132,7 +132,7 @@ export default function ContactUs() {
 
                         <button
                             onClick={() => { handleSubmit() }}
-                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden hover:shadow-lg">
+                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden hover:shadow-lg ">
                             Submit your message
                         </button>
                     </div>
