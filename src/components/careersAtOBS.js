@@ -40,7 +40,7 @@ export default function CareersAtOBS() {
     };
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-stone-50">
             <div className="flex-1">
 
                 {/* Header */}

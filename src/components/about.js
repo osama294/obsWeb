@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function About() {
     return (
-        <div className="flex flex-col py-1 lg:py-10 xl:py-16">
+        <div className="flex flex-col py-1 lg:py-10 xl:py-16 bg-stone-50">
             {/* Column with 4 rows */}
 
             <div className="flex-1">

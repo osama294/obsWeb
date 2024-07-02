@@ -57,7 +57,7 @@ export default function PortfolioSlider() {
 
 
     return (
-        <div className="flex flex-col  py-2 lg:py-10 xl:py-10 ">
+        <div className="flex flex-col  py-2 lg:py-10 xl:py-10 bg-stone-50">
             <div className="flex-1">
                 {/* Header */}
                 <div className="lg:mt-0 xl:mt-0 mt-4 flex flex-row items-center w-[80%] self-center ml-[8%]">
