@@ -64,7 +64,7 @@ export default function Footer() {
                                     <Link href={'https://www.facebook.com/obstechnologia'} target="_blank">
                                         <Image alt="facebook Icon" src={appIcons.facebookIcon} className="lg:h-[29px] xl:h-[39px] lg:w-[29px] xl:w-[39px] h-[18px] w-[20px]" height={39} width={39} />
                                     </Link>
-                                    <div className="lg:w-[19.50px] xl:w-[19.50px] w-3 lg:h-[0px] xl:h-[0px] h-[1px] origin-top-left rotate-90 opacity-10 lg:border-2 xl:border-2 border border-black ml-[5px] mb-[10px]"></div>
+                                    <div className="lg:w-[19.50px] xl:w-[19.50px] w-3 lg:h-[0px] xl:h-[0px] h-[1px] origin-top-left rotate-90 opacity-10 lg:border-2 xl:border-2 border border-black ml-[5px] mb-[10px] "></div>
                                     <Link href={'https://www.instagram.com/obstechnologia/'} target="_blank">
                                         <Image alt="instagram Icon" src={appIcons.instagramIcon} className="lg:h-[29px] xl:h-[39px] lg:w-[29px] xl:w-[39px] h-[18px] w-[20px]" height={39} width={39} />
                                     </Link>

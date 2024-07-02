@@ -28,7 +28,7 @@ export default function Main() {
 
     return (
         <>
-            <div className="lg:max-w-full lg:overflow-hidden lg:h-screen lg:bg-cover lg:bg-no-repeat xl:max-w-full xl:overflow-hidden xl:h-screen xl:bg-cover xl:bg-no-repeat bg-cover overflow-auto bg-[url('../assets/images/mainBgScifi.png')]">
+            <div className="lg:max-w-full lg:overflow-hidden lg:h-screen lg:bg-cover lg:bg-no-repeat xl:max-w-full xl:overflow-hidden xl:h-screen xl:bg-cover xl:bg-no-repeat bg-cover overflow-auto bg-[url('../assets/images/mainBgScifi.png')] bg-stone-50">
                 <div className='flex flex-col lg:flex-row xl:flex-row justify-center lg:justify-between xl:justify-between lg:items-center xl:items-center items-center lg:mt-[200px] xl:mt-[200px] mt-[25%] '>
                     <span
                         className={`lg:text-[45px] xl:text-[70px] text-obsBlack ml-[3%] text-[35px] leading-[45px] text-center lg:text-left xl:text-left font-semibold lg:ml-[60px] xl:ml-[170px] lg:leading-[60.51px] xl:leading-[100.51px]`}

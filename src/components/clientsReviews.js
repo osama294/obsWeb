@@ -1,4 +1,4 @@
-import { appIcons } from "@/assets/utilities";
+import { appIcons, appImages } from "@/assets/utilities";
 import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -73,7 +73,7 @@ export default function ClientsReviews() {
                 <div >
                     {/* Header */}
                     <div className=" md:mt-10 mt-4 flex flex-row items-center w-[80%] self-center ml-[8%] ">
-                        <div className="bg-[url('../assets/images/headingDash.png')] md:h-[1px] h-[1.3px] md:w-[48px] w-[25px]  "></div>
+                        <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[16px] xl:h-[16px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
                         <span className="md:text-[25px] text-obsGrey md:ml-[22px] ml-[10px] font-semibold xl:font-normal lg:font-normal">
                             Our Testimonials
                         </span>

@@ -1,5 +1,5 @@
 import { submitHireUs } from "@/assets/apiCalls/hireUs";
-import { appIcons } from "@/assets/utilities";
+import { appIcons, appImages } from "@/assets/utilities";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
@@ -27,29 +27,40 @@ export default function HireUs() {
 
     const handleSubmit = async (e) => {
 
-        try {
-            const { name, email, confirmEmail, timelineForProject, platform, budget, projectDescription } = formData;
-            if (!name || !email || !confirmEmail || !timelineForProject || !platform || !budget || !projectDescription) {
-                alert('Please fill out all required fields.');
-                return;
-            }
-            if (email !== confirmEmail) {
-                alert('Email and Confirm Email do not match.');
-                return;
-            }
-            const jsonFormData = JSON.stringify(formData);
-            console.log('Form submitted', jsonFormData);
-            const response = await submitHireUs(formData);
-            console.log('Response from API:', response);
-            if (response.status == 200) {
-                setIsModalOpen(true);
-                setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error submitting the form:', error);
+        const allFieldsFilled = Object.values(formData).every(field => field.trim() !== '');
+
+        if (!allFieldsFilled) {
+            alert('Please fill all the fields before submitting.');
+            return;
         }
+        else {
+            setIsModalOpen(true);
+            setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
+        }
+
+        // try {
+        //     const { name, email, confirmEmail, timelineForProject, platform, budget, projectDescription } = formData;
+        //     if (!name || !email || !confirmEmail || !timelineForProject || !platform || !budget || !projectDescription) {
+        //         alert('Please fill out all required fields.');
+        //         return;
+        //     }
+        //     if (email !== confirmEmail) {
+        //         alert('Email and Confirm Email do not match.');
+        //         return;
+        //     }
+        //     const jsonFormData = JSON.stringify(formData);
+        //     console.log('Form submitted', jsonFormData);
+        //     const response = await submitHireUs(formData);
+        //     console.log('Response from API:', response);
+        //     if (response.status == 200) {
+        //         setIsModalOpen(true);
+        //         setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
+        //     } else {
+        //         alert('Something went wrong. Please try again.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting the form:', error);
+        // }
     };
 
     return (
@@ -62,8 +73,8 @@ export default function HireUs() {
                 <div className="flex-1 mt-[5%]">
                     {/* Header */}
                     <div className="flex flex-row items-center w-[80%] self-center ml-[8%] ">
-                        <div className="bg-[url('../assets/images/headingDash.png')] h-[1px] md:w-[48px] w-[25px]"></div>
-                        <span className="md:text-[24px] text-[14] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
+                        <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[12px] xl:h-[12px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
+                        <span className="md:text-[24px] text-[14px] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
                             Got a project for us?
                         </span>
                     </div>
@@ -135,7 +146,7 @@ export default function HireUs() {
                         <div className="mb-4 mt-[5% md:mt-[1%]">
                             <label htmlFor="timelineForProject" className="flex items-center">
                                 <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
-                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline For Project for the project?</span>
+                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline for the project?</span>
                             </label>
                             <input
                                 className="w-full  md:my-3 px-3 py-2 rounded-none  md:text-[15px] text-[12px] border-b border-black focus:outline-none focus:border-obsYellow"

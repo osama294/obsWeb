@@ -1,5 +1,5 @@
 import { submitContactUs } from "@/assets/apiCalls/contactUs";
-import { appIcons } from "@/assets/utilities";
+import { appIcons, appImages } from "@/assets/utilities";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -26,21 +26,42 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
 
-        try {
-            const jsonFormData = JSON.stringify(formData);
-            console.log('Form submitted', jsonFormData);
+        // Check if all fields are filled
+        const allFieldsFilled = Object.values(formData).every(field => field.trim() !== '');
 
-            const response = await submitContactUs(formData);
-            console.log('Response from API:', response);
-            if (response.status == 200) {
-                setIsModalOpen(true);
-                setFormData({ name: '', email: '', confirmEmail: '', phoneNumber: '', bestTimeToContact: '', preferredContactMethod: '', additionalInformation: '' })
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error submitting the form:', error);
+        if (!allFieldsFilled) {
+            alert('Please fill all the fields before submitting.');
+            return;
         }
+        else {
+            setIsModalOpen(true);
+            setFormData({
+                name: '',
+                email: '',
+                phoneNumber: '',
+                bestTimeToContact: '',
+                preferredContactMethod: '',
+                additionalInformation: ''
+            });
+        }
+
+
+
+        // try {
+        //     const jsonFormData = JSON.stringify(formData);
+        //     console.log('Form submitted', jsonFormData);
+
+        //     const response = await submitContactUs(formData);
+        //     console.log('Response from API:', response);
+        //     if (response.status == 200) {
+        //         setIsModalOpen(true);
+        //         setFormData({ name: '', email: '', confirmEmail: '', phoneNumber: '', bestTimeToContact: '', preferredContactMethod: '', additionalInformation: '' })
+        //     } else {
+        //         alert('Something went wrong. Please try again.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting the form:', error);
+        // }
     };
 
 
@@ -49,7 +70,7 @@ export default function ContactUs() {
             <div className="flex-1">
                 {/* Header */}
                 <div className="lg:mt-10 xl:mt-10 mt-4 flex flex-row items-center w-[80%] self-center ml-[8%]">
-                    <div className="bg-[url('../assets/images/headingDash.png')] lg:h-[1px] xl:h-[1px] h-[1.3px] lg:w-[48px] xl:w-[48px] w-[25px]"></div>
+                    <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[16px] xl:h-[16px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
                     <span className="lg:text-[28px] xl:text-[28px] text-obsGrey lg:ml-[22px] xl:ml-[22px] ml-[10px] font-semibold xl:font-normal lg:font-normal">
                         Contact Us
                     </span>
@@ -111,7 +132,7 @@ export default function ContactUs() {
 
                         <button
                             onClick={() => { handleSubmit() }}
-                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden">
+                            className="lg:w-[325px] xl:w-[325px] lg:h-[45px] xl:mt-10 lg:mt-10 xl:h-[45px] text-white bg-yellow-400 rounded-[7px] lg:block xl:block hidden hover:shadow-lg ">
                             Submit your message
                         </button>
                     </div>
@@ -148,7 +169,7 @@ export default function ContactUs() {
                                 name="additionalInformation"
                                 value={formData.additionalInformation}
                                 onChange={handleChange}
-                                className="mt-1 p-2 rounded-[5px] lg:w-[100%] xl:w-[100%] w-[100%] lg:text-[16px] xl:text-[16px] text-[12px] px-4 border-[0.5px] border-[#949494] lg:border xl:border focus:outline-none focus:border-obsYellow placeholder-[#595959]"
+                                className="mt-1 p-2 rounded-[5px] lg:w-[100%] xl:w-[100%] w-[100%] lg:text-[16px] xl:text-[16px] text-[12px] px-4 border-[0.5px] border-[#949494] lg:border xl:border focus:outline-none focus:border-obsYellow placeholder-[#595959] "
                                 rows={10} cols={27}
                             />
                         </div>

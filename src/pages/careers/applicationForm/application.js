@@ -1,5 +1,5 @@
 import { submitApplicationForm } from "@/assets/apiCalls/applicationFrom";
-import { appIcons } from "@/assets/utilities";
+import { appIcons, appImages } from "@/assets/utilities";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
@@ -138,45 +138,65 @@ export default function ApplicationForm() {
 
     const handleSubmit = async (e) => {
 
-
-        try {
-            const formDataToSend = new FormData();
-
-            // Append form fields
-            formDataToSend.append("firstName", formData.firstName);
-            formDataToSend.append("lastName", formData.lastName);
-            formDataToSend.append("email", formData.email);
-            formDataToSend.append("phoneNumber", formData.phoneNumber);
-            formDataToSend.append("appliedPosition", formData.appliedPosition);
-            formDataToSend.append("earliestPossibleStartDate", formData.earliestPossibleStartDate);
-            formDataToSend.append("preferredInterveiwDate", formData.preferredInterveiwDate);
-            formDataToSend.append("timeForInterview", formData.timeForInterview);
-            formDataToSend.append("coverLetter", formData.coverLetter);
-
-            // Append files
-            uploadedFiles.forEach((file, index) => {
-                formDataToSend.append(`resume`, file);
-            });
-
-            uploadAdditionalFiles.forEach((file, index) => {
-                formDataToSend.append(`otherDocs`, file);
-            });
-
-            const response = await submitApplicationForm(formDataToSend);
-            console.log('Response from API:', response);
-
-            if (response.status === 200) {
-                setIsModalOpen(true);
-                setFormData({
-                    firstName: '', lastName: '', email: '', phoneNumber: '', appliedPosition: '', earliestPossibleStartDate: '',
-                    preferredInterveiwDate: '', timeForInterview: '', coverLetter: '', resume: '', otherDocs: '',
-                });
-            } else {
-                console.error("Error submitting form:", response);
+        const allFieldsFilled = Object.entries(formData).every(([key, field]) => {
+            if (typeof field === 'string') {
+                return field.trim() !== '';
             }
-        } catch (error) {
-            console.error("Error submitting form:", error);
+            return field !== '';
+        });
+        console.log(formData)
+        if (!allFieldsFilled) {
+            alert('Please fill all the fields before submitting.');
+            return;
         }
+        else {
+            setIsModalOpen(true);
+            setFormData({
+                firstName: '', lastName: '', email: '', phoneNumber: '', appliedPosition: '', earliestPossibleStartDate: '',
+                preferredInterveiwDate: '', timeForInterview: '', coverLetter: '', resume: '', otherDocs: '',
+            });
+            setUploadedFiles([]);
+            setUploadAdditionalFiles([]);
+        }
+
+        // try {
+        //     const formDataToSend = new FormData();
+
+        //     // Append form fields
+        //     formDataToSend.append("firstName", formData.firstName);
+        //     formDataToSend.append("lastName", formData.lastName);
+        //     formDataToSend.append("email", formData.email);
+        //     formDataToSend.append("phoneNumber", formData.phoneNumber);
+        //     formDataToSend.append("appliedPosition", formData.appliedPosition);
+        //     formDataToSend.append("earliestPossibleStartDate", formData.earliestPossibleStartDate);
+        //     formDataToSend.append("preferredInterveiwDate", formData.preferredInterveiwDate);
+        //     formDataToSend.append("timeForInterview", formData.timeForInterview);
+        //     formDataToSend.append("coverLetter", formData.coverLetter);
+
+        //     // Append files
+        //     uploadedFiles.forEach((file, index) => {
+        //         formDataToSend.append(`resume`, file);
+        //     });
+
+        //     uploadAdditionalFiles.forEach((file, index) => {
+        //         formDataToSend.append(`otherDocs`, file);
+        //     });
+
+        //     const response = await submitApplicationForm(formDataToSend);
+        //     console.log('Response from API:', response);
+
+        //     if (response.status === 200) {
+        //         setIsModalOpen(true);
+        //         setFormData({
+        //             firstName: '', lastName: '', email: '', phoneNumber: '', appliedPosition: '', earliestPossibleStartDate: '',
+        //             preferredInterveiwDate: '', timeForInterview: '', coverLetter: '', resume: '', otherDocs: '',
+        //         });
+        //     } else {
+        //         console.error("Error submitting form:", response);
+        //     }
+        // } catch (error) {
+        //     console.error("Error submitting form:", error);
+        // }
     };
 
     //use these functions on drag events 
@@ -233,8 +253,8 @@ export default function ApplicationForm() {
                 <div className="flex-1 mt-[5%]">
                     {/* Header */}
                     <div className="h-1/6 flex flex-row items-center w-[80%] self-center ml-[8%]">
-                        <div className="bg-[url('../assets/images/headingDash.png')] h-[1px] md:w-[48px] w-[25px]"></div>
-                        <span className="md:text-[25px] text-[14] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
+                        <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[12px] xl:h-[12px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
+                        <span className="md:text-[25px] text-[14px] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
                             Application Form
                         </span>
                     </div>
@@ -311,7 +331,7 @@ export default function ApplicationForm() {
 
                             <div className="w-full md:w-[40%] mb-2 md:ml-[2%]">
 
-                                <label htmlFor="confirmEmail">
+                                <label htmlFor="phoneNumber">
                                     <span className="text-black md:text-[15px] text-[10px] font-medium">Phone Number</span>
                                 </label>
                                 <input
@@ -319,9 +339,9 @@ export default function ApplicationForm() {
 
                                     className="w-full md:h-[45px] border-b rounded-none border-black md:my-[15px] my-5 md:text-[15px] lg:px-1 xl:px-1  text-[9px] px-1 pb-2 focus:outline-none focus:border-obsYellow"
                                     type="number"
-                                    id="confirmEmail"
-                                    name="confirmEmail"
-                                    value={formData.confirmEmail}
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    value={formData.phoneNumber}
                                     onChange={handleChange}
                                 />
                             </div>

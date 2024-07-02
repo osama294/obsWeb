@@ -51,17 +51,17 @@ const ProjectsData = [
     },
 
 {
-        id: 8,
+            id: 8,
         name: 'FightAlerts',
         image: appImages.fightAlerts,
         description: "A mobile application that ensures you never miss an MMA match by scheduling notifications for upcoming UFC fights. Our team of designers & developers successfully created a user-centric experience, and even extended their services to marketing to ensure all the needs of our valuable client were perfectly met."
         },
-
+    
 {
-        id: 9,
+            id: 9,
             name: 'FlashMath',
-            image: appImages.flashMath,
-            description: "A mobile app and a web application, designed & developed to allow students to take quizzes on different math topics, including Telling Time, Counting Money, Fractions, Additions, and more. Made specifically for Valdosta School Systems,  our designers & developers paid special attention on user-accessibility & ease of use. "
+        image: appImages.flashMath,
+        description: "A mobile app and a web application, designed & developed to allow students to take quizzes on different math topics, including Telling Time, Counting Money, Fractions, Additions, and more. Made specifically for Valdosta School Systems,  our designers & developers paid special attention on user-accessibility & ease of use. "
     }, 
 
 {
@@ -110,7 +110,7 @@ const ProjectsData = [
     id: 16,
         name: 'Writer’s Lock',
             image: appImages.writerLock,
-                description: "A notes writing app, which allows users to  to jot down their ideas with ease, make notes and assist them in boosting their productivity. The app is customized according to the user's needs & is designed to meet the needs of millions of writers across the globe. Wherever you need to be productive, Writer’s Lock is always nearby."
+                description: "A notes writing app, which allows users to jot down their ideas with ease, make notes and assist them in boosting their productivity. The app is customized according to the user's needs & is designed to meet the needs of millions of writers across the globe. Wherever you need to be productive, Writer’s Lock is always nearby."
 }, 
 
 {
