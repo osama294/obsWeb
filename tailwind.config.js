@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         obsYellow: '#FFD400',
         obsBlack: '#000000',
-        obsGrey: '#625E5E',
+        obsGrey: '#625E5E50',
         obsLightGrey: '#F9F9F9',
 
       },

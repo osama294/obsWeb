@@ -11,7 +11,7 @@ export default function TEAM() {
 
                 {/* Header */}
                 <div className="lg:h-1/6 xl:h-1/6 h-[1%] lg:mt-10 xl:mt-10 mt-10 flex flex-row items-center w-[80%] self-center ml-[8%] xl:mb-10 lg:mb-10">
-                    <div className="bg-[url('../assets/images/headingDash.png')] lg:h-[1px] xl:h-[1px] h-[1.3px] lg:w-[48px] xl:w-[48px] w-[25px]  "></div>
+                    <Image width={48} height={2} alt='icon' src={appImages.headingDash} className='object-contain lg:h-[16px] xl:h-[16px] lg:w-[48px] xl:w-[48px] h-[9px] w-[38px] ' />
                     <span className="lg:text-[25px] xl:text-[25px] text-obsGrey  lg:ml-[22px] xl:ml-[22px] ml-[10px] font-semibold xl:font-normal lg:font-normal  ">
                         Our Team
                     </span>

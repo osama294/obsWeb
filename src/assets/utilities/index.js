@@ -79,6 +79,8 @@ const appImages = {
 
     reactNativeJobDes: require('../images/reactNativeJobDes.png'),
     reactNativeJobHeading: require('../images/reactNativeJobHeading.png'),
+    headingDash: require('../images/headingDash.png'),
+
 
 
 }

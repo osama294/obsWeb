@@ -63,7 +63,7 @@ export default function HireUs() {
                     {/* Header */}
                     <div className="flex flex-row items-center w-[80%] self-center ml-[8%] ">
                         <div className="bg-[url('../assets/images/headingDash.png')] h-[1px] md:w-[48px] w-[25px]"></div>
-                        <span className="md:text-[24px] text-[14] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
+                        <span className="md:text-[24px] text-[14px] text-obsGrey md:ml-[22px] ml-[15px] font-medium ">
                             Got a project for us?
                         </span>
                     </div>
@@ -135,7 +135,7 @@ export default function HireUs() {
                         <div className="mb-4 mt-[5% md:mt-[1%]">
                             <label htmlFor="timelineForProject" className="flex items-center">
                                 <span className="text-red-600 text-[8px] md:text-[15px] mr-1 md:mr-4 font-medium  md:block ">*</span>
-                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline For Project for the project?</span>
+                                <span className="text-black md:text-[15px] text-[9px] font-medium ml-1">What is your timeline for the project?</span>
                             </label>
                             <input
                                 className="w-full  md:my-3 px-3 py-2 rounded-none  md:text-[15px] text-[12px] border-b border-black focus:outline-none focus:border-obsYellow"
