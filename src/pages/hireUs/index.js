@@ -27,29 +27,40 @@ export default function HireUs() {
 
     const handleSubmit = async (e) => {
 
-        try {
-            const { name, email, confirmEmail, timelineForProject, platform, budget, projectDescription } = formData;
-            if (!name || !email || !confirmEmail || !timelineForProject || !platform || !budget || !projectDescription) {
-                alert('Please fill out all required fields.');
-                return;
-            }
-            if (email !== confirmEmail) {
-                alert('Email and Confirm Email do not match.');
-                return;
-            }
-            const jsonFormData = JSON.stringify(formData);
-            console.log('Form submitted', jsonFormData);
-            const response = await submitHireUs(formData);
-            console.log('Response from API:', response);
-            if (response.status == 200) {
-                setIsModalOpen(true);
-                setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error submitting the form:', error);
+        const allFieldsFilled = Object.values(formData).every(field => field.trim() !== '');
+
+        if (!allFieldsFilled) {
+            alert('Please fill all the fields before submitting.');
+            return;
         }
+        else {
+            setIsModalOpen(true);
+            setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
+        }
+
+        // try {
+        //     const { name, email, confirmEmail, timelineForProject, platform, budget, projectDescription } = formData;
+        //     if (!name || !email || !confirmEmail || !timelineForProject || !platform || !budget || !projectDescription) {
+        //         alert('Please fill out all required fields.');
+        //         return;
+        //     }
+        //     if (email !== confirmEmail) {
+        //         alert('Email and Confirm Email do not match.');
+        //         return;
+        //     }
+        //     const jsonFormData = JSON.stringify(formData);
+        //     console.log('Form submitted', jsonFormData);
+        //     const response = await submitHireUs(formData);
+        //     console.log('Response from API:', response);
+        //     if (response.status == 200) {
+        //         setIsModalOpen(true);
+        //         setFormData({ name: '', email: '', confirmEmail: '', timelineForProject: '', WebsiteUrl: '', companyName: '', platform: '', budget: '', projectDescription: '' });
+        //     } else {
+        //         alert('Something went wrong. Please try again.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting the form:', error);
+        // }
     };
 
     return (

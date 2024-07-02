@@ -14,7 +14,7 @@ export default function CareerCard({ job, onClick }) {
         return (
             <div className="
             xl:w-[390px] w-[187px] lg:w-[280px] xl:h-[500px] lg:h-[360px] h-[252px] relative border-[0.2px] border-gray-100 
-            rounded-[16px] shadow-[0px_0px_14px_0px_#00000024] group cursor-pointer xl:my-10 my-3"
+            rounded-[16px] shadow-[0px_0px_14px_0px_#00000024] group cursor-pointer xl:my-10 my-3 bg-white"
                 onClick={flipCard}>
                 {children}
             </div>
@@ -40,7 +40,7 @@ export default function CareerCard({ job, onClick }) {
 
         return (
             <CardBody>
-                <div className="flex flex-col justify-center items-center xl:p-10 p-3 xl:mt-0 mt-3">
+                <div className="flex flex-col justify-center items-center xl:p-10 p-3 xl:mt-0 mt-3 ">
 
 
                     <Image alt={`${jobTitle}`} className="xl:h-[132px] xl:w-[152px] lg:h-[80px] lg:w-[100px] w-[55px] h-[45px] xl:mb-[10%]  mb-5 object-contain select-none" src={image} />

@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar";
 export default function Careers() {
     return (
 
-        <div className="md:max-w-full md:h-screen bg-white">
+        <div className="md:max-w-full md:h-screen bg-stone-50">
 
             <Navbar />
 

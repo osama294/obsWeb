@@ -26,21 +26,42 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
 
-        try {
-            const jsonFormData = JSON.stringify(formData);
-            console.log('Form submitted', jsonFormData);
+        // Check if all fields are filled
+        const allFieldsFilled = Object.values(formData).every(field => field.trim() !== '');
 
-            const response = await submitContactUs(formData);
-            console.log('Response from API:', response);
-            if (response.status == 200) {
-                setIsModalOpen(true);
-                setFormData({ name: '', email: '', confirmEmail: '', phoneNumber: '', bestTimeToContact: '', preferredContactMethod: '', additionalInformation: '' })
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error submitting the form:', error);
+        if (!allFieldsFilled) {
+            alert('Please fill all the fields before submitting.');
+            return;
         }
+        else {
+            setIsModalOpen(true);
+            setFormData({
+                name: '',
+                email: '',
+                phoneNumber: '',
+                bestTimeToContact: '',
+                preferredContactMethod: '',
+                additionalInformation: ''
+            });
+        }
+
+
+
+        // try {
+        //     const jsonFormData = JSON.stringify(formData);
+        //     console.log('Form submitted', jsonFormData);
+
+        //     const response = await submitContactUs(formData);
+        //     console.log('Response from API:', response);
+        //     if (response.status == 200) {
+        //         setIsModalOpen(true);
+        //         setFormData({ name: '', email: '', confirmEmail: '', phoneNumber: '', bestTimeToContact: '', preferredContactMethod: '', additionalInformation: '' })
+        //     } else {
+        //         alert('Something went wrong. Please try again.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting the form:', error);
+        // }
     };
 
 
